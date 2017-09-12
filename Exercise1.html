@@ -39,30 +39,55 @@ div.bcontent {
   <table>
     <th>
       <p style="float:left">
-        Introduce your name.
+        <form action="Data.php">
+        Introduce your name: <p>
+          <input type="text" name="FirstName" value="Your Name"><br>
+        </p>
+        <input type="submit" value="Submit">
       </p>
       <p style="float:left">
-        Introduce your surname.
+        <form action="Data.php">
+        Introduce your surname: <p>
+          <input type="text" name="Surname" value="Your Surname"><br>
+        </p>
+        <input type="submit" value="Submit">
       </p>
       <p style="float:left">
-        Introduce your email.
-      </p>
+        <form action="Data.php">
+        Introduce your email: <p>
+          <input type="email" id="myEmail" value="alumno@uc3m.com">
+        </p>
+        <input type="submit" value="Submit">
       <p style="float:left">
-        Introduce your birthday.
-      </p>
+        <form action="Data.php">
+        Introduce your birthday: <p>
+          <input type="date" id="myDate" value="1997-07-18"><br>
+        </p>
+        <input type="submit" value="Submit">
       <p style="float:left">
-        Introduce your language.
-      </p>
+        Select your language: <p>
+          <form action="Data.php">
+          <select>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Dutch">Dutch</option>
+            <option value="Russian">Russian</option>
+          </select>
+        </p>
+        <input type="submit" value="Submit">
       <p style="float:left">
-        Introduce your profile picture.
-      </p>
+        Introduce your profile picture: <p>
+          <input type="image" src="profile.jpg" alt="Profile" height="50" width="50"><br>
+        </p>
+        <input type="submit" value="Submit">
     </th>
   </table>
 
 </div>
 
 </body>
-
 
 <footer>
 
