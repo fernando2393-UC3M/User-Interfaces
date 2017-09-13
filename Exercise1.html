@@ -1,78 +1,68 @@
 <!DOCTYPE html>
 <html>
 <html lang="en-US">
-<style>
-body {
-    background-color: powderblue;
-}
-p.arial {
-    font-family: "Arial", Arial, arial;
-    color: #000e78;
-}
-h1 {
-    font-family: "Contantia Regular", Helvetica, serif;
-    color: #000e78;
-}
-div.bcontent {
-    color: #000e78;
-}
-p.clear {
-    clear: both;
-}
-</style>
+
+<head>
+  <title>
+    UC3M College Bank
+  </title>
+  <link rel="stylesheet" href="Exercise1.css">
+</head>
+
 <header>
-<title>
-  UC3M College Bank
-</title>
-<img src="logo.png" alt="logo" style="display:inline-block;float:left;width:500px;height:160.719px;">
-<h1 style="float:left">Welcome To Your College Bank Account</h1>
-<p class="clear">
-<table style="float:left">
-  <tr>
-    <th><a href="https://www.uc3m.es"><p class="arial">The Institution</a></th>
-    <th><a href="https://www.uc3m.es"><p class="arial">Your Account</a></th>
-    <th><a href="https://www.uc3m.es"><p class="arial">Help</a></th>
-  </tr>
-</table>
-</p>
-
-
+  <img src="logo.png" alt="logo" class="logo">
+  <h1>Welcome To Your College Bank Account</h1>
+  <ul class="menu">
+    <li><a class="men" href="https://www.uc3m.es">The Institution</a></li>
+    <li><a class="men" href="https://www.uc3m.es">Your Account</a></li>
+    <li><a class="men" href="https://www.uc3m.es">Help</a></li>
+  </ul>
 </header>
 
 <body>
-  <p class="clear arial">
-  <table>
-    <th>
-      <p style="float:left">
-        <form action="Data.php">
-        Introduce your name: <p>
-          <input type="text" name="FirstName" value="Your Name"><br>
-        </p>
+  <div class="block">
+    PERSONAL INFORMATION
+  </div>
+
+  <div class="block1">
+    <form action="Data.php">
+      Introduce your name:
+      <p>
+        <input type="text" name="FirstName" value="Your Name">
+      </p>
+      <p>
         <input type="submit" value="Submit">
       </p>
-      <p style="float:left">
-        <form action="Data.php">
-        Introduce your surname: <p>
-          <input type="text" name="Surname" value="Your Surname"><br>
+      <form action="Data.php">
+        Introduce your surname:
+        <p>
+          <input type="text" name="Surname" value="Your Surname">
         </p>
-        <input type="submit" value="Submit">
-      </p>
-      <p style="float:left">
-        <form action="Data.php">
-        Introduce your email: <p>
-          <input type="email" id="myEmail" value="alumno@uc3m.com">
+        <p>
+          <input type="submit" value="Submit">
         </p>
-        <input type="submit" value="Submit">
-      <p style="float:left">
         <form action="Data.php">
-        Introduce your birthday: <p>
-          <input type="date" id="myDate" value="1997-07-18"><br>
-        </p>
-        <input type="submit" value="Submit">
-      <p style="float:left">
-        Select your language: <p>
+          Introduce your email:
+          <p>
+            <input type="email" id="myEmail" value="alumno@uc3m.com">
+          </p>
+          <p>
+            <input type="submit" value="Submit">
+          </p>
           <form action="Data.php">
-          <select>
+            Introduce your birthday:
+            <p>
+              <input type="date" id="myDate" value="1997-07-18">
+            </p>
+            <p>
+              <input type="submit" value="Submit">
+            </p>
+          </div>
+          <div class="block1">
+            Select your language:
+            <p>
+              <form action="Data.php">
+                <select>
             <option value="English">English</option>
             <option value="Spanish">Spanish</option>
             <option value="French">French</option>
@@ -80,17 +70,18 @@ p.clear {
             <option value="Dutch">Dutch</option>
             <option value="Russian">Russian</option>
           </select>
-        </p>
-        <input type="submit" value="Submit">
-      <p style="float:left">
-        Introduce your profile picture: <p>
-          <input type="image" src="profile.jpg" alt="Profile" height="50" width="50"><br>
-        </p>
-        <input type="submit" value="Submit">
-    </th>
-  </table>
-</p>
-
+            </p>
+            <p>
+              <input type="submit" value="Submit">
+            </p>
+            Introduce your profile picture:
+            <p>
+              <input type="file" name="picture" accept="image/*" height="100" width="100">
+            </p>
+            <p>
+              <input type="submit" value="Submit">
+            </p>
+          </div>
 </body>
 
 <footer>
