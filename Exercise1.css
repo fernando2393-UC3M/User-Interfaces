@@ -46,6 +46,17 @@ div.block1 {
   float: left;
 }
 
+div.block2 {
+  clear: both;
+  float: left;
+  font-family: "Arial", Arial, arial;
+  color: #000e78;
+  font-size: 250%;
+  margin-left: 3%;
+  margin-top: 3%;
+  padding-top: 10px;
+}
+
 ul.menu {
   list-style-type: none;
   padding: 0;
@@ -73,4 +84,8 @@ img.logo {
   float: left;
   width: 500px;
   height: 160.719px;
+}
+
+footer {
+    display: block;
 }
