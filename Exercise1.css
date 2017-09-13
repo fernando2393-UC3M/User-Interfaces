@@ -74,3 +74,8 @@ img.logo {
   width: 500px;
   height: 160.719px;
 }
+
+li a:hover {
+    background-color: #000e78;
+    color: white;
+}
