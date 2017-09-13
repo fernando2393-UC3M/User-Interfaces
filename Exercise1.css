@@ -27,7 +27,7 @@ p.clear {
   clear: both;
 }
 
-div.block{
+div.block {
   float: left;
   font-family: "Arial", Arial, arial;
   color: #000e78;
@@ -76,6 +76,15 @@ img.logo {
 }
 
 li a:hover {
-    background-color: #000e78;
-    color: white;
+  background-color: #000e78;
+  color: white;
+}
+
+footer {
+  -webkit-columns: 100px 3;
+  columns: 100px 3;
+  -webkit-column-gap: 40px;
+  column-gap: 40px;
+  -webkit-column-rule: 4px outset #000e78;
+  column-rule: 4px outset #000e78;
 }
