@@ -58,14 +58,10 @@ ul.menu {
   text-align: right;
 }
 
-li a:hover {
-  background-color: #000e78;
-  color: white;
-}
-
 a.men {
   display: block;
   padding: 1px 75px;
+  border: 2px solid #000e78;
 }
 
 .menu li {
