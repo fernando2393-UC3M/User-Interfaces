@@ -3,90 +3,219 @@
 <html lang="en-US">
 
 <head>
-  <title>
-    UC3M College Bank
-  </title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="Exercise1.css">
+    <title>
+        FILMIN
+    </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="Exercise1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<header>
-  <img src="logo.png" alt="logo" class="logo">
-  <h1>Welcome To Your College Bank Account</h1>
-  <ul class="menu">
-    <li><a class="men" href="https://www.uc3m.es">The Institution</a></li>
-    <li><a class="men" href="https://www.uc3m.es">Your Account</a></li>
-    <li><a class="men" href="https://www.uc3m.es">Help</a></li>
-  </ul>
-</header>
-
 <body>
-  <div class="block">
-    PERSONAL INFORMATION
-  </div>
 
-  <div class="block1">
-    <form action="Data.php">
-      Introduce your name:
-      <p>
-        <input type="text" name="FirstName" value="Your Name">
-      </p>
-      <p>
-        <input type="submit" value="Submit">
-      </p>
-      <form action="Data.php">
-        Introduce your surname:
-        <p>
-          <input type="text" name="Surname" value="Your Surname">
-        </p>
-        <p>
-          <input type="submit" value="Submit">
-        </p>
-        <form action="Data.php">
-          Introduce your email:
-          <p>
-            <input type="email" id="myEmail" value="alumno@uc3m.com">
-          </p>
-          <p>
-            <input type="submit" value="Submit">
-          </p>
-          <form action="Data.php">
-            Introduce your birthday:
-            <p>
-              <input type="date" id="myDate" value="1997-07-18">
-            </p>
-            <p>
-              <input type="submit" value="Submit">
-            </p>
-          </div>
-          <div class="block1">
+    <header>
+        <img src="logo.png" alt="logo" class="logo">
+        <h1>Welcome To Your Account</h1>
+        <ul class="menu">
+            <li><a class="men" href="https://www.filmin.es/blog" target="_blank">Blog</a></li>
+            <li><a class="men" href="https://www.filmin.es/canales" target="_blank">Channels</a></li>
+            <li><a class="men" href="https://www.filmin.es/colecciones" target="_blank">Collections</a></li>
+        </ul>
+    </header>
+
+    <article>
+        <div class="block">
+            PERSONAL INFORMATION
+        </div>
+
+        <div class="block1">
+            <form action="Data.php">
+                Introduce your name:
+                <p>
+                    <input type="text" name="FirstName" value="Your Name">
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+
+            <form action="Data.php">
+                Introduce your surname:
+                <p>
+                    <input type="text" name="Surname" value="Your Surname">
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+
+            <form action="Data.php">
+                Introduce your email:
+                <p>
+                    <input type="email" id="myEmail" value="alumno@uc3m.com">
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+
+            <form action="Data.php">
+                Introduce your birthday:
+                <p>
+                    <input type="date" id="myDate" value="1997-07-18">
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+        </div>
+
+        <div class="block1">
             Select your language:
             <p>
-              <form action="Data.php">
+                <form action="Data.php">
+                    <select>
+              <option value="English">English</option>
+              <option value="Spanish">Spanish</option>
+              <option value="French">French</option>
+              <option value="German">German</option>
+              <option value="Dutch">Dutch</option>
+              <option value="Russian">Russian</option>
+            </select>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+
+            Select Photo
+            <p>
+                <input type="file" name="picture" accept="image/*" height="100" width="100">
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+
+            <p>
+                <img src="photo.png" alt="Upload photo" class="photo">
+            </p>
+
+        </div>
+    </article>
+
+    <article>
+        <div class="block2">
+            BILLING INFORMATION
+        </div>
+
+        <div class="block3">
+            <form action="Data.php">
+                Address:
+                <p>
+                    <input type="text" name="Address" value="Street, City, ZIP, Country" class="address">
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+
+
+            <form action="Data.php">
+                <p>
+                    Payment Method
+                </p>
                 <select>
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="French">French</option>
-            <option value="German">German</option>
-            <option value="Dutch">Dutch</option>
-            <option value="Russian">Russian</option>
-          </select>
-            </p>
-            <p>
-              <input type="submit" value="Submit">
-            </p>
-            Introduce your profile picture:
-            <p>
-              <input type="file" name="picture" accept="image/*" height="100" width="100">
-            </p>
-            <p>
-              <input type="submit" value="Submit">
-            </p>
-          </div>
+                <option value="Credit Card">CreditCard</option>
+                <option value="Paypal">Paypal</option>
+                <option value="BitCoin">BitCoin</option>
+                <option value="Google Wallet">GoogleWallet</option>
+                <option value="Bank Tranfer">BankTransfer</option>
+             </select>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+            </div>
+            <div class="block4">
+              <table class="creditcard">
+                <form action="Data.php">
+                <tr>
+                  <th>Number:</th>
+                  <th>Valid Thru:</th>
+                  <th>Code:</th>
+                </tr>
+
+                <tr>
+                              <!--CREDITCARDNUMBER-->
+                  <td>
+                          <p>
+                              <input type="text" id="creditcardnum" value="0000 0000 0000 0000" maxlength="16">
+                          </p>
+                  </td>
+                              <!--VALID THRU-->
+                  <td>
+                          <select>
+                          <option value=''>Month</option>
+                          <option value='01'>January</option>
+                          <option value='02'>February</option>
+                          <option value='03'>March</option>
+                          <option value='04'>April</option>
+                          <option value='05'>May</option>
+                          <option value='06'>June</option>
+                          <option value='07'>July</option>
+                          <option value='08'>August</option>
+                          <option value='09'>September</option>
+                          <option value='10'>October</option>
+                          <option value='11'>November</option>
+                          <option value='12'>December</option>
+                      </select>
+                          <select>
+                          <option value=''>Year</option>
+                          <option value='17'>2017</option>
+                          <option value='18'>2018</option>
+                          <option value='19'>2019</option>
+                          <option value='20'>2020</option>
+                          <option value='21'>2021</option>
+                          <option value='22'>2022</option>
+                          <option value='23'>2023</option>
+                          <option value='24'>2024</option>
+                          <option value='25'>2025</option>
+                          <option value='26'>2026</option>
+                          <option value='27'>2027</option>
+                          <option value='28'>2028</option>
+                      </select>
+                          <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
+                    </td>
+                              <!--CREDITCODE-->
+                    <td>
+                        <input type="text" id="creditcode" value="000" maxlength="3" class="creditcode">
+                    </td>
+
+                    <td>
+                      <p>
+                          <input type="submit" value="Submit">
+                      </p>
+                    </td>
+                  </tr>
+                  </form>
+              </table>
+            </div>
+    </article>
+
+    <footer>
+        <p>
+          <a class="social" href="https://www.filmin.es/aviso-legal">
+              <i class="fa fa-copyright" style="font-size:36px"></i>
+          </a>
+            <a class="social" href="https://www.facebook.com/Filmin">
+                <i class="fa fa-facebook-official" style="font-size:36px"></i>
+            </a>
+            <a class="social" href="https://twitter.com/filmin">
+                <i class="fa fa-twitter" style="font-size:36px"></i>
+            </a>
+        </p>
+    </footer>
+
 </body>
-
-<footer>
-
-</footer>
 
 </html>
