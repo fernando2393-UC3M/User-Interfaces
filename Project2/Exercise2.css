@@ -1,0 +1,127 @@
+body {
+    background: linear-gradient(to right, #F5F5F5, #BDBDBD);
+    margin: 0 auto;
+}
+
+header {
+    margin: 0 auto;
+    background-color: #424242;
+    height: 160.719px;
+    width: 100%;
+    /*Allow the header to be fixed*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+footer {
+    padding: 20px;
+    background-color: #424242;
+    color: white;
+    clear: both;
+}
+
+article {
+    /*We add a margin to the top to allow the header to be fixed without hiding any information*/
+    margin-top: 160.719px;
+}
+
+p.arial {
+    font-family: "Arial", Arial, arial;
+    color: #000e78;
+}
+
+h1 {
+    font-family: "Lucida Grande", Helvetica, serif;
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    text-align: right;
+    margin-right: 3%;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+div.bcontent {
+    color: #000e78;
+}
+
+p.clear {
+    clear: both;
+}
+
+
+/*Makes the input box smaller*/
+
+.creditcode {
+    width: 25px;
+}
+
+div.description {
+    float: left;
+    color: #000e78;
+    font-family: "Arial";
+    width: 20%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+    line-height: 250%;
+    clear: both;
+}
+
+div.title {
+    font-family: "Algerian";
+    color: #000e78;
+    font-size: 300%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 5%;
+    line-height: 200%;
+    width: 20%;
+    text-align: center;
+}
+
+iframe.video {
+    margin-top: 5%;
+}
+
+div.username {
+    color: white;
+    float: right;
+    font-family: arial;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+img.profile {
+    float: right;
+    height: 75px;
+    width: 54.824px;
+    margin-right: 3%;
+    clear: right;
+}
+
+
+/*Makes the input box bigger*/
+
+.address {
+    width: 129px;
+}
+
+img.logo {
+    display: inline-block;
+    float: left;
+    width: 500px;
+    height: 160.719px;
+}
+
+i.icon {
+    font-size: 24px;
+    color: #000e78;
+    float: left;
+    margin-left: 5%;
+    margin-top: 5%;
+    clear: both;
+}
