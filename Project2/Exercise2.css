@@ -65,7 +65,6 @@ div.description {
     text-align: justify;
     text-justify: inter-word;
     margin-left: 5%;
-    margin-top: 5%;
     margin-right: 5%;
     line-height: 250%;
     clear: both;
@@ -120,8 +119,56 @@ img.logo {
 i.icon {
     font-size: 24px;
     color: #000e78;
+    float: right;
+    margin-top: -1.5%;
+}
+
+i.iconl {
+    font-size: 24px;
+    color: #000e78;
     float: left;
-    margin-left: 5%;
-    margin-top: 5%;
-    clear: both;
+}
+
+div.adj {
+    color: #000e78;
+    font-family: "Arial";
+    margin-left: 9%;
+    margin-top: -1.5%;
+}
+
+div.subpanel {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+div.subvideos {
+    margin: 2% 2%;
+    float: left;
+}
+
+iframe.subvideo {
+    clear: top;
+}
+
+div.subdescription {
+    clear: bottom;
+    color: #000e78;
+    font-family: "Arial";
+    margin-top: 3%;
+}
+
+a.social {
+    padding: 20px;
+    border-left: solid white;
+}
+
+a {
+    /*To avoid a line of the URL*/
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    /*To avoid the icons changing colour when clicked*/
+    color: #CFD8DC;
 }
