@@ -1,12 +1,12 @@
 body {
-    background: linear-gradient(to right, #F5F5F5, #BDBDBD);
+    background-image: url(hex-abstract-material-design-ad.jpg);
     margin: 0 auto;
 }
 
 header {
     margin: 0 auto;
     background-color: #424242;
-    height: 160.719px;
+    height: 140px;
     width: 100%;
     /*Allow the header to be fixed*/
     position: fixed;
@@ -27,19 +27,43 @@ article {
     margin-top: 160.719px;
 }
 
-p.arial {
-    font-family: "Arial", Arial, arial;
+#rcorners {
+    border-radius: 60px;
+    border: 2px solid #000e78;
+    padding: 20px; 
+    width: auto;
+    height: auto;
+	background: #ffffff;    
+}
+
+#srcorners {
+    border-radius: 60px;
+    border: 2px solid #000e78;
+    padding: 20px; 
+    width: auto;
+    height: auto;
+	background: #ffffff;    
+}
+
+div.head{
+float:right;
+margin-right: 7%;
+}
+
+p.roboto {
+    font-family: "Roboto";
     color: #000e78;
 }
 
 h1 {
-    font-family: "Lucida Grande", Helvetica, serif;
+    font-family: "Roboto";
     color: white;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    text-align: right;
-    margin-right: 3%;
+	font-weight: 300;
+    text-align: left;
+    margin-right: 5%;
     margin-top: 0;
     padding-top: 20px;
+	margin-bottom: 0.5%;
 }
 
 div.bcontent {
@@ -57,49 +81,61 @@ p.clear {
     width: 25px;
 }
 
+div.oneblock{
+margin-top: -2%;
+}
+
 div.description {
     float: left;
     color: #000e78;
-    font-family: "Arial";
+    font-family: "Roboto";
     width: 20%;
     text-align: justify;
     text-justify: inter-word;
     margin-left: 5%;
     margin-right: 5%;
+	margin-top: 5%;
     line-height: 250%;
     clear: both;
+	max-width:20%;
 }
 
 div.title {
-    font-family: "Algerian";
+    font-family: "Roboto";
     color: #000e78;
     font-size: 300%;
     float: left;
-    margin-left: 5%;
-    margin-top: 5%;
+	margin-top: -6%;
     line-height: 200%;
-    width: 20%;
+    width: 100%;
     text-align: center;
 }
 
+
 iframe.video {
     margin-top: 5%;
+	/*max-width: 100%;
+	height: auto;*/
+
+	
 }
 
 div.username {
     color: white;
-    float: right;
-    font-family: arial;
+    float: left;
+    font-family: Roboto;
     margin-right: 1%;
-    margin-top: 1%;
+    margin-top: 20%;
 }
 
 img.profile {
     float: right;
-    height: 75px;
-    width: 54.824px;
-    margin-right: 3%;
+    height: 100px;
+    width: 73.0987px;
+    margin-right: -15%;
+	margin-top: -13%;
     clear: right;
+	border-radius: 50%;
 }
 
 
@@ -131,7 +167,7 @@ i.iconl {
 
 div.adj {
     color: #000e78;
-    font-family: "Arial";
+    font-family: "Roboto";
     margin-left: 9%;
     margin-top: -1.5%;
 }
@@ -153,13 +189,19 @@ iframe.subvideo {
 div.subdescription {
     clear: bottom;
     color: #000e78;
-    font-family: "Arial";
+    font-family: "Roboto";
     margin-top: 3%;
 }
 
 a.social {
     padding: 20px;
     border-left: solid white;
+}
+
+a.twitter {
+	padding: 20px;
+	border-left: solid white;
+    border-right: solid white;
 }
 
 a {

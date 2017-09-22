@@ -27,15 +27,14 @@ article{
   margin-top: 160.719px;
 }
 
-p.arial {
-  font-family: "Arial", Arial, arial;
+p.roboto {
+  font-family: "Roboto";
   color: #000e78;
 }
 
 h1 {
-  font-family: "Lucida Grande", Helvetica, serif;
+  font-family: "Roboto";
   color: white;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   text-align: right;
   margin-right: 3%;
   margin-top: 0;
@@ -53,7 +52,7 @@ p.clear {
 
 div.block{ /*PERSONAL INFORMATION*/
   float: left;
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   font-size: 250%;
   margin-left: 3%;
@@ -62,7 +61,7 @@ div.block{ /*PERSONAL INFORMATION*/
 }
 
 div.block1 { /*DATA PERSONAL INFO*/
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   margin-left: 5%;
   margin-top: 3%;
@@ -74,7 +73,7 @@ div.block1 { /*DATA PERSONAL INFO*/
 div.block2 { /*BILLING INFO*/
   clear: both;
   float: left;
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   font-size: 250%;
   margin-left: 3%;
@@ -84,7 +83,7 @@ div.block2 { /*BILLING INFO*/
 }
 
 div.block3 { /*DATA BILLING INFO*/
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   margin-left: 7%;
   margin-top: 3%;
@@ -94,7 +93,7 @@ div.block3 { /*DATA BILLING INFO*/
 }
 
 div.block4 {
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   margin-left: 150px;
   margin-top: 150px;
@@ -106,7 +105,7 @@ div.block4 {
 ul.menu {
   list-style-type: none;
   padding: 0;
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   overflow: hidden;
   margin-right: 10px;
@@ -170,4 +169,17 @@ a.twitter {
 	padding: 20px;
 	border-left: solid white;
     border-right: solid white;
+}
+
+/*Responsive Webpage*/
+
+.col-1 {width: 33.3%;}
+.col-2 {width: 66.6%;}
+.col-3 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
