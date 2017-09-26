@@ -164,17 +164,17 @@ a:visited {
 }
 
 img.logo {
-  display: inline-block;
+  display: block;
+  width: 30%;
+  height: auto;
   float: left;
-  width: 500px;
-  height: 160.719px;
 }
 
 img.photo {
-  display: inline-block;
+  display: block;
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 40%;
+  height: auto;
 }
 
 a.twitter {
@@ -192,7 +192,8 @@ input.button{
 select{
   border: none;
   border-bottom: solid 2px #000e78;
-  width: 200px;
+  max-width: 200px;
+  width: auto;
 }
 
 p.hole{
