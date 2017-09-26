@@ -1,46 +1,53 @@
-body {
-  background-image: url(hex-abstract-material-design-ad.jpg);
-    margin: 0 auto;
-}
-
 header {
   margin: 0 auto;
-    background-color: #424242;
-    height: 140px;
-    width: 100%;
-    /*Allow the header to be fixed*/
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  background-color: #424242;
+  height: 140px;
+  width: 100%;
+  /*Allow the header to be fixed*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-footer{
+footer {
   padding: 20px;
   background-color: #424242;
   color: white;
   clear: both;
 }
 
-article{
+
+
+article {
   /*We add a margin to the top to allow the header to be fixed without hiding any information*/
   margin-top: 160.719px;
 }
 
-p.arial {
-  font-family: "Arial", Arial, arial;
-  color: #000e78;
+input.field{
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #000e78;
+  transition: border 0.3s;
 }
 
+#rcorners {
+  border-radius: 60px;
+  border: 2px solid #000e78;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  background: #ffffff;
+}
+
+
 h1 {
-  font-family: "Lucida Grande", Helvetica, serif;
+  font-family: "Roboto", Helvetica, serif;
   color: white;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
   text-align: right;
   margin-right: 3%;
   margin-top: 0;
   padding-top: 20px;
-
 }
 
 div.bcontent {
@@ -51,69 +58,66 @@ p.clear {
   clear: both;
 }
 
-div.block{ /*PERSONAL INFORMATION*/
+div.block {
+  /*PERSONAL INFORMATION*/
   float: left;
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   font-size: 250%;
   margin-left: 3%;
   margin-top: 3%;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 }
 
-div.block1 { /*DATA PERSONAL INFO*/
-  font-family: "Lucida Grande", Arial, arial;
+div.block1 {
+  /*DATA PERSONAL INFO*/
+  font-family: "Roboto";
   color: #000e78;
   margin-left: 5%;
   margin-top: 3%;
   padding-top: 100px;
   float: left;
-  text-shadow: 2px 1px 3px rgba(0,0,0,0.3);
 }
 
-div.block2 { /*BILLING INFO*/
+div.block2 {
+  /*BILLING INFO*/
   clear: both;
   float: left;
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   font-size: 250%;
   margin-left: 3%;
   margin-top: 3%;
   padding-top: 10px;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 }
 
-div.block3 { /*DATA BILLING INFO*/
-  font-family: "Lucida Grande", Arial, arial;
+div.block3 {
+  /*DATA BILLING INFO*/
+  font-family: "Roboto";
   color: #000e78;
   margin-left: 7%;
   margin-top: 3%;
   padding-top: 100px;
   float: left;
-  text-shadow: 2px 1px 3px rgba(0,0,0,0.3);
 }
 
 div.block4 {
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   margin-left: 150px;
   margin-top: 150px;
-  float:left;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-
+  float: left;
 }
 
 ul.menu {
   list-style-type: none;
   padding: 0;
-  font-family: "Lucida Grande", Arial, arial;
+  font-family: "Roboto";
   color: #000e78;
   overflow: hidden;
   margin-right: 10px;
   display: flex;
   float: right;
   text-align: right;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 a.men {
@@ -123,34 +127,41 @@ a.men {
 }
 
 a.social {
-  padding:20px;
+  padding: 20px;
   border-left: solid white;
 }
 
-a { /*To avoid a line of the URL*/
-    text-decoration: none;
+a {
+  /*To avoid a line of the URL*/
+  text-decoration: none;
 }
 
-a:link, a:visited { /*To avoid the icons changing colour when clicked*/
-    color: #CFD8DC;
+a:link,
+a:visited {
+  /*To avoid the icons changing colour when clicked*/
+  color: #CFD8DC;
 }
+
 
 /*Allows to use the ul in a horizontal way*/
+
 .menu li {
   display: inline-block;
 }
 
 
 /*Makes the input box smaller*/
-.creditcode{
-    width: 25px;
+
+.creditcode {
+  width: 25px;
 }
+
 
 /*Makes the input box bigger*/
-.address{
-    width: 129px;
-}
 
+.address {
+  width: 129px;
+}
 
 img.logo {
   display: inline-block;
@@ -167,7 +178,23 @@ img.photo {
 }
 
 a.twitter {
-	padding: 20px;
-	border-left: solid white;
-    border-right: solid white;
+  padding: 20px;
+  border-left: solid white;
+  border-right: solid white;
+}
+
+input.button{
+  color: 2px #000e78;
+  background-color: #CFD8DC;
+  border: none;
+}
+
+select{
+  border: none;
+  border-bottom: solid 2px #000e78;
+  width: 200px;
+}
+
+p.hole{
+  margin-top: 1%;
 }
