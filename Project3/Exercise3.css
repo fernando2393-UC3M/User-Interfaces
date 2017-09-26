@@ -12,7 +12,7 @@
 
 [class*="col-"] {
   float: left;
-  padding: 15px;
+  padding: 1%;
   width: 100%;
 }
 
@@ -21,8 +21,6 @@
 
 body {
   background: linear-gradient(to right, #F5F5F5, #BDBDBD);
-  margin: 0 0;
-  padding: 0;
   width: 100%;
 }
 
@@ -187,7 +185,6 @@ select {
 }
 
 input.field {
-  padding: 10px;
   border: none;
   border-bottom: solid 2px #000e78;
   transition: border 0.3s;
@@ -331,7 +328,7 @@ a {
     font-size: 250%;
     margin-left: 3%;
     margin-top: 3%;
-    padding-top: 10px;
+    padding-top: 2%;
     clear: none;
   }
   div.block3 {
@@ -428,7 +425,6 @@ a {
     background: rgba(0, 0, 0, 0);
   }
   input.field {
-    padding: 10px;
     border: none;
     border-bottom: solid 2px #000e78;
     transition: border 0.3s;
@@ -442,6 +438,13 @@ a {
     color: #000e78;
     text-align: left;
     margin-left: 1%;
+    margin-top: 5%;
+  }
+
+  div.bill1 {
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    text-align: left;
     margin-top: 5%;
   }
 }
