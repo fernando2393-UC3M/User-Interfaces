@@ -376,6 +376,12 @@ a {
     border-left: solid white;
     margin-left: 0%;
   }
+  a.twitter {
+    padding: 20px;
+    border-left: solid white;
+    margin-left: 0%;
+    border-right: solid white;
+  }
   a {
     /*To avoid a line of the URL*/
     text-decoration: none;
@@ -440,11 +446,11 @@ a {
     margin-left: 1%;
     margin-top: 5%;
   }
-
   div.bill1 {
     font-family: "Roboto", Roboto, Roboto;
     color: #000e78;
     text-align: left;
+    margin-left: -1%;
     margin-top: 5%;
   }
 }
