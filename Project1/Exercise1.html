@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<html lang="en-US">
 
 <head>
     <title>
@@ -76,7 +75,6 @@
 
         <div class="block1">
             Select your language:
-            <p>
                 <form action="Data.php">
                     <select>
               <option value="English">English</option>
@@ -86,16 +84,15 @@
               <option value="Dutch">Dutch</option>
               <option value="Russian">Russian</option>
             </select>
+                </form>
                     <i class="material-icons">language</i>
-            </p>
-
             <p>
                 <input class="button" type="submit" value="Submit">
             </p>
 
             Select Photo
             <p>
-                <input type="file" name="picture" accept="image/*" height="100" width="100">
+                <input type="file" name="picture" accept="image/*">
             </p>
             <p>
                 <input class="button" type="submit" value="Submit">
@@ -117,7 +114,7 @@
             <form action="Data.php">
                 Address:
                 <p>
-                    <input class="field" type="text" name="Address" value="Street, City, ZIP, Country" class="address">
+                    <input class="field" type="text" name="Address" value="Street, City, ZIP, Country">
                     <i class="material-icons">home</i>
                 </p>
                 <p>
@@ -186,12 +183,12 @@
                       </select>
 
                     <i class="material-icons">date_range</i>
-                    <input class="field" class="input class=" field "Card" type="hidden" name="expiry" id="expiry" maxlength="4" />
+                    <input class="field" type="hidden" name="expiry" id="expiry"/>
                 </p>
                 <!--CREDITCODE-->
                 Credit Code:
                 <p>
-                    <input class="field" type="text" id="creditcode" value="000" maxlength="3" class="creditcode">
+                    <input class="field" type="text" id="creditcode" value="000" maxlength="3">
                     <i class="material-icons">done</i>
                 </p>
                 <p>
