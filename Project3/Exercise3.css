@@ -81,7 +81,7 @@ footer {
 
 article {
   /*We add a margin to the top to allow the header to be fixed without hiding any information*/
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 div.block {
@@ -91,7 +91,6 @@ div.block {
   font-family: "Roboto", Roboto, Roboto;
   color: #000e78;
   font-size: 250%;
-  text-align: center;
 }
 
 p.clear {
@@ -106,7 +105,6 @@ div.block1 {
   float: left;
   width: 100%;
   font-size: 150%;
-  text-align: center;
 }
 
 div.block2 {
@@ -116,7 +114,6 @@ div.block2 {
   font-family: "Roboto", Roboto, Roboto;
   color: #000e78;
   font-size: 250%;
-  text-align: center;
 }
 
 div.block3 {
@@ -127,7 +124,6 @@ div.block3 {
   float: left;
   width: 100%;
   font-size: 150%;
-  text-align: center;
 }
 
 div.block4 {
@@ -138,7 +134,6 @@ div.block4 {
   float: left;
   width: 100%;
   font-size: 150%;
-  text-align: center;
 }
 
 .creditcardnum {
@@ -162,7 +157,6 @@ img.photo {
   float: left;
   width: 20%;
   height: auto;
-  margin-left: 40%;
 }
 
 a.social {
@@ -170,10 +164,15 @@ a.social {
   margin-left: 20%;
 }
 
+a.twitter {
+  padding: 1%;
+  margin-left: 20%;
+}
+
 input.button {
-  color: 2px #000e78;
-  background-color: #CFD8DC;
-  border: none;
+ color: white;
+    background-color: #000e78;
+    border: none;
 }
 
 select {
@@ -198,8 +197,15 @@ i.icon {
 div.bill {
   font-family: "Roboto", Roboto, Roboto;
   color: #000e78;
-  text-align: center;
+  margin-left: 5%;
 }
+
+div.bill1 {
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
 
 
 /*Aesthetic stuff*/
@@ -269,7 +275,7 @@ a {
     right: 0;
   }
   footer {
-    padding: 20px;
+    padding: 2%;
     background-color: #424242;
     height: 10%;
     color: white;
@@ -277,7 +283,7 @@ a {
   }
   article {
     /*We add a margin to the top to allow the header to be fixed without hiding any information*/
-    margin-top: 160.719px;
+    margin-top: 15%;
   }
   p.Roboto {
     font-family: "Roboto", Roboto, Roboto;
@@ -289,7 +295,7 @@ a {
     text-align: right;
     margin-right: 3%;
     margin-top: 0;
-    padding-top: 20px;
+    padding-top: 2%;
   }
   div.bcontent {
     color: #000e78;
@@ -305,8 +311,9 @@ a {
     font-size: 250%;
     margin-left: 3%;
     margin-top: 3%;
-    text-align: none;
+    text-align: left;
     clear: none;
+	padding-left: 2%;
   }
   div.block1 {
     /*DATA PERSONAL INFO*/
@@ -328,8 +335,9 @@ a {
     font-size: 250%;
     margin-left: 3%;
     margin-top: 3%;
-    padding-top: 2%;
+	text-align: left;
     clear: none;
+	padding-left: 2%;
   }
   div.block3 {
     /*DATA BILLING INFO*/
@@ -338,7 +346,7 @@ a {
     font-size: 100%;
     margin-left: 3%;
     margin-top: 10%;
-    padding-top: 10px;
+    padding-top: 1%;
     float: left;
     text-align: left;
   }
@@ -358,7 +366,7 @@ a {
     color: #000e78;
     overflow: hidden;
     height: 25%;
-    margin-right: 10px;
+    margin-right: 1%;
     display: flex;
     float: right;
     text-align: right;
@@ -417,10 +425,11 @@ a {
     float: left;
     width: 40%;
     height: auto;
+	margin-left: 0%;
   }
   input.button {
-    color: 2px #000e78;
-    background-color: #CFD8DC;
+    color: white;
+    background-color: #000e78;
     border: none;
   }
   select {
