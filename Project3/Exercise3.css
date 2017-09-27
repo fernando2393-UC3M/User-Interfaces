@@ -27,7 +27,7 @@ body {
 header {
   background-color: #424242;
   height: auto;
-  max-width: 100%;
+  width: 100%;
   /*Allow the header to be fixed*/
   position: fixed;
   top: 0;
@@ -72,16 +72,21 @@ img.logo {
 }
 
 footer {
-  padding: 1%;
+  padding-bottom: 1%;
   background-color: #424242;
   color: white;
   clear: both;
   width: 100%;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  right:0px;
 }
 
 article {
   /*We add a margin to the top to allow the header to be fixed without hiding any information*/
   margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 div.block {
@@ -138,12 +143,6 @@ div.block4 {
 
 .creditcardnum {
   width: 100%;
-}
-
-.creditcode {
-  width: 20%;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 .address {
@@ -275,9 +274,8 @@ a {
     right: 0;
   }
   footer {
-    padding: 2%;
     background-color: #424242;
-    height: 10%;
+    height: 8%;
     color: white;
     clear: both;
   }
@@ -285,6 +283,11 @@ a {
     /*We add a margin to the top to allow the header to be fixed without hiding any information*/
     margin-top: 15%;
   }
+  
+  div.links{
+  margin-left: 1%;
+  }
+  
   p.Roboto {
     font-family: "Roboto", Roboto, Roboto;
     color: #000e78;
@@ -296,6 +299,7 @@ a {
     margin-right: 3%;
     margin-top: 0;
     padding-top: 2%;
+	font-size: 250%;
   }
   div.bcontent {
     color: #000e78;
@@ -361,31 +365,31 @@ a {
   }
   ul.menu {
     list-style-type: none;
-    padding: 0;
+    padding-right: 10%;
     font-family: "Roboto", Roboto, Roboto;
     color: #000e78;
     overflow: hidden;
     height: 25%;
+	width: auto;
     margin-right: 1%;
     display: flex;
     float: right;
-    text-align: right;
+    text-align: center;
     font-size: 150%;
   }
   a.men {
     display: block;
     height: 100%;
     padding-top: 5%;
-    padding-bottom: 5%;
     border: 2px solid #CFD8DC;
   }
   a.social {
-    padding: 20px;
+    padding-bottom: 1%;
     border-left: solid white;
     margin-left: 0%;
   }
   a.twitter {
-    padding: 20px;
+    padding-bottom: 1%;
     border-left: solid white;
     margin-left: 0%;
     border-right: solid white;
@@ -406,14 +410,7 @@ a {
   .table {
     margin-left: 200%;
   }
-  /*Makes the input box smaller*/
-  .creditcode {
-    width: 27px;
-  }
-  /*Makes the input box bigger*/
-  .address {
-    width: 140px;
-  }
+
   img.logo {
     display: block;
     width: 30%;
@@ -459,7 +456,7 @@ a {
     font-family: "Roboto", Roboto, Roboto;
     color: #000e78;
     text-align: left;
-    margin-left: -1%;
     margin-top: 5%;
+	margin-left: 0;
   }
 }
