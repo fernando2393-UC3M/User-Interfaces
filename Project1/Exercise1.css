@@ -1,9 +1,10 @@
 header {
-  margin: 0 auto;
+  margin: 0 0;
   background-color: #424242;
-  height: 140px;
+  height: 185px;
   width: 100%;
   /*Allow the header to be fixed*/
+
   position: fixed;
   top: 0;
   left: 0;
@@ -11,10 +12,15 @@ header {
 }
 
 footer {
-  padding: 20px;
-  background-color: #424242;
-  color: white;
-  clear: both;
+   padding-bottom: 1%;
+   background-color: #424242;
+   color: white;
+   clear: both;
+   width: 100%;
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+   right: 0px;
 }
 
 
@@ -149,19 +155,6 @@ a:visited {
   display: inline-block;
 }
 
-
-/*Makes the input box smaller*/
-
-.creditcode {
-  width: 25px;
-}
-
-
-/*Makes the input box bigger*/
-
-.address {
-  width: 129px;
-}
 
 img.logo {
   display: block;
