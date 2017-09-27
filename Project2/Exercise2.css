@@ -36,13 +36,31 @@ article {
 	background: #ffffff;    
 }
 
-#srcorners {
+#rcorners1 {
     border-radius: 60px;
     border: 2px solid #000e78;
-    padding: 20px; 
+    padding: 20px;
     width: auto;
     height: auto;
-	background: #ffffff;    
+    background: #ffffff;
+}
+
+#rcorners2 {
+    border-radius: 60px;
+    border: 2px solid #000e78;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    background: #ffffff;
+}
+
+#rcorners3 {
+    border-radius: 60px;
+    border: 2px solid #000e78;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    background: #ffffff;
 }
 
 div.head{
@@ -111,15 +129,6 @@ div.title {
     text-align: center;
 }
 
-
-iframe.video {
-    margin-top: 5%;
-	/*max-width: 100%;
-	height: auto;*/
-
-	
-}
-
 div.username {
     color: white;
     float: left;
@@ -146,7 +155,6 @@ img.profile {
 }
 
 img.logo {
-    display: inline-block;
     float: left;
     width: 500px;
     height: 160.719px;
@@ -184,6 +192,7 @@ div.subvideos {
 
 iframe.subvideo {
     clear: top;
+    border: none;
 }
 
 div.subdescription {
@@ -213,4 +222,16 @@ a:link,
 a:visited {
     /*To avoid the icons changing colour when clicked*/
     color: #CFD8DC;
+}
+
+iframe.video {
+    margin-top: 5%;
+    border: none;
+}
+
+iframe.spotify{
+    height: 405px;
+    width: auto;
+    border: none;
+    margin-left: 2%;
 }
