@@ -96,8 +96,6 @@
             </select>
                             <i class="material-icons icon">language</i>
                         </form>
-
-                    </p>
                     <p>
                         <input class="button" type="submit" value="Submit">
                     </p>
@@ -105,7 +103,7 @@
 
                     Select Photo
                     <p>
-                        <input type="file" name="picture" accept="image/*" height="100" width="100">
+                        <input type="file" name="picture" accept="image/*" >
                     </p>
                     <p>
                         <input class="button" type="submit" value="Submit">
@@ -130,7 +128,7 @@
                 <form action="Data.php">
                     Address:
                     <p>
-                        <input class="field" type="text" name="Address" value="Street, City, ZIP, Country" class="address">
+                        <input class="field" type="text" name="Address" value="Street, City, ZIP, Country">
                         <i class="material-icons icon">home</i>
                     </p>
                     <p>
@@ -162,7 +160,7 @@
                     <!--CREDITCARDNUMBER-->
                     Number:
                     <p>
-                        <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000" maxlength="16">
+                        <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
                         <i class="material-icons icon">credit_card</i>
                     </p>
                     <!--VALID THRU-->
@@ -200,12 +198,12 @@
                       </select>
 
                         <i class="material-icons icon">date_range</i>
-                        <input class="field" class="input class=" field "Card" type="hidden" name="expiry" id="expiry" maxlength="4" />
+                        <input class="field" type="hidden" name="expiry" id="expiry">
                     </p>
                     <!--CREDITCODE-->
                     Credit Code:
                     <p>
-                        <input class="field" type="text" id="creditcode" value="000" maxlength="3" class="creditcode">
+                        <input class="field" type="text" id="creditcode" value="000" maxlength="3">
                         <i class="material-icons icon">done</i>
                     </p>
                     <p>
@@ -220,6 +218,7 @@
     </article>
 
     <footer>
+	<div class="links">
         <p>
             <a class="social" href="https://www.filmin.es/aviso-legal">
           <i class="fa fa-copyright" style="font-size:36px"></i>
@@ -231,6 +230,7 @@
             <i class="fa fa-twitter" style="font-size:36px"></i>
         </a>
         </p>
+		</div>
     </footer>
 
 </body>
