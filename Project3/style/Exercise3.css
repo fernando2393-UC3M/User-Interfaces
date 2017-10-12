@@ -1,0 +1,580 @@
+/*Necessary for the responsive design*/
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 1%;
+  width: 100%;
+}
+
+
+/*MOBILE BY DEFAULT*/
+
+body {
+  background: linear-gradient(to right, #F5F5F5, #BDBDBD);
+  width: 100%;
+}
+
+header {
+  background-color: #424242;
+  height: auto;
+  width: 100%;
+  /*Allow the header to be fixed*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+h1 {
+  font-family: "Roboto", Helvetica, serif;
+  font-size: 100%;
+  color: white;
+  text-align: right;
+  margin-right: 3%;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+ul.menu {
+  list-style-type: none;
+  font-family: "Roboto", Roboto, Roboto;
+  color: #000e78;
+  overflow: hidden;
+  margin-right: 5%;
+  margin-top: 0%;
+  display: flex;
+  float: right;
+  text-align: right;
+}
+
+a.men {
+  display: block;
+  padding: 1px 20px;
+  border: 2px solid #CFD8DC;
+  font-size: 60%;
+}
+
+img.logo {
+  display: block;
+  width: 30%;
+  height: auto;
+  float: left;
+}
+
+footer {
+  padding-bottom: 1%;
+  background-color: #424242;
+  color: white;
+  clear: both;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+article {
+  /*We add a margin to the top to allow the header to be fixed without hiding any information*/
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+div.block {
+  /*PERSONAL INFORMATION*/
+  float: left;
+  width: 100%;
+  font-family: "Roboto", Roboto, Roboto;
+  color: #000e78;
+  font-size: 250%;
+}
+
+p.clear {
+  clear: both;
+}
+
+div.block2 {
+  /*BILLING INFO*/
+  float: left;
+  width: 100%;
+  font-family: "Roboto", Roboto, Roboto;
+  color: #000e78;
+  font-size: 250%;
+}
+
+.creditcardnum {
+  width: 100%;
+}
+
+.address {
+  width: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+img.photo {
+  display: block;
+  float: left;
+  width: 20%;
+  height: auto;
+}
+
+a.social {
+  padding: 1%;
+  margin-left: 20%;
+}
+
+a.twitter {
+  padding: 1%;
+  margin-left: 20%;
+}
+
+input.button {
+  color: white;
+  background-color: #000e78;
+  border: none;
+}
+
+select {
+  border: none;
+  border-bottom: solid 2px #000e78;
+  max-width: 200px;
+  width: auto;
+  background: rgba(0, 0, 0, 0);
+}
+
+input.field {
+  border: none;
+  border-bottom: solid 2px #000e78;
+  transition: border 0.3s;
+  background: rgba(0, 0, 0, 0);
+}
+
+i.icon {
+  color: #000e78;
+}
+
+div.bill {
+  font-family: "Roboto", Roboto, Roboto;
+  color: #000e78;
+  margin-left: 5%;
+}
+
+div.bill1 {
+  font-family: "Roboto", Roboto, Roboto;
+  color: #000e78;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+
+/*Aesthetic stuff*/
+
+a:link,
+a:visited {
+  /*To avoid the icons changing colour when clicked*/
+  color: #CFD8DC;
+}
+
+a {
+  /*To avoid a line of the URL*/
+  text-decoration: none;
+}
+
+
+/*For tablet design*/
+
+@media only screen and (min-width: 600px) {
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+  body {
+    background: linear-gradient(to right, #F5F5F5, #BDBDBD);
+    margin: 0 auto;
+  }
+  header {
+    margin: 0 0;
+    background-color: #424242;
+    height: auto;
+    width: 100%;
+    /*Allow the header to be fixed*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  footer {
+    background-color: #424242;
+    height: 8%;
+    color: white;
+    clear: both;
+    padding-left: 2%;
+  }
+  a.social {
+    padding-bottom: 1%;
+    border-left: solid white;
+    margin-left: 0%;
+  }
+  a.twitter {
+    padding-bottom: 1%;
+    border-left: solid white;
+    margin-left: 0%;
+    border-right: solid white;
+  }
+  div.block {
+    /*PERSONAL INFORMATION*/
+    float: left;
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    font-size: 250%;
+    margin-left: 3%;
+    margin-top: 3%;
+    text-align: left;
+    clear: none;
+    padding-left: 2%;
+  }
+  div.block2 {
+    /*BILLING INFO*/
+    float: left;
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    font-size: 250%;
+    margin-left: 3%;
+    margin-top: 3%;
+    text-align: left;
+    clear: none;
+    padding-left: 2%;
+  }
+  ul.menu {
+    list-style-type: none;
+    padding-right: 10%;
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    overflow: hidden;
+    height: 25%;
+    width: auto;
+    margin-right: 1%;
+    display: flex;
+    float: right;
+    text-align: center;
+    font-size: 150%;
+  }
+  a.men {
+    display: block;
+    height: 100%;
+    padding-top: 5%;
+    border: 2px solid #CFD8DC;
+  }
+  a {
+    /*To avoid a line of the URL*/
+    text-decoration: none;
+  }
+  a:link,
+  a:visited {
+    /*To avoid the icons changing colour when clicked*/
+    color: #CFD8DC;
+  }
+  /*Allows to use the ul in a horizontal way*/
+  .menu li {
+    display: inline-block;
+  }
+  .table {
+    margin-left: 200%;
+  }
+  img.logo {
+    display: block;
+    width: 30%;
+    height: auto;
+    float: left;
+  }
+  img.photo {
+    display: block;
+    float: left;
+    width: 40%;
+    height: auto;
+    margin-left: 0%;
+  }
+  input.button {
+    color: white;
+    background-color: #000e78;
+    border: none;
+  }
+  select {
+    border: none;
+    border-bottom: solid 2px #000e78;
+    max-width: 200px;
+    width: auto;
+    background: rgba(0, 0, 0, 0);
+  }
+  input.field {
+    border: none;
+    border-bottom: solid 2px #000e78;
+    transition: border 0.3s;
+    background: rgba(0, 0, 0, 0);
+  }
+  i.icon {
+    color: #000e78;
+  }
+  div.bill {
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 5%;
+  }
+  div.bill1 {
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop:*/
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  body {
+    background: linear-gradient(to right, #F5F5F5, #BDBDBD);
+    margin: 0 auto;
+  }
+  header {
+    margin: 0 0;
+    background-color: #424242;
+    height: auto;
+    width: 100%;
+    /*Allow the header to be fixed*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  footer {
+    background-color: #424242;
+    height: 8%;
+    color: white;
+    clear: both;
+  }
+  article {
+    /*We add a margin to the top to allow the header to be fixed without hiding any information*/
+    margin-top: 15%;
+  }
+  div.links {
+    margin-left: 1%;
+  }
+  p.Roboto {
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+  }
+  h1 {
+    font-family: "Roboto", Helvetica, serif;
+    color: white;
+    text-align: right;
+    margin-right: 3%;
+    margin-top: 0;
+    padding-top: 2%;
+    font-size: 250%;
+  }
+  div.bcontent {
+    color: #000e78;
+  }
+  p.clear {
+    clear: both;
+  }
+  div.block {
+    /*PERSONAL INFORMATION*/
+    float: left;
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    font-size: 250%;
+    margin-left: 3%;
+    margin-top: 3%;
+    text-align: left;
+    clear: none;
+    padding-left: 2%;
+  }
+  div.block2 {
+    /*BILLING INFO*/
+    float: left;
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    font-size: 250%;
+    margin-left: 3%;
+    margin-top: 3%;
+    text-align: left;
+    clear: none;
+    padding-left: 2%;
+  }
+  ul.menu {
+    list-style-type: none;
+    padding-right: 10%;
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    overflow: hidden;
+    height: 25%;
+    width: auto;
+    margin-right: 1%;
+    display: flex;
+    float: right;
+    text-align: center;
+    font-size: 150%;
+  }
+  a.men {
+    display: block;
+    height: 100%;
+    padding-top: 5%;
+    border: 2px solid #CFD8DC;
+  }
+  a.social {
+    padding-bottom: 1%;
+    border-left: solid white;
+    margin-left: 0%;
+  }
+  a.twitter {
+    padding-bottom: 1%;
+    border-left: solid white;
+    margin-left: 0%;
+    border-right: solid white;
+  }
+  a {
+    /*To avoid a line of the URL*/
+    text-decoration: none;
+  }
+  a:link,
+  a:visited {
+    /*To avoid the icons changing colour when clicked*/
+    color: #CFD8DC;
+  }
+  /*Allows to use the ul in a horizontal way*/
+  .menu li {
+    display: inline-block;
+  }
+  .table {
+    margin-left: 200%;
+  }
+  img.logo {
+    display: block;
+    width: 30%;
+    height: auto;
+    float: left;
+  }
+  img.photo {
+    display: block;
+    float: left;
+    width: 40%;
+    height: auto;
+    margin-left: 0%;
+  }
+  input.button {
+    color: white;
+    background-color: #000e78;
+    border: none;
+  }
+  select {
+    border: none;
+    border-bottom: solid 2px #000e78;
+    max-width: 200px;
+    width: auto;
+    background: rgba(0, 0, 0, 0);
+  }
+  input.field {
+    border: none;
+    border-bottom: solid 2px #000e78;
+    transition: border 0.3s;
+    background: rgba(0, 0, 0, 0);
+  }
+  i.icon {
+    color: #000e78;
+  }
+  div.bill {
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 5%;
+  }
+  div.bill1 {
+    font-family: "Roboto", Roboto, Roboto;
+    color: #000e78;
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 0;
+  }
+}
