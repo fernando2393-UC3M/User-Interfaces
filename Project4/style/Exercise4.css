@@ -24,6 +24,15 @@ body {
   width: 100%;
 }
 
+#rectangle {
+  border-radius: 60px;
+  border: 2px solid #000e78;
+  padding: 2%;
+  width: auto;
+  height: auto;
+  background: #ffffff;
+}
+
 header {
   background-color: #424242;
   height: auto;
@@ -174,6 +183,21 @@ div.bill1 {
   color: #000e78;
   margin-left: 5%;
   margin-top: 5%;
+}
+
+div.block3 {
+    float: left;
+    font-family: "Roboto",
+    Roboto,
+    Roboto;
+    color: #000e78;
+    margin-left: 3%;
+    margin-top: 3%;
+    text-align: left;
+    clear: none;
+    padding-left: 2%;
+    clear: both;
+    margin-bottom: -10%;
 }
 
 
@@ -341,6 +365,21 @@ a {
     background-color: #000e78;
     border: none;
   }
+
+  input.buttonl {
+    color: white;
+    background-color: #000e78;
+    border: none;
+    float: left;
+  }
+
+  input.buttonr {
+    color: white;
+    background-color: #000e78;
+    border: none;
+    float: right;
+  }
+
   select {
     border: none;
     border-bottom: solid 2px #000e78;
