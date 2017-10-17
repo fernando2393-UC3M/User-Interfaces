@@ -34,8 +34,8 @@ function checkCookie() {
 }
 
 function checkF1() {
-  var fieldValue = document.forms["passForm"]["username"].value;
-  var pw = document.forms["passForm"]["pass"].value;
+  var fieldValue = document.forms["GlobalForm"]["username"].value;
+  var pw = document.forms["GlobalForm"]["pass"].value;
   if (fieldValue.length === 0) {
     alert("Username is invalid");
     return false;
@@ -56,12 +56,12 @@ function checkF1() {
 }
 
 function checkF2() {
-  var name = document.forms["form2"]["FirstName"].value;
+  var name = document.forms["GlobalForm"]["FirstName"].value;
   if (name.length === 0) {
     alert("Invalid name");
     return false;
   }
-  var surname = document.forms["form2"]["Surname"].value;
+  var surname = document.forms["GlobalForm"]["Surname"].value;
   if (surname.length === 0) {
     alert("Invalid surname");
     return false;
@@ -76,5 +76,34 @@ function checkF2() {
     alert("Invalid date");
     return false;
   }
+  return true;
+}
+
+function checkF3() {
+  var address = document.forms["GlobalForm"]["Address"].value;
+  if(address.length === 0){
+    alert("Invalid address");
+    return false;
+  }
+  var payment = document.forms["GlobalForm"]["Payment"].value;
+  if(payment === "Select"){
+    alert("Invalid payment method");
+    return false;
+  }
+
+  return true;
+}
+
+function globalCheck(){
+  if(checkF1() === false){
+    return false;
+  }
+  if(checkF2() === false){
+    return false;
+  }
+  if(checkF3() === false){
+    return false;
+  }
+  alert("All your data have been stored");
   return true;
 }
