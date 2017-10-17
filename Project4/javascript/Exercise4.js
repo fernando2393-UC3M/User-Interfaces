@@ -54,3 +54,7 @@ function checkF1() {
   }
   return true;
 }
+
+function checkF2(){
+
+}
