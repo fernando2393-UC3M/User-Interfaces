@@ -70,7 +70,7 @@
           PERSONAL INFORMATION
         </div>
       </div>
-      <form>
+      <form name="form2" onsubmit="return checkF2()">
         <div class="col-3 col-m-5 bill">
           Introduce your name
           <p>
@@ -148,7 +148,7 @@
           BILLING INFORMATION
         </div>
       </div>
-      <form>
+      <form name="form3" onsubmit="return checkF3()">
         <div class="col-3 col-m-5 bill">
           Address:
           <p>
@@ -163,7 +163,8 @@
           <p>
             Payment Method
           </p>
-          <select>
+          <select name="Payment">
+                <option value="Select">Select</option>
                 <option value="Credit Card">CreditCard</option>
                 <option value="Paypal">Paypal</option>
                 <option value="BitCoin">BitCoin</option>
