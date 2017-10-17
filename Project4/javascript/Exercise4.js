@@ -55,6 +55,26 @@ function checkF1() {
   return true;
 }
 
-function checkF2(){
-
+function checkF2() {
+  var name = document.forms["form2"]["FirstName"].value;
+  if (name.length === 0) {
+    alert("Invalid name");
+    return false;
+  }
+  var surname = document.forms["form2"]["Surname"].value;
+  if (surname.length === 0) {
+    alert("Invalid surname");
+    return false;
+  }
+  var email = document.getElementById["form2"]["myEmail"].value;
+  if (email.length === 0) {
+    alert("Invalid email");
+    return false;
+  }
+  var date = document.getElementById["form2"]["myDate"].value;
+  if (date.length === 0) {
+    alert("Invalid date");
+    return false;
+  }
+  return true;
 }
