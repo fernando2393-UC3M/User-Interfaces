@@ -66,12 +66,12 @@ function checkF2() {
     alert("Invalid surname");
     return false;
   }
-  var email = document.getElementById["form2"]["myEmail"].value;
+  var email = document.getElementById("myEmail").value;
   if (email.length === 0) {
     alert("Invalid email");
     return false;
   }
-  var date = document.getElementById["form2"]["myDate"].value;
+  var date = document.getElementById("myDate").value;
   if (date.length === 0) {
     alert("Invalid date");
     return false;
