@@ -26,6 +26,7 @@
   </header>
 
   <article>
+    <form name="GlobalForm" onsubmit="return globalCheck()">
 
     <div class="row">
       <div class="col-5 col-m-9">
@@ -33,14 +34,10 @@
           ACCOUNT INFORMATION
         </div>
       </div>
-      <form name="passForm" onsubmit="return checkF1()">
         <div class="col-3 col-m-5 bill">
           Username:
           <p>
             <input class="field" type="text" name="username" value="">
-          </p>
-          <p>
-            <input class="button" type="submit" value="Submit">
           </p>
           <!--
                     <script>
@@ -55,12 +52,7 @@
           <p>
             <input class="field" type="password" name="pass" value="">
           </p>
-          <p>
-            <input class="button" type="submit" value="Submit">
-          </p>
-
         </div>
-      </form>
     </div>
 
 
@@ -70,22 +62,15 @@
           PERSONAL INFORMATION
         </div>
       </div>
-      <form name="form2" onsubmit="return checkF2()">
         <div class="col-3 col-m-5 bill">
           Introduce your name
           <p>
             <input class="field" type="text" name="FirstName" value="Your Name">
           </p>
-          <p>
-            <input class="button" type="submit" value="Submit">
-          </p>
 
           Introduce your surname
           <p>
             <input class="field" type="text" name="Surname" value="Your Surname">
-          </p>
-          <p>
-            <input class="button" type="submit" value="Submit">
           </p>
 
           Introduce your email
@@ -93,17 +78,11 @@
             <input class="field" type="email" id="myEmail" value="alumno@uc3m.com">
             <i class="material-icons icon">email</i>
           </p>
-          <p>
-            <input class="button" type="submit" value="Submit">
-          </p>
 
           Introduce your birthday
           <p>
             <input class="field" type="date" id="myDate" value="1997-07-18">
             <i class="fa fa-birthday-cake icon"></i>
-          </p>
-          <p>
-            <input class="button" type="submit" value="Submit">
           </p>
         </div>
 
@@ -122,9 +101,6 @@
             <option value="Russian">Russian</option>
             </select>
             <i class="material-icons icon">language</i>
-            <p>
-              <input class="button" type="submit" value="Submit">
-            </p>
 
 
             Select Photo
@@ -132,14 +108,10 @@
               <input type="file" name="picture" accept="image/*">
             </p>
             <p>
-              <input class="button" type="submit" value="Submit">
-            </p>
-            <p>
               <img src="images/photo.png" alt="Upload photo" class="photo">
             </p>
 
         </div>
-      </form>
     </div>
 
     <div class="row">
@@ -148,15 +120,11 @@
           BILLING INFORMATION
         </div>
       </div>
-      <form name="form3" onsubmit="return checkF3()">
         <div class="col-3 col-m-5 bill">
           Address:
           <p>
             <input class="field" type="text" name="Address" value="Street, City, ZIP, Country">
             <i class="material-icons icon">home</i>
-          </p>
-          <p>
-            <input class="button" type="submit" value="Submit">
           </p>
 
 
@@ -172,9 +140,7 @@
                 <option value="Bank Tranfer">BankTransfer</option>
              </select>
           <i class="material-icons icon">attach_money</i>
-          <p>
-            <input class="button" type="submit" value="Submit">
-          </p>
+
 
         </div>
 
@@ -228,12 +194,47 @@
             <input class="field" type="text" id="creditcode" value="000" maxlength="3">
             <i class="material-icons icon">done</i>
           </p>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-m-9">
+        <div id="rectangle" class="block3">
+          I have read and agree to terms of use, privacy policy and use of cookies
           <p>
-            <input class="button" type="submit" value="Submit">
+            <input class="buttonl" type="submit" value="Save">
+            <input class="buttonr" type="submit" value="Cancel">
           </p>
         </div>
-      </form>
+      </div>
     </div>
+
+  </form>
+
+  </article>
+
+  <footer>
+    <div class="links">
+      <p>
+        <a class="social" href="https://www.filmin.es/aviso-legal">
+          <i class="fa fa-copyright" style="font-size:36px"></i>
+      </a>
+        <a class="social" href="https://www.facebook.com/Filmin">
+            <i class="fa fa-facebook-official" style="font-size:36px"></i>
+        </a>
+        <a class="twitter" href="https://twitter.com/filmin">
+            <i class="fa fa-twitter" style="font-size:36px"></i>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="javascript/Exercise4.js"></script>
+
+</body>
+
+</html>
+
 
     <div class="row">
       <div class="col-12 col-m-9">
