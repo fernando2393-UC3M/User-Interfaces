@@ -4,6 +4,7 @@ function setCookie(cname, cvalue, exdays) {
   var expires = "expires=" + d.toGMTString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -32,21 +33,24 @@ function checkCookie() {
   }
 }
 
-function checkPass(){
+function checkF1() {
+  var fieldValue = document.forms["passForm"]["username"].value;
   var pw = document.forms["passForm"]["pass"].value;
+  if (fieldValue.length === 0) {
+    alert("Username is invalid");
+    return false;
+  }
   if (pw.length > 8) {
-      alert("Your password must be at most 8 characters");
-      return false;
+    alert("Your password must be at most 8 characters");
+    return false;
   }
   if (pw.search(/[a-z]/i) < 0) {
-      alert("Your password must contain at least one letter.");
-      return false;
+    alert("Your password must contain at least one letter.");
+    return false;
   }
   if (pw.search(/[0-9]/) < 0) {
-      alert("Your password must contain at least one digit.");
-      return false;
+    alert("Your password must contain at least one digit.");
+    return false;
   }
-  else{
-    return true;
-  }
+  return true;
 }
