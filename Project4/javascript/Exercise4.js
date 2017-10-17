@@ -31,3 +31,22 @@ function checkCookie() {
     }
   }
 }
+
+function checkPass(){
+  var pw = document.forms["passForm"]["pass"].value;
+  if (pw.length > 8) {
+      alert("Your password must be at most 8 characters");
+      return false;
+  }
+  if (pw.search(/[a-z]/i) < 0) {
+      alert("Your password must contain at least one letter.");
+      return false;
+  }
+  if (pw.search(/[0-9]/) < 0) {
+      alert("Your password must contain at least one digit.");
+      return false;
+  }
+  else{
+    return true;
+  }
+}
