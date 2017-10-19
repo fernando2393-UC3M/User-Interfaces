@@ -81,12 +81,12 @@ function checkF2() {
 
 function checkF3() {
   var address = document.forms["GlobalForm"]["Address"].value;
-  if(address.length === 0){
+  if (address.length === 0) {
     alert("Invalid address");
     return false;
   }
   var payment = document.forms["GlobalForm"]["Payment"].value;
-  if(payment === "Select"){
+  if (payment === "Select") {
     alert("Invalid payment method");
     return false;
   }
@@ -94,16 +94,21 @@ function checkF3() {
   return true;
 }
 
-function globalCheck(){
-  if(checkF1() === false){
+function globalCheck() {
+  if (checkF1() === false) {
     return false;
   }
-  if(checkF2() === false){
+  if (checkF2() === false) {
     return false;
   }
-  if(checkF3() === false){
+  if (checkF3() === false) {
     return false;
   }
   alert("All your data have been stored");
   return true;
+}
+
+function modalBox() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "inline-block";
 }
