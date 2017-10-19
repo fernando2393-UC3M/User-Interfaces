@@ -1,3 +1,4 @@
+
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
@@ -81,12 +82,12 @@ function checkF2() {
 
 function checkF3() {
   var address = document.forms["GlobalForm"]["Address"].value;
-  if (address.length === 0) {
+  if(address.length === 0){
     alert("Invalid address");
     return false;
   }
   var payment = document.forms["GlobalForm"]["Payment"].value;
-  if (payment === "Select") {
+  if(payment === "Select"){
     alert("Invalid payment method");
     return false;
   }
@@ -94,34 +95,45 @@ function checkF3() {
   return true;
 }
 
-function checkModalPass(){
-  var pw = document.getElementById("modalpass").value;
-  if (pw.length > 8) {
-    alert("Your password must be at most 8 characters");
-  }
-  if (pw.search(/[a-z]/i) < 0) {
-    alert("Your password must contain at least one letter.");
-  }
-  if (pw.search(/[0-9]/) < 0) {
-    alert("Your password must contain at least one digit.");
-  }
-}
-
-function globalCheck() {
-  if (checkF1() === false) {
+function globalCheck(){
+  if(checkF1() === false){
     return false;
   }
-  if (checkF2() === false) {
+  if(checkF2() === false){
     return false;
   }
-  if (checkF3() === false) {
+  if(checkF3() === false){
     return false;
   }
   alert("All your data have been stored");
   return true;
 }
 
-function modalBox() {
-  var modal = document.getElementById('myModal');
-  modal.style.display = "block";
+function showPay(){
+  var x= document.getElementById("myPayment").value;
+  switch(x){
+    case "CreditCard":
+      document.getElementById("creditCard").style.visibility= "visible";
+      document.getElementById("bank").style.visibility= "hidden";
+      document.getElementById("paypal").style.visibility= "hidden";
+      break;
+
+    case "Paypal":
+      document.getElementById("creditCard").style.visibility= "hidden";
+      document.getElementById("bank").style.visibility= "hidden";
+      document.getElementById("paypal").style.visibility= "visible";
+      break;
+
+    case "BankTransfer":
+      document.getElementById("creditCard").style.visibility= "hidden";
+      document.getElementById("bank").style.visibility= "visible";
+      document.getElementById("paypal").style.visibility= "hidden";
+      break;
+
+    default: //Bank Tranfer
+      document.getElementById("creditCard").style.visibility= "hidden";
+      document.getElementById("bank").style.visibility= "hidden";
+      document.getElementById("paypal").style.visibility= "hidden";
+  }
+
 }
