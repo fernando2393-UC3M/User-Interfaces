@@ -25,7 +25,7 @@
     </ul>
   </header>
 
-  <div id="myModal" class="modal">
+  <div id="myModal" class="modal" onsubmit="return checkModalPass()">
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
@@ -45,9 +45,10 @@
             <div>
               Password:
               <p>
-                <input class="field" type="text" name="modalmail" value="">
+                <input class="field" type="password" id="modalpass" value="">
               </p>
             </div>
+            <input class="sub" type="submit" value="Submit">
           </form>
         </div>
       </div>
