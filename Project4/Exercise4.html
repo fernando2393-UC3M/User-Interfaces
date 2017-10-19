@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="style/Exercise4.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="modalBox()">
+
+<body>
 
   <header>
     <img src="images/logo.png" alt="logo" class="logo">
@@ -25,56 +25,20 @@
     </ul>
   </header>
 
-  <div id="myModal" class="modal" onsubmit="checkModalPass(); return false;">
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Welcome to Filmin</h2>
-      </div>
-      <div class="modal-body">
-        <p>Introduce your user information:</p>
-        <div class="modaldata">
-          <form>
-            <div class="modaldiv">
-              Email:
-              <p>
-                <input class="field" type="email" name="modalmail" value="">
-              </p>
-            </div>
-            <div>
-              Password:
-              <p>
-                <input class="field" type="password" id="modalpass" value="">
-              </p>
-            </div>
-            <input class="sub" type="submit" value="Submit">
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
   <article>
-
     <form name="GlobalForm" onsubmit="return globalCheck()">
 
-      <div class="row">
-        <div class="col-5 col-m-9">
-          <div class="block2">
-            ACCOUNT INFORMATION
-          </div>
+    <div class="row">
+      <div class="col-5 col-m-9">
+        <div class="block2">
+          ACCOUNT INFORMATION
         </div>
+      </div>
         <div class="col-3 col-m-5 bill">
           Username:
           <p>
             <input class="field" type="text" name="username" value="">
           </p>
-          <!--
-                    <script>
-                     document.getElementById("demo").innerHTML = checkCookie();
-                    </script>
-                -->
         </div>
 
         <div class="col-3 col-m-5 bill1">
@@ -84,15 +48,15 @@
             <input class="field" type="password" name="pass" value="">
           </p>
         </div>
-      </div>
+    </div>
 
 
-      <div class="row">
-        <div class="col-5 col-m-9">
-          <div class="block">
-            PERSONAL INFORMATION
-          </div>
+    <div class="row">
+      <div class="col-5 col-m-9">
+        <div class="block">
+          PERSONAL INFORMATION
         </div>
+      </div>
         <div class="col-3 col-m-5 bill">
           Introduce your name
           <p>
@@ -131,7 +95,10 @@
             <option value="Dutch">Dutch</option>
             <option value="Russian">Russian</option>
             </select>
-            <i class="material-icons icon">language</i> Select Photo
+            <i class="material-icons icon">language</i>
+
+
+            Select Photo
             <p>
               <input type="file" name="picture" accept="image/*">
             </p>
@@ -140,9 +107,9 @@
             </p>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row">
+    <div class="row">
         <div class="col-5 col-m-9">
           <div class="block2">
             BILLING INFORMATION
@@ -155,89 +122,112 @@
             <i class="material-icons icon">home</i>
           </p>
 
-
           <p>
             Payment Method
           </p>
-          <select name="Payment">
+          <select name="Payment" id="myPayment" onchange="showPay()">
                 <option value="Select">Select</option>
-                <option value="Credit Card">CreditCard</option>
+                <option value="CreditCard" >CreditCard</option>
                 <option value="Paypal">Paypal</option>
                 <option value="BitCoin">BitCoin</option>
                 <option value="Google Wallet">GoogleWallet</option>
-                <option value="Bank Tranfer">BankTransfer</option>
-             </select>
+                <option value="BankTransfer">BankTransfer</option>
+          </select>
           <i class="material-icons icon">attach_money</i>
-
-
         </div>
 
         <div class="col-3 col-m-5 bill1">
-          <!--CREDITCARDNUMBER-->
-          Number:
-          <p>
-            <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
-            <i class="material-icons icon">credit_card</i>
-          </p>
-          <!--VALID THRU-->
-          Valid Thru:
-          <p>
-            <select>
-                          <option value=''>Month</option>
-                          <option value='01'>January</option>
-                          <option value='02'>February</option>
-                          <option value='03'>March</option>
-                          <option value='04'>April</option>
-                          <option value='05'>May</option>
-                          <option value='06'>June</option>
-                          <option value='07'>July</option>
-                          <option value='08'>August</option>
-                          <option value='09'>September</option>
-                          <option value='10'>October</option>
-                          <option value='11'>November</option>
-                          <option value='12'>December</option>
-                      </select>
-            <select>
-                          <option value=''>Year</option>
-                          <option value='17'>2017</option>
-                          <option value='18'>2018</option>
-                          <option value='19'>2019</option>
-                          <option value='20'>2020</option>
-                          <option value='21'>2021</option>
-                          <option value='22'>2022</option>
-                          <option value='23'>2023</option>
-                          <option value='24'>2024</option>
-                          <option value='25'>2025</option>
-                          <option value='26'>2026</option>
-                          <option value='27'>2027</option>
-                          <option value='28'>2028</option>
-                      </select>
-
-            <i class="material-icons icon">date_range</i>
-            <input class="field" type="hidden" name="expiry" id="expiry">
-          </p>
-          <!--CREDITCODE-->
-          Credit Code:
-          <p>
-            <input class="field" type="text" id="creditcode" value="000" maxlength="3">
-            <i class="material-icons icon">done</i>
-          </p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 col-m-9">
-          <div id="rectangle" class="block3">
-            I have read and agree to terms of use, privacy policy and use of cookies
+          <!--CREDITCARDNUMBER (JS)-->
+          <div id="creditCard">
+            Number:
             <p>
-              <input class="buttonl" type="submit" value="Save">
-              <input class="buttonr" type="submit" value="Cancel">
+              <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
+              <i class="material-icons icon">credit_card</i>
+            </p>
+            <!--VALID THRU-->
+            Valid Thru:
+            <p>
+              <select>
+                            <option value=''>Month</option>
+                            <option value='01'>January</option>
+                            <option value='02'>February</option>
+                            <option value='03'>March</option>
+                            <option value='04'>April</option>
+                            <option value='05'>May</option>
+                            <option value='06'>June</option>
+                            <option value='07'>July</option>
+                            <option value='08'>August</option>
+                            <option value='09'>September</option>
+                            <option value='10'>October</option>
+                            <option value='11'>November</option>
+                            <option value='12'>December</option>
+                        </select>
+              <select>
+                            <option value=''>Year</option>
+                            <option value='17'>2017</option>
+                            <option value='18'>2018</option>
+                            <option value='19'>2019</option>
+                            <option value='20'>2020</option>
+                            <option value='21'>2021</option>
+                            <option value='22'>2022</option>
+                            <option value='23'>2023</option>
+                            <option value='24'>2024</option>
+                            <option value='25'>2025</option>
+                            <option value='26'>2026</option>
+                            <option value='27'>2027</option>
+                            <option value='28'>2028</option>
+                        </select>
+
+              <i class="material-icons icon">date_range</i>
+              <input class="field" type="hidden" name="expiry" id="expiry">
+            </p>
+            <!--CREDITCODE-->
+            Credit Code:
+            <p>
+              <input class="field" type="text" id="creditcode" value="000" maxlength="3">
+              <i class="material-icons icon">done</i>
             </p>
           </div>
+
+          <!--PAYPAL (JS)-->
+          <div id="paypal">
+                <a href="https://www.paypal.com/es/home" target="_blank">Go to PayPal</a>
+          </div>
+          <!--BANKTRANSFER (JS)-->
+          <div id="bank">
+            Account Holder Name
+            <p>
+              <input class="field" type="text" name="Full Name" value="Your Name">
+            </p>
+
+            Account Number:
+            <p>
+              <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
+            </p>
+
+            Bank Name
+            <p>
+              <input class="field" type="text" name="Bank Name" value="Your Bank's Name">
+            </p>
+
+          </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-m-9">
+        <div id="rectangle" class="block3">
+          I have read and agree to terms of use, privacy policy and use of cookies
+          <p>
+            <input class="buttonl" type="submit" value="Save">
+            <input class="buttonr" type="submit" value="Cancel">
+          </p>
         </div>
       </div>
+    </div>
 
-    </form>
+  </form>
 
   </article>
 
