@@ -94,6 +94,19 @@ function checkF3() {
   return true;
 }
 
+function checkModalPass(){
+  var pw = document.getElementById("modalpass").value;
+  if (pw.length > 8) {
+    alert("Your password must be at most 8 characters");
+  }
+  if (pw.search(/[a-z]/i) < 0) {
+    alert("Your password must contain at least one letter.");
+  }
+  if (pw.search(/[0-9]/) < 0) {
+    alert("Your password must contain at least one digit.");
+  }
+}
+
 function globalCheck() {
   if (checkF1() === false) {
     return false;
@@ -110,5 +123,5 @@ function globalCheck() {
 
 function modalBox() {
   var modal = document.getElementById('myModal');
-  modal.style.display = "inline-block";
+  modal.style.display = "block";
 }
