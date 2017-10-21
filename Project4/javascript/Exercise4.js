@@ -1,3 +1,24 @@
+/*Test Commit*/
+
+/*Photo Uploader*/
+
+function previewFile(){
+       var preview = document.querySelector(".photo"); //selects the query with class="photo"
+       var file    = document.querySelector('input[type=file]').files[0]; //Selects the first file input
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+/*Cookies Block*/
 
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
@@ -22,17 +43,92 @@ function getCookie(cname) {
   return "";
 }
 
-function checkCookie() {
-  var user = getCookie("username");
-  if (user != "") {
-    document.write("Welcome again " + user);
+function checkCookieMail() {
+  var mail = getCookie("mail");
+  if (mail != "") {
   } else {
-    user = prompt("Please enter your name:", "");
-    if (user != "" && user != null) {
-      setCookie("username", user, 30);
+    mail = document.getElementById("modalmail").value;
+    if (mail != "" && mail != null) {
+      setCookie("mail", mail, 30);
     }
   }
 }
+
+function checkCookiePass() {
+  var password = getCookie("password");
+  if (password != "") {
+  } else {
+    password = document.getElementById("modalpass").value;
+    if (password != "" && password != null) {
+      setCookie("password", password, 30);
+    }
+  }
+}
+
+function checkCookieUsrName() {
+  var usr = getCookie("usr");
+  if (usr != "") {
+  } else {
+    usr = document.getElementById("Username").value;
+    if (usr != "" && usr != null) {
+      setCookie("usr", usr, 30);
+    }
+  }
+}
+
+function checkCookieFName() {
+  var fname = getCookie("fname");
+  if (fname != "") {
+  } else {
+    fname = document.getElementById("FirstName").value;
+    if (fname != "" && fname != null) {
+      setCookie("fname", fname, 30);
+    }
+  }
+}
+
+function checkCookieSurname() {
+  var surname = getCookie("surname");
+  if (surname != "") {
+  } else {
+    surname = document.getElementById("Surname").value;
+    if (surname != "" && surname != null) {
+      setCookie("surname", surname, 30);
+    }
+  }
+}
+
+function checkCookieLanguage() {
+  var lang = getCookie("lang");
+  if (lang != "") {
+  } else {
+    surname = document.getElementById("Language").value;
+    if (lang != "" && lang != null) {
+      setCookie("lang", lang, 30);
+    }
+  }
+}
+
+function setPass(){
+  document.getElementById("pass").value = getCookie("password");
+}
+
+function setMail(){
+  document.getElementById("myEmail").value = getCookie("mail");
+}
+
+function setFName(){
+  var fname = getCookie("fname");
+  if(fname != "" && fname != null){
+    document.getElementById("FirstName").value = getCookie("fname");
+  }
+}
+
+function resetAllCookies(){
+  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+/*Checks Block*/
 
 function checkF1() {
   var fieldValue = document.forms["GlobalForm"]["username"].value;
@@ -82,12 +178,12 @@ function checkF2() {
 
 function checkF3() {
   var address = document.forms["GlobalForm"]["Address"].value;
-  if(address.length === 0){
+  if (address.length === 0) {
     alert("Invalid address");
     return false;
   }
   var payment = document.forms["GlobalForm"]["Payment"].value;
-  if(payment === "Select"){
+  if (payment === "Select") {
     alert("Invalid payment method");
     return false;
   }
@@ -95,18 +191,41 @@ function checkF3() {
   return true;
 }
 
-function globalCheck(){
-  if(checkF1() === false){
+function checkModalPass(){
+  var pw = document.getElementById("modalpass").value;
+  if (pw.length > 8) {
+    alert("Your password must be at most 8 characters");
+  }
+  if (pw.search(/[a-z]/i) < 0) {
+    alert("Your password must contain at least one letter.");
+  }
+  if (pw.search(/[0-9]/) < 0) {
+    alert("Your password must contain at least one digit.");
+  }
+}
+
+function globalCheck() {
+  if (checkF1() === false) {
     return false;
   }
-  if(checkF2() === false){
+  if (checkF2() === false) {
     return false;
   }
-  if(checkF3() === false){
+  if (checkF3() === false) {
     return false;
   }
   alert("All your data have been stored");
   return true;
+}
+
+function modalBox() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "block";
+}
+
+function modalBoxHide(){
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
 }
 
 function showPay(){
@@ -135,5 +254,4 @@ function showPay(){
       document.getElementById("bank").style.visibility= "hidden";
       document.getElementById("paypal").style.visibility= "hidden";
   }
-
 }
