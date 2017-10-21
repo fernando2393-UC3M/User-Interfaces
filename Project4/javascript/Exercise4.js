@@ -1,8 +1,8 @@
 /*Photo Uploader*/
 
 function previewFile(){
-       var preview = document.querySelector(".photo"); //selects the query named img
-       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var preview = document.querySelector(".photo"); //selects the query with class="photo"
+       var file    = document.querySelector('input[type=file]').files[0]; //Selects the first file input
        var reader  = new FileReader();
 
        reader.onloadend = function () {
@@ -45,7 +45,6 @@ function getCookie(cname) {
 function checkCookieMail() {
   var mail = getCookie("mail");
   if (mail != "") {
-    alert("Welcome again");
   } else {
     mail = document.getElementById("modalmail").value;
     if (mail != "" && mail != null) {

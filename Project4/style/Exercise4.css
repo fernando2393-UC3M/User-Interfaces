@@ -424,9 +424,11 @@ a {
   img.photo {
     display: block;
     float: left;
-    width: 40%;
+    width: auto;
     height: auto;
     margin-left: 0%;
+    max-height: 200px;
+    max-width: 112.5px;
   }
 
   button {
