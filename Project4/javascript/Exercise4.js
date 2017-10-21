@@ -81,6 +81,34 @@ function checkCookiePass() {
   }
 }
 
+function checkCookieMyMail() {
+  var mail = getCookie("mail");
+  if (mail != "") {
+    document.cookie = "mail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    mail = document.getElementById("myEmail").value;
+    setCookie("mail", mail, 30);
+  } else {
+    mail = document.getElementById("myEmail").value;
+    if (mail != "" && mail != null) {
+      setCookie("mail", mail, 30);
+    }
+  }
+}
+
+function checkCookieMyPassword() {
+  var password = getCookie("password");
+  if (password != "") {
+    document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    password = document.getElementById("pass").value;
+    setCookie("password", password, 30);
+  } else {
+    password = document.getElementById("pass").value;
+    if (password != "" && password != null) {
+      setCookie("password", password, 30);
+    }
+  }
+}
+
 function checkCookieUsrName() {
   var usr = getCookie("usr");
   if (usr != "") {
@@ -123,6 +151,20 @@ function checkCookieSurname() {
   }
 }
 
+function checkCookieAddress() {
+  var address = getCookie("address");
+  if (address != "") {
+    document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    address = document.getElementById("Address").value;
+    setCookie("address", address, 30);
+  } else {
+    address = document.getElementById("Address").value;
+    if (address != "" && address != null) {
+      setCookie("address", address, 30);
+    }
+  }
+}
+
 function setPass() {
   document.getElementById("pass").value = getCookie("password");
 }
@@ -141,6 +183,10 @@ function setFName() {
 
 function setSurname() {
     document.getElementById("Surname").value = getCookie("surname");
+}
+
+function setAddress() {
+    document.getElementById("Address").value = getCookie("address");
 }
 
 

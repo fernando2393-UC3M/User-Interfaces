@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="modalBox()" onsubmit= "setPass(); setMail(); setUsrName(); setFName(); setSurname()">
+<body onload="modalBox()" onsubmit= "setPass(); setMail(); setUsrName(); setFName(); setSurname(); setAddress()">
 
   <header>
     <img src="images/logo.png" alt="logo" class="logo">
@@ -57,7 +57,7 @@
 
   <article>
 
-    <form name="GlobalForm" onsubmit="checkCookieUsrName(); checkCookieFName(); checkCookieSurname()">
+    <form name="GlobalForm" onsubmit="checkCookieMyMail(); checkCookieMyPassword(); checkCookieUsrName(); checkCookieFName(); checkCookieSurname(); checkCookieAddress()">
 
       <div class="row">
         <div class="col-5 col-m-9">
@@ -148,7 +148,7 @@
         <div class="col-3 col-m-5 bill">
           Address:
           <p>
-            <input class="field" type="text" name="Address" value="Street, City, ZIP, Country">
+            <input class="field" type="text" id="Address" name="Address" value="Street, City, ZIP, Country">
             <i class="material-icons icon">home</i>
           </p>
 
