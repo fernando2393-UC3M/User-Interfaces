@@ -2,21 +2,21 @@
 
 /*Photo Uploader*/
 
-function previewFile(){
-       var preview = document.querySelector(".photo"); //selects the query with class="photo"
-       var file    = document.querySelector('input[type=file]').files[0]; //Selects the first file input
-       var reader  = new FileReader();
+function previewFile() {
+  var preview = document.querySelector(".photo"); //selects the query with class="photo"
+  var file = document.querySelector('input[type=file]').files[0]; //Selects the first file input
+  var reader = new FileReader();
 
-       reader.onloadend = function () {
-           preview.src = reader.result;
-       }
-
-       if (file) {
-           reader.readAsDataURL(file); //reads the data as a URL
-       } else {
-           preview.src = "";
-       }
+  reader.onloadend = function() {
+    preview.src = reader.result;
   }
+
+  if (file) {
+    reader.readAsDataURL(file); //reads the data as a URL
+  } else {
+    preview.src = "";
+  }
+}
 
 
 /*Cookies Block*/
@@ -46,8 +46,7 @@ function getCookie(cname) {
 
 function checkCookieMail() {
   var mail = getCookie("mail");
-  if (mail != "") {
-  } else {
+  if (mail != "") {} else {
     mail = document.getElementById("modalmail").value;
     if (mail != "" && mail != null) {
       setCookie("mail", mail, 30);
@@ -57,8 +56,7 @@ function checkCookieMail() {
 
 function checkCookiePass() {
   var password = getCookie("password");
-  if (password != "") {
-  } else {
+  if (password != "") {} else {
     password = document.getElementById("modalpass").value;
     if (password != "" && password != null) {
       setCookie("password", password, 30);
@@ -68,8 +66,7 @@ function checkCookiePass() {
 
 function checkCookieUsrName() {
   var usr = getCookie("usr");
-  if (usr != "") {
-  } else {
+  if (usr != "") {} else {
     usr = document.getElementById("Username").value;
     if (usr != "" && usr != null) {
       setCookie("usr", usr, 30);
@@ -79,8 +76,7 @@ function checkCookieUsrName() {
 
 function checkCookieFName() {
   var fname = getCookie("fname");
-  if (fname != "") {
-  } else {
+  if (fname != "") {} else {
     fname = document.getElementById("FirstName").value;
     if (fname != "" && fname != null) {
       setCookie("fname", fname, 30);
@@ -90,8 +86,7 @@ function checkCookieFName() {
 
 function checkCookieSurname() {
   var surname = getCookie("surname");
-  if (surname != "") {
-  } else {
+  if (surname != "") {} else {
     surname = document.getElementById("Surname").value;
     if (surname != "" && surname != null) {
       setCookie("surname", surname, 30);
@@ -101,8 +96,7 @@ function checkCookieSurname() {
 
 function checkCookieLanguage() {
   var lang = getCookie("lang");
-  if (lang != "") {
-  } else {
+  if (lang != "") {} else {
     surname = document.getElementById("Language").value;
     if (lang != "" && lang != null) {
       setCookie("lang", lang, 30);
@@ -110,22 +104,22 @@ function checkCookieLanguage() {
   }
 }
 
-function setPass(){
+function setPass() {
   document.getElementById("pass").value = getCookie("password");
 }
 
-function setMail(){
+function setMail() {
   document.getElementById("myEmail").value = getCookie("mail");
 }
 
-function setFName(){
+function setFName() {
   var fname = getCookie("fname");
-  if(fname != "" && fname != null){
+  if (fname != "" && fname != null) {
     document.getElementById("FirstName").value = getCookie("fname");
   }
 }
 
-function resetAllCookies(){
+function resetAllCookies() {
   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
@@ -192,17 +186,21 @@ function checkF3() {
   return true;
 }
 
-function checkModalPass(){
+function checkModalPass() {
   var pw = document.getElementById("modalpass").value;
   if (pw.length > 8) {
     alert("Your password must be at most 8 characters");
+    return false;
   }
   if (pw.search(/[a-z]/i) < 0) {
     alert("Your password must contain at least one letter.");
+    return false;
   }
   if (pw.search(/[0-9]/) < 0) {
     alert("Your password must contain at least one digit.");
+    return false;
   }
+  return true;
 }
 
 function globalCheck() {
@@ -224,7 +222,9 @@ function modalBox() {
   modal.style.display = "block";
 }
 
-function modalBoxHide(){
-  var modal = document.getElementById('myModal');
-  modal.style.display = "none";
+function modalBoxHide() {
+  if (checkModalPass() === true) {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+  }
 }
