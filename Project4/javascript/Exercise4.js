@@ -56,11 +56,20 @@ function checkCookieMail() {
 
 function checkCookiePass() {
   var password = getCookie("password");
-  if (password != "") {} else {
+  if (password != "") {
+    if (password === document.getElementById("modalpass").value) {
+      return true;
+    } else {
+      alert("Invalid password, try again.");
+      return false;
+    }
+  } else {
     password = document.getElementById("modalpass").value;
     if (password != "" && password != null) {
       setCookie("password", password, 30);
+      return true;
     }
+    return false;
   }
 }
 
@@ -223,8 +232,36 @@ function modalBox() {
 }
 
 function modalBoxHide() {
-  if (checkModalPass() === true) {
+  if (checkModalPass() === true && checkCookiePass() === true) {
     var modal = document.getElementById('myModal');
     modal.style.display = "none";
+  }
+}
+
+function showPay(){
+  var x= document.getElementById("myPayment").value;
+  switch(x){
+    case "CreditCard":
+      document.getElementById("creditCard").style.visibility= "visible";
+      document.getElementById("bank").style.visibility= "hidden";
+      document.getElementById("paypal").style.visibility= "hidden";
+      break;
+
+    case "Paypal":
+      document.getElementById("creditCard").style.visibility= "hidden";
+      document.getElementById("bank").style.visibility= "hidden";
+      document.getElementById("paypal").style.visibility= "visible";
+      break;
+
+    case "BankTransfer":
+      document.getElementById("creditCard").style.visibility= "hidden";
+      document.getElementById("bank").style.visibility= "visible";
+      document.getElementById("paypal").style.visibility= "hidden";
+      break;
+
+    default: //Bank Tranfer
+      document.getElementById("creditCard").style.visibility= "hidden";
+      document.getElementById("bank").style.visibility= "hidden";
+      document.getElementById("paypal").style.visibility= "hidden";
   }
 }

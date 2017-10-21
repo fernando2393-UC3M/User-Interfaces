@@ -34,7 +34,7 @@
       <div class="modal-body">
         <p>Introduce your user information:</p>
         <div class="modaldata">
-          <form onsubmit="checkCookieMail(); checkCookiePass()">
+          <form onsubmit="checkCookieMail()">
             <div class="modaldiv">
               Email:
               <p>
@@ -156,13 +156,13 @@
           <p>
             Payment Method
           </p>
-          <select name="Payment">
-                <option value="Select">Select</option>
-                <option value="Credit Card">CreditCard</option>
-                <option value="Paypal">Paypal</option>
-                <option value="BitCoin">BitCoin</option>
-                <option value="Google Wallet">GoogleWallet</option>
-                <option value="Bank Tranfer">BankTransfer</option>
+          <select name="Payment" id="myPayment" onchange="showPay()">
+            <option value="Select">Select</option>
+            <option value="CreditCard">CreditCard</option>
+            <option value="Paypal">Paypal</option>
+            <option value="BitCoin">BitCoin</option>
+            <option value="Google Wallet">GoogleWallet</option>
+            <option value="BankTransfer">BankTransfer</option>
              </select>
           <i class="material-icons icon">attach_money</i>
 
@@ -170,55 +170,81 @@
         </div>
 
         <div class="col-3 col-m-5 bill1">
-          <!--CREDITCARDNUMBER-->
-          Number:
-          <p>
-            <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
-            <i class="material-icons icon">credit_card</i>
-          </p>
-          <!--VALID THRU-->
-          Valid Thru:
-          <p>
-            <select>
-                          <option value=''>Month</option>
-                          <option value='01'>January</option>
-                          <option value='02'>February</option>
-                          <option value='03'>March</option>
-                          <option value='04'>April</option>
-                          <option value='05'>May</option>
-                          <option value='06'>June</option>
-                          <option value='07'>July</option>
-                          <option value='08'>August</option>
-                          <option value='09'>September</option>
-                          <option value='10'>October</option>
-                          <option value='11'>November</option>
-                          <option value='12'>December</option>
-                      </select>
-            <select>
-                          <option value=''>Year</option>
-                          <option value='17'>2017</option>
-                          <option value='18'>2018</option>
-                          <option value='19'>2019</option>
-                          <option value='20'>2020</option>
-                          <option value='21'>2021</option>
-                          <option value='22'>2022</option>
-                          <option value='23'>2023</option>
-                          <option value='24'>2024</option>
-                          <option value='25'>2025</option>
-                          <option value='26'>2026</option>
-                          <option value='27'>2027</option>
-                          <option value='28'>2028</option>
-                      </select>
+          <!--CREDITCARDNUMBER (JS)-->
+          <div id="creditCard">
+            Number:
+            <p>
+              <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
+              <i class="material-icons icon">credit_card</i>
+            </p>
+            <!--VALID THRU-->
+            Valid Thru:
+            <p>
+              <select>
+                            <option value=''>Month</option>
+                            <option value='01'>January</option>
+                            <option value='02'>February</option>
+                            <option value='03'>March</option>
+                            <option value='04'>April</option>
+                            <option value='05'>May</option>
+                            <option value='06'>June</option>
+                            <option value='07'>July</option>
+                            <option value='08'>August</option>
+                            <option value='09'>September</option>
+                            <option value='10'>October</option>
+                            <option value='11'>November</option>
+                            <option value='12'>December</option>
+                        </select>
+              <select>
+                            <option value=''>Year</option>
+                            <option value='17'>2017</option>
+                            <option value='18'>2018</option>
+                            <option value='19'>2019</option>
+                            <option value='20'>2020</option>
+                            <option value='21'>2021</option>
+                            <option value='22'>2022</option>
+                            <option value='23'>2023</option>
+                            <option value='24'>2024</option>
+                            <option value='25'>2025</option>
+                            <option value='26'>2026</option>
+                            <option value='27'>2027</option>
+                            <option value='28'>2028</option>
+                        </select>
 
-            <i class="material-icons icon">date_range</i>
-            <input class="field" type="hidden" name="expiry" id="expiry">
-          </p>
-          <!--CREDITCODE-->
-          Credit Code:
-          <p>
-            <input class="field" type="text" id="creditcode" value="000" maxlength="3">
-            <i class="material-icons icon">done</i>
-          </p>
+              <i class="material-icons icon">date_range</i>
+              <input class="field" type="hidden" name="expiry" id="expiry">
+            </p>
+            <!--CREDITCODE-->
+            Credit Code:
+            <p>
+              <input class="field" type="text" id="creditcode" value="000" maxlength="3">
+              <i class="material-icons icon">done</i>
+            </p>
+          </div>
+
+          <!--PAYPAL (JS)-->
+          <div id="paypal">
+                <a href="https://www.paypal.com/es/home" target="_blank">Go to PayPal</a>
+          </div>
+          <!--BANKTRANSFER (JS)-->
+          <div id="bank">
+            Account Holder Name
+            <p>
+              <input class="field" type="text" name="Full Name" value="Your Name">
+            </p>
+
+            Account Number:
+            <p>
+              <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
+            </p>
+
+            Bank Name
+            <p>
+              <input class="field" type="text" name="Bank Name" value="Your Bank's Name">
+            </p>
+
+          </div>
+
         </div>
       </div>
 
