@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="style/Exercise4.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-
-<body>
+<body onload="modalBox()" onsubmit="modalBoxHide(); setPass(); setMail(); setFName()">
 
   <header>
     <img src="images/logo.png" alt="logo" class="logo">
@@ -25,19 +25,50 @@
     </ul>
   </header>
 
-  <article>
-    <form name="GlobalForm" onsubmit="return globalCheck()">
+  <div id="myModal" class="modal" onsubmit="checkModalPass(); return false;">
 
-    <div class="row">
-      <div class="col-5 col-m-9">
-        <div class="block2">
-          ACCOUNT INFORMATION
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Welcome to Filmin</h2>
+      </div>
+      <div class="modal-body">
+        <p>Introduce your user information:</p>
+        <div class="modaldata">
+          <form onsubmit="checkCookieMail(); checkCookiePass()">
+            <div class="modaldiv">
+              Email:
+              <p>
+                <input class="field" type="email" id="modalmail" value="">
+              </p>
+            </div>
+            <div>
+              Password:
+              <p>
+                <input class="field" type="password" id="modalpass" value="">
+              </p>
+            </div>
+            <input class="sub" type="submit" value="Submit">
+          </form>
         </div>
       </div>
+    </div>
+  </div>
+
+
+  <article>
+
+    <form name="GlobalForm" onsubmit="return globalCheck(); checkCookieFName()">
+
+      <div class="row">
+        <div class="col-5 col-m-9">
+          <div class="block2">
+            ACCOUNT INFORMATION
+          </div>
+        </div>
         <div class="col-3 col-m-5 bill">
           Username:
           <p>
-            <input class="field" type="text" name="username" value="">
+            <input class="field" type="text" id="username" name="Username" value="Username">
           </p>
         </div>
 
@@ -45,32 +76,32 @@
 
           Password:
           <p>
-            <input class="field" type="password" name="pass" value="">
+            <input class="field" type="password" id="pass" name="pass" value="">
           </p>
         </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-5 col-m-9">
-        <div class="block">
-          PERSONAL INFORMATION
-        </div>
       </div>
+
+
+      <div class="row">
+        <div class="col-5 col-m-9">
+          <div class="block">
+            PERSONAL INFORMATION
+          </div>
+        </div>
         <div class="col-3 col-m-5 bill">
           Introduce your name
           <p>
-            <input class="field" type="text" name="FirstName" value="Your Name">
+            <input class="field" type="text" id="FirstName" name="FirstName" value="Your Name">
           </p>
 
           Introduce your surname
           <p>
-            <input class="field" type="text" name="Surname" value="Your Surname">
+            <input class="field" type="text" id="Surname" name="Surname" value="Your Surname">
           </p>
 
           Introduce your email
           <p>
-            <input class="field" type="email" id="myEmail" value="alumno@uc3m.com">
+            <input class="field" type="email" id="myEmail" value="alumno@uc3m.es">
             <i class="material-icons icon">email</i>
           </p>
 
@@ -87,7 +118,7 @@
           Select your language
           <p>
 
-            <select>
+            <select id="Language">
             <option value="English">English</option>
             <option value="Spanish">Spanish</option>
             <option value="French">French</option>
@@ -96,20 +127,19 @@
             <option value="Russian">Russian</option>
             </select>
             <i class="material-icons icon">language</i>
-
-
-            Select Photo
+          </p>
+          Select Photo
             <p>
-              <input type="file" name="picture" accept="image/*">
-            </p>
-            <p>
-              <img src="images/photo.png" alt="Upload photo" class="photo">
+              <input type="file" name="picture" onchange="previewFile()">
+              <p>
+                <img src="images/photo.png" alt="Upload photo" class="photo">
+              </p>
             </p>
 
         </div>
-    </div>
+      </div>
 
-    <div class="row">
+      <div class="row">
         <div class="col-5 col-m-9">
           <div class="block2">
             BILLING INFORMATION
@@ -121,6 +151,7 @@
             <input class="field" type="text" name="Address" value="Street, City, ZIP, Country">
             <i class="material-icons icon">home</i>
           </p>
+
 
           <p>
             Payment Method
@@ -134,6 +165,8 @@
                 <option value="BankTransfer">BankTransfer</option>
           </select>
           <i class="material-icons icon">attach_money</i>
+
+
         </div>
 
         <div class="col-3 col-m-5 bill1">
@@ -213,21 +246,21 @@
           </div>
 
         </div>
-    </div>
+      </div>
 
-    <div class="row">
-      <div class="col-12 col-m-9">
-        <div id="rectangle" class="block3">
-          I have read and agree to terms of use, privacy policy and use of cookies
-          <p>
-            <input class="buttonl" type="submit" value="Save">
-            <input class="buttonr" type="submit" value="Cancel">
-          </p>
+      <div class="row">
+        <div class="col-12 col-m-9">
+          <div id="rectangle" class="block3">
+            I have read and agree to terms of use, privacy policy and use of cookies
+            <p>
+              <input class="buttonl" type="submit" value="Save">
+              <input class="buttonr" type="submit" value="Cancel">
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-  </form>
+    </form>
 
   </article>
 
