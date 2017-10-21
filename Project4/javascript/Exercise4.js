@@ -112,9 +112,12 @@ function checkCookieMyPassword() {
 function checkCookieUsrName() {
   var usr = getCookie("usr");
   if (usr != "") {
-    document.cookie = "usr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    usr = document.getElementById("Username").value;
-    setCookie("usr", usr, 30);
+    if(usr != document.getElementById("Username").value){
+      alert("User name has been changed");
+      document.cookie = "usr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; //Delete old cookie
+      usr = document.getElementById("Username").value;                          //usr is new name
+      setCookie("usr", usr, 30);
+    }
   } else {
     usr = document.getElementById("Username").value;
     if (usr != "" && usr != null) {
@@ -126,9 +129,12 @@ function checkCookieUsrName() {
 function checkCookieFName() {
   var fname = getCookie("fname");
   if (fname != "") {
-    document.cookie = "fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    fname = document.getElementById("FirstName").value;
-    setCookie("fname", fname, 30);
+    if(fname != document.getElementById("FirstName").value){
+      alert("First name has been changed");
+      document.cookie = "fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      fname = document.getElementById("FirstName").value;
+      setCookie("fname", fname, 30);
+    }
   } else {
     fname = document.getElementById("FirstName").value;
     if (fname != "" && fname != null) {
@@ -140,9 +146,12 @@ function checkCookieFName() {
 function checkCookieSurname() {
   var surname = getCookie("surname");
   if (surname != "") {
-    document.cookie = "surname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    surname = document.getElementById("Surname").value;
-    setCookie("surname", surname, 30);
+    if(surname != document.getElementById("Surname").value){
+      alert("Surname has been changed");
+      document.cookie = "surname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      surname = document.getElementById("Surname").value;
+      setCookie("surname", surname, 30);
+    }
   } else {
     surname = document.getElementById("Surname").value;
     if (surname != "" && surname != null) {
@@ -154,9 +163,12 @@ function checkCookieSurname() {
 function checkCookieAddress() {
   var address = getCookie("address");
   if (address != "") {
-    document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    address = document.getElementById("Address").value;
-    setCookie("address", address, 30);
+    if(address != document.getElementById("Address").value){
+      alert("Address has been changed");
+      document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      address = document.getElementById("Address").value;
+      setCookie("address", address, 30);
+    }
   } else {
     address = document.getElementById("Address").value;
     if (address != "" && address != null) {
@@ -190,10 +202,22 @@ function setAddress() {
 }
 
 
-
 function resetAllCookies() {
   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "mail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "usr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "surname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  alert("Cookies Removed");
+  location.reload();
 }
+
+function resetForm(){
+  document.getElementById("GlobalForm").reset();
+}
+
 
 /*Checks Block*/
 
@@ -276,6 +300,7 @@ function checkModalPass() {
 }
 
 function globalCheck() {
+  alert("ENTER CHECK");
   if (checkF1() === false) {
     return false;
   }
@@ -286,7 +311,6 @@ function globalCheck() {
     return false;
   }
   alert("All your data have been stored");
-  return true;
 }
 
 function modalBox() {
