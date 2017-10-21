@@ -68,7 +68,7 @@
         <div class="col-3 col-m-5 bill">
           Username:
           <p>
-            <input class="field" type="text" name="username" value="">
+            <input class="field" type="text" id="username" name="Username" value="Username">
           </p>
         </div>
 
@@ -96,7 +96,7 @@
 
           Introduce your surname
           <p>
-            <input class="field" type="text" name="Surname" value="Your Surname">
+            <input class="field" type="text" id="Surname" name="Surname" value="Your Surname">
           </p>
 
           Introduce your email
@@ -118,7 +118,7 @@
           Select your language
           <p>
 
-            <select>
+            <select id="Language">
             <option value="English">English</option>
             <option value="Spanish">Spanish</option>
             <option value="French">French</option>
@@ -126,12 +126,14 @@
             <option value="Dutch">Dutch</option>
             <option value="Russian">Russian</option>
             </select>
-            <i class="material-icons icon">language</i> Select Photo
+            <i class="material-icons icon">language</i>
+          </p>
+          Select Photo
             <p>
-              <input type="file" name="picture" accept="image/*">
-            </p>
-            <p>
-              <img src="images/photo.png" alt="Upload photo" class="photo">
+              <input type="file" name="picture" onchange="previewFile()">
+              <p>
+                <img src="images/photo.png" alt="Upload photo" class="photo">
+              </p>
             </p>
 
         </div>
