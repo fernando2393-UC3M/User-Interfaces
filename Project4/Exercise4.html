@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="modalBox()">
+<body onload="modalBox()" onsubmit="modalBoxHide()">
 
   <header>
     <img src="images/logo.png" alt="logo" class="logo">
@@ -34,11 +34,11 @@
       <div class="modal-body">
         <p>Introduce your user information:</p>
         <div class="modaldata">
-          <form>
+          <form onsubmit="checkCookieMail(); checkCookiePass()">
             <div class="modaldiv">
               Email:
               <p>
-                <input class="field" type="email" name="modalmail" value="">
+                <input class="field" type="email" id="modalmail" value="">
               </p>
             </div>
             <div>
@@ -70,11 +70,6 @@
           <p>
             <input class="field" type="text" name="username" value="">
           </p>
-          <!--
-                    <script>
-                     document.getElementById("demo").innerHTML = checkCookie();
-                    </script>
-                -->
         </div>
 
         <div class="col-3 col-m-5 bill1">

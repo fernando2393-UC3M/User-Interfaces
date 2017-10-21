@@ -21,16 +21,31 @@ function getCookie(cname) {
   return "";
 }
 
-function checkCookie() {
-  var user = getCookie("username");
-  if (user != "") {
-    document.write("Welcome again " + user);
+function checkCookieMail() {
+  var mail = getCookie("mail");
+  if (mail != "") {
+    alert("Welcome again");
   } else {
-    user = prompt("Please enter your name:", "");
-    if (user != "" && user != null) {
-      setCookie("username", user, 30);
+    mail = document.getElementById("modalmail").value;
+    if (mail != "" && mail != null) {
+      setCookie("mail", mail, 30);
     }
   }
+}
+
+function checkCookiePass() {
+  var password = getCookie("password");
+  if (password != "") {
+  } else {
+    password = document.getElementById("modalpass").value;
+    if (password != "" && password != null) {
+      setCookie("password", password, 30);
+    }
+  }
+}
+
+function resetAllCookies(){
+  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
 function checkF1() {
@@ -124,4 +139,9 @@ function globalCheck() {
 function modalBox() {
   var modal = document.getElementById('myModal');
   modal.style.display = "block";
+}
+
+function modalBoxHide(){
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
 }
