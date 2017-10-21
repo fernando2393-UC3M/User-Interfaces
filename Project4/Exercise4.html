@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="modalBox()" onsubmit= "setPass(); setMail(); setFName()">
+<body onload="modalBox()" onsubmit= "setPass(); setMail(); setUsrName(); setFName(); setSurname()">
 
   <header>
     <img src="images/logo.png" alt="logo" class="logo">
@@ -57,7 +57,7 @@
 
   <article>
 
-    <form name="GlobalForm" onsubmit="return globalCheck(); checkCookieFName()">
+    <form name="GlobalForm" onsubmit="return globalCheck(); checkCookieUsrName(); checkCookieFName(); checkCookieSurname()">
 
       <div class="row">
         <div class="col-5 col-m-9">
@@ -68,7 +68,7 @@
         <div class="col-3 col-m-5 bill">
           Username:
           <p>
-            <input class="field" type="text" id="username" name="Username" value="Username">
+            <input class="field" type="text" id="Username" name="Username" value="">
           </p>
         </div>
 
@@ -91,12 +91,12 @@
         <div class="col-3 col-m-5 bill">
           Introduce your name
           <p>
-            <input class="field" type="text" id="FirstName" name="FirstName" value="Your Name">
+            <input class="field" type="text" id="FirstName" name="FirstName" value="">
           </p>
 
           Introduce your surname
           <p>
-            <input class="field" type="text" id="Surname" name="Surname" value="Your Surname">
+            <input class="field" type="text" id="Surname" name="Surname" value="">
           </p>
 
           Introduce your email
@@ -253,7 +253,7 @@
           <div id="rectangle" class="block3">
             I have read and agree to terms of use, privacy policy and use of cookies
             <p>
-              <input class="buttonl" type="submit" value="Save">
+              <input class="buttonl" id="save" type="submit" value="Save">
               <input class="buttonr" type="submit" value="Cancel">
             </p>
           </div>

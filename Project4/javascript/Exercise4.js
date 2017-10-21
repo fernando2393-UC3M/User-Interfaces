@@ -75,7 +75,11 @@ function checkCookiePass() {
 
 function checkCookieUsrName() {
   var usr = getCookie("usr");
-  if (usr != "") {} else {
+  if (usr != "") {
+    document.cookie = "usr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    usr = document.getElementById("Username").value;
+    setCookie("usr", usr, 30);
+  } else {
     usr = document.getElementById("Username").value;
     if (usr != "" && usr != null) {
       setCookie("usr", usr, 30);
@@ -85,7 +89,11 @@ function checkCookieUsrName() {
 
 function checkCookieFName() {
   var fname = getCookie("fname");
-  if (fname != "") {} else {
+  if (fname != "") {
+    document.cookie = "fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    fname = document.getElementById("FirstName").value;
+    setCookie("fname", fname, 30);
+  } else {
     fname = document.getElementById("FirstName").value;
     if (fname != "" && fname != null) {
       setCookie("fname", fname, 30);
@@ -95,20 +103,14 @@ function checkCookieFName() {
 
 function checkCookieSurname() {
   var surname = getCookie("surname");
-  if (surname != "") {} else {
+  if (surname != "") {
+    document.cookie = "surname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    surname = document.getElementById("Surname").value;
+    setCookie("surname", surname, 30);
+  } else {
     surname = document.getElementById("Surname").value;
     if (surname != "" && surname != null) {
       setCookie("surname", surname, 30);
-    }
-  }
-}
-
-function checkCookieLanguage() {
-  var lang = getCookie("lang");
-  if (lang != "") {} else {
-    surname = document.getElementById("Language").value;
-    if (lang != "" && lang != null) {
-      setCookie("lang", lang, 30);
     }
   }
 }
@@ -121,12 +123,19 @@ function setMail() {
   document.getElementById("myEmail").value = getCookie("mail");
 }
 
-function setFName() {
-  var fname = getCookie("fname");
-  if (fname != "" && fname != null) {
-    document.getElementById("FirstName").value = getCookie("fname");
-  }
+function setUsrName() {
+    document.getElementById("Username").value = getCookie("usr");
 }
+
+function setFName() {
+    document.getElementById("FirstName").value = getCookie("fname");
+}
+
+function setSurname() {
+    document.getElementById("Surname").value = getCookie("surname");
+}
+
+
 
 function resetAllCookies() {
   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -237,6 +246,8 @@ function modalBoxHide() {
     modal.style.display = "none";
   }
 }
+
+/*Show payment method block*/
 
 function showPay(){
   var x= document.getElementById("myPayment").value;
