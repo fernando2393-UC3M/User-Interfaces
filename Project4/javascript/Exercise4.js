@@ -46,7 +46,15 @@ function getCookie(cname) {
 
 function checkCookieMail() {
   var mail = getCookie("mail");
-  if (mail != "") {} else {
+  if (mail != "") {
+    if (mail === document.getElementById("modalmail").value) {
+      return true;
+    }
+    else {
+      alert("Invalid mail, try again.");
+      return false;
+    }
+  } else {
     mail = document.getElementById("modalmail").value;
     if (mail != "" && mail != null) {
       setCookie("mail", mail, 30);
@@ -241,7 +249,7 @@ function modalBox() {
 }
 
 function modalBoxHide() {
-  if (checkModalPass() === true && checkCookiePass() === true) {
+  if ((checkModalPass() === true && checkCookiePass() === true) && (checkCookieMail() === true)) {
     var modal = document.getElementById('myModal');
     modal.style.display = "none";
   }
