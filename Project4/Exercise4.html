@@ -57,8 +57,7 @@
 
   <article>
 
-    <form name="GlobalForm" onsubmit="checkCookieMyMail(); checkCookieMyPassword(); checkCookieUsrName(); checkCookieFName(); checkCookieSurname(); checkCookieAddress()">
-
+    <form name="GlobalForm" id="GlobalForm" onsubmit="checkCookieMyMail(); checkCookieMyPassword(); checkCookieUsrName(); checkCookieFName(); checkCookieSurname(); checkCookieAddress()">
       <div class="row">
         <div class="col-5 col-m-9">
           <div class="block2">
@@ -68,7 +67,7 @@
         <div class="col-3 col-m-5 bill">
           Username:
           <p>
-            <input class="field" type="text" id="Username" name="Username" value="">
+            <input class="field" type="text" id="Username" name="Username" value="Username">
           </p>
         </div>
 
@@ -91,12 +90,12 @@
         <div class="col-3 col-m-5 bill">
           Introduce your name
           <p>
-            <input class="field" type="text" id="FirstName" name="FirstName" value="">
+            <input class="field" type="text" id="FirstName" name="FirstName" value="First Name">
           </p>
 
           Introduce your surname
           <p>
-            <input class="field" type="text" id="Surname" name="Surname" value="">
+            <input class="field" type="text" id="Surname" name="Surname" value="Surname">
           </p>
 
           Introduce your email
@@ -253,8 +252,8 @@
           <div id="rectangle" class="block3">
             I have read and agree to terms of use, privacy policy and use of cookies
             <p>
-              <input class="buttonl" id="save" type="submit" value="Save">
-              <input class="buttonr" type="submit" value="Cancel">
+              <input class="buttonl" type="submit" value="Save">
+              <input class="buttonr" id="cancel" type="button" value="Cancel" onclick="resetAllCookies()">
             </p>
           </div>
         </div>
