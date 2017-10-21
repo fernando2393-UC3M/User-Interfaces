@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="modalBox()" onsubmit="modalBoxHide()">
+<body onload="modalBox()" onsubmit="modalBoxHide(); setPass(); setMail(); setFName()">
 
   <header>
     <img src="images/logo.png" alt="logo" class="logo">
@@ -57,7 +57,7 @@
 
   <article>
 
-    <form name="GlobalForm" onsubmit="return globalCheck()">
+    <form name="GlobalForm" onsubmit="return globalCheck(); checkCookieFName()">
 
       <div class="row">
         <div class="col-5 col-m-9">
@@ -76,7 +76,7 @@
 
           Password:
           <p>
-            <input class="field" type="password" name="pass" value="">
+            <input class="field" type="password" id="pass" name="pass" value="">
           </p>
         </div>
       </div>
@@ -91,7 +91,7 @@
         <div class="col-3 col-m-5 bill">
           Introduce your name
           <p>
-            <input class="field" type="text" name="FirstName" value="Your Name">
+            <input class="field" type="text" id="FirstName" name="FirstName" value="Your Name">
           </p>
 
           Introduce your surname
@@ -101,7 +101,7 @@
 
           Introduce your email
           <p>
-            <input class="field" type="email" id="myEmail" value="alumno@uc3m.com">
+            <input class="field" type="email" id="myEmail" value="alumno@uc3m.es">
             <i class="material-icons icon">email</i>
           </p>
 

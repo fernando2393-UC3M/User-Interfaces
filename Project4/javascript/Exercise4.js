@@ -1,3 +1,5 @@
+/*Cookies Block*/
+
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
@@ -44,9 +46,34 @@ function checkCookiePass() {
   }
 }
 
+function checkCookieFName() {
+  var fname = getCookie("fname");
+  if (fname != "") {
+  } else {
+    fname = document.getElementById("FirstName").value;
+    if (fname != "" && fname != null) {
+      setCookie("fname", fname, 30);
+    }
+  }
+}
+
+function setPass(){
+  document.getElementById("pass").value = getCookie("password");
+}
+
+function setMail(){
+  document.getElementById("myEmail").value = getCookie("mail");
+}
+
+function setFName(){
+  document.getElementById("FirstName").value = getCookie("fname");
+}
+
 function resetAllCookies(){
   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
+
+/*Checks Block*/
 
 function checkF1() {
   var fieldValue = document.forms["GlobalForm"]["username"].value;
