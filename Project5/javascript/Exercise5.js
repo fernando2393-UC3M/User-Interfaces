@@ -14,21 +14,25 @@ function getCookie(cname) {
   return "";
 }
 
-
-
 function modalBox() {
   var modal = document.getElementById('myModal');
   modal.style.display = "block";
 }
 
 function modalBoxHide() {
-  if ((checkModalPass() === true && checkCookiePass() === true) && (checkCookieMail() === true)) {
+  var syntaxCheck=checkModalPass();
+  var passCheck=checkCookiePass();
+  if ((syntaxCheck === true && passCheck === true) && (checkCookieMail() === true)) {
     var modal = document.getElementById('myModal');
     modal.style.display = "none";
     //Display values in page
+    document.getElementById("username").innerHTML= getCookie("usr");
   }
   else{
-    alert("HEY");
+    if(syntaxCheck === false || passCheck === false){
+      return false;
+    }
+    window.location="Exercise4.html";
     //Redirect to ex1
   }
 }
