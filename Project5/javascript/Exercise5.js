@@ -91,3 +91,15 @@ function counterShare() {
     shares += 1;
     document.getElementById("shares").innerHTML = shares+" shares";
 }
+
+function display1(){
+  document.getElementById("description1").style.visibility= "visible";
+}
+
+function display2(){
+  document.getElementById("description2").style.visibility= "visible";
+}
+
+function display3(){
+  document.getElementById("description3").style.visibility= "visible";
+}
