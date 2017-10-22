@@ -82,97 +82,138 @@ function checkCookiePass() {
 }
 
 function checkCookieMyMail() {
-  var mail = getCookie("mail");
-  if (mail != "") {
-    document.cookie = "mail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    mail = document.getElementById("myEmail").value;
-    setCookie("mail", mail, 30);
-  } else {
-    mail = document.getElementById("myEmail").value;
-    if (mail != "" && mail != null) {
+  var check=validateMyEmail();  //Check format
+  if(check==false){
+    return false;
+  }
+  else{
+    var mail = getCookie("mail");
+    if (mail != "") {
+      document.cookie = "mail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      mail = document.getElementById("myEmail").value;
       setCookie("mail", mail, 30);
+    } else {
+      mail = document.getElementById("myEmail").value;
+      if (mail != "" && mail != null) {
+        setCookie("mail", mail, 30);
+      }
     }
   }
 }
 
 function checkCookieMyPassword() {
-  var password = getCookie("password");
-  if (password != "") {
-    document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    password = document.getElementById("pass").value;
-    setCookie("password", password, 30);
-  } else {
-    password = document.getElementById("pass").value;
-    if (password != "" && password != null) {
+  var check=validatePass();  //Check format
+  if(check==false){
+    return false;
+  }
+  else{
+    var password = getCookie("password");
+    if (password != "") {
+      document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      password = document.getElementById("pass").value;
       setCookie("password", password, 30);
+    } else {
+      password = document.getElementById("pass").value;
+      if (password != "" && password != null) {
+        setCookie("password", password, 30);
+      }
     }
   }
 }
 
 function checkCookieUsrName() {
-  var usr = getCookie("usr");
-  if (usr != "") {
-    if(usr != document.getElementById("Username").value){
-      alert("User name has been changed");
-      document.cookie = "usr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; //Delete old cookie
-      usr = document.getElementById("Username").value;                          //usr is new name
-      setCookie("usr", usr, 30);
-    }
-  } else {
-    usr = document.getElementById("Username").value;
-    if (usr != "" && usr != null) {
-      setCookie("usr", usr, 30);
+  var check=validateUsrName();  //Check format
+  if(check==false){
+    return false;
+  }
+  else{
+    var usr = getCookie("usr");
+    if (usr != "") {
+      if(usr != document.getElementById("Username").value){
+        alert("User name has been changed");
+        document.cookie = "usr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; //Delete old cookie
+        usr = document.getElementById("Username").value;                          //usr is new name
+        setCookie("usr", usr, 30);
+      }
+    } else {
+      usr = document.getElementById("Username").value;
+      if (usr != "" && usr != null) {
+        setCookie("usr", usr, 30);
+      }
     }
   }
 }
 
 function checkCookieFName() {
-  var fname = getCookie("fname");
-  if (fname != "") {
-    if(fname != document.getElementById("FirstName").value){
-      alert("First name has been changed");
-      document.cookie = "fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  var result=validateFName();  //Check format
+  if(result==false){
+    return false;
+  }
+  else{
+    var fname = getCookie("fname");
+    if (fname != "") {
+      if(fname != document.getElementById("FirstName").value){
+        alert("First name has been changed");
+        document.cookie = "fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        fname = document.getElementById("FirstName").value;
+        setCookie("fname", fname, 30);
+      }
+    } else {
       fname = document.getElementById("FirstName").value;
-      setCookie("fname", fname, 30);
+      if (fname != "" && fname != null) {
+        setCookie("fname", fname, 30);
+      }
     }
-  } else {
-    fname = document.getElementById("FirstName").value;
-    if (fname != "" && fname != null) {
-      setCookie("fname", fname, 30);
-    }
+
   }
 }
 
 function checkCookieSurname() {
-  var surname = getCookie("surname");
-  if (surname != "") {
-    if(surname != document.getElementById("Surname").value){
-      alert("Surname has been changed");
-      document.cookie = "surname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  var result=validateSurname();  //Check format
+  if(result==false){
+    return false;
+  }
+  else{
+    var surname = getCookie("surname");
+    if (surname != "") {
+      if(surname != document.getElementById("Surname").value){
+        alert("Surname has been changed");
+        document.cookie = "surname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        surname = document.getElementById("Surname").value;
+        setCookie("surname", surname, 30);
+      }
+    } else {
       surname = document.getElementById("Surname").value;
-      setCookie("surname", surname, 30);
-    }
-  } else {
-    surname = document.getElementById("Surname").value;
-    if (surname != "" && surname != null) {
-      setCookie("surname", surname, 30);
+      if (surname != "" && surname != null) {
+        setCookie("surname", surname, 30);
+      }
     }
   }
 }
 
 function checkCookieAddress() {
-  var address = getCookie("address");
-  if (address != "") {
-    if(address != document.getElementById("Address").value){
-      alert("Address has been changed");
-      document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  var result=validateAddress();  //Check format
+  var resultPay=validatePay();   //As it is the last cookie check we also check the payment
+  if(result==false){
+    return false;
+  }
+  else if(resultPay==false){
+    return false;
+  }
+  else{
+    var address = getCookie("address");
+    if (address != "") {
+      if(address != document.getElementById("Address").value){
+        alert("Address has been changed");
+        document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        address = document.getElementById("Address").value;
+        setCookie("address", address, 30);
+      }
+    } else {
       address = document.getElementById("Address").value;
-      setCookie("address", address, 30);
-    }
-  } else {
-    address = document.getElementById("Address").value;
-    if (address != "" && address != null) {
-      setCookie("address", address, 30);
+      if (address != "" && address != null) {
+        setCookie("address", address, 30);
+      }
     }
   }
 }
@@ -221,13 +262,17 @@ function resetForm(){
 
 /*Checks Block*/
 
-function checkF1() {
-  var fieldValue = document.forms["GlobalForm"]["username"].value;
-  var pw = document.forms["GlobalForm"]["pass"].value;
+function validateUsrName(){
+  var fieldValue = document.forms["GlobalForm"]["Username"].value;
   if (fieldValue.length === 0) {
     alert("Username is invalid");
     return false;
   }
+  return true;
+}
+
+function validatePass() {
+  var pw = document.forms["GlobalForm"]["pass"].value;
   if (pw.length > 8) {
     alert("Your password must be at most 8 characters");
     return false;
@@ -243,42 +288,48 @@ function checkF1() {
   return true;
 }
 
-function checkF2() {
+function validateFName(){
   var name = document.forms["GlobalForm"]["FirstName"].value;
   if (name.length === 0) {
     alert("Invalid name");
     return false;
   }
+  return true;
+}
+
+function validateSurname(){
   var surname = document.forms["GlobalForm"]["Surname"].value;
   if (surname.length === 0) {
     alert("Invalid surname");
     return false;
   }
+  return true;
+}
+
+function validateMyEmail(){
   var email = document.getElementById("myEmail").value;
   if (email.length === 0) {
     alert("Invalid email");
     return false;
   }
-  var date = document.getElementById("myDate").value;
-  if (date.length === 0) {
-    alert("Invalid date");
+  return true;
+}
+
+function validateAddress(){
+  var address = document.getElementById("Address").value;
+  if (address.length === 0) {
+    alert("Invalid address");
     return false;
   }
   return true;
 }
 
-function checkF3() {
-  var address = document.forms["GlobalForm"]["Address"].value;
-  if (address.length === 0) {
-    alert("Invalid address");
-    return false;
-  }
+function validatePay() {
   var payment = document.forms["GlobalForm"]["Payment"].value;
   if (payment === "Select") {
     alert("Invalid payment method");
     return false;
   }
-
   return true;
 }
 
@@ -299,6 +350,7 @@ function checkModalPass() {
   return true;
 }
 
+/* Incompatible use with cookies
 function globalCheck() {
   alert("ENTER CHECK");
   if (checkF1() === false) {
@@ -312,7 +364,7 @@ function globalCheck() {
   }
   alert("All your data have been stored");
 }
-
+*/ 
 function modalBox() {
   var modal = document.getElementById('myModal');
   modal.style.display = "block";
