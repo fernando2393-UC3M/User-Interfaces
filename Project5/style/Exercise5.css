@@ -1,3 +1,5 @@
+
+
 .modal {
     font-family: "Roboto", Helvetica, serif;
     display: none; /* Hidden by default */
@@ -56,7 +58,7 @@ clear: both;
 }
 
 body {
-    background-image: url(hex-abstract-material-design-ad.jpg);
+    background-image: url(images/hex-abstract-material-design-ad.jpg);
     margin: 0 auto;
 }
 
