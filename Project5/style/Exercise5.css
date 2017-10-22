@@ -233,13 +233,18 @@ i.iconl {
     float: left;
 }
 
-div.adj {
+.adj {
     color: #000e78;
     font-family: "Roboto";
     margin-left: 9%;
     margin-top: -1.5%;
     height: 30%;
     clear: both;
+}
+
+button {
+  border: none;
+  background-color: inherit;
 }
 
 div.subpanel {

@@ -1,3 +1,6 @@
+var clicks = 0;
+var shares = 0;
+
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -20,19 +23,18 @@ function modalBox() {
 }
 
 function modalBoxHide() {
-  var syntaxCheck=checkModalPass();
-  var passCheck=checkCookiePass();
+  var syntaxCheck = checkModalPass();
+  var passCheck = checkCookiePass();
   if ((syntaxCheck === true && passCheck === true) && (checkCookieMail() === true)) {
     var modal = document.getElementById('myModal');
     modal.style.display = "none";
     //Display values in page
-    document.getElementById("username").innerHTML= getCookie("usr");
-  }
-  else{
-    if(syntaxCheck === false || passCheck === false){
+    document.getElementById("username").innerHTML = getCookie("usr");
+  } else {
+    if (syntaxCheck === false || passCheck === false) {
       return false;
     }
-    window.location="Exercise4.html";
+    window.location = "Exercise4.html";
     //Redirect to ex1
   }
 }
@@ -72,11 +74,20 @@ function checkCookieMail() {
   if (mail != "") {
     if (mail === document.getElementById("modalmail").value) {
       return true;
-    }
-    else {
+    } else {
       alert("Invalid mail, try again.");
       return false;
     }
   }
   //Now we dont have to set the cookie, just redirect to ex1
+}
+
+function counterLike() {
+    clicks += 1;
+    document.getElementById("likes").innerHTML = clicks+" likes";
+}
+
+function counterShare() {
+    shares += 1;
+    document.getElementById("shares").innerHTML = shares+" shares";
 }
