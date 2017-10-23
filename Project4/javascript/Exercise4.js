@@ -262,7 +262,7 @@ function resetAllCookies() {
 
 function saveAllCookies() {
   if(checkCookieMyMail() === true && checkCookieMyPassword() === true && checkCookieUsrName() === true && checkCookieFName() === true && checkCookieSurname() === true && checkCookieAddress() == true){
-    alert("All Cookies has ben saved");
+    alert("All Cookies has been saved");
     location.reload();
   }
 }
