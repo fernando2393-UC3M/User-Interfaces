@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>
+    FILMIN
+  </title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style/Exercise4.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body onload="modalBox()" onsubmit= "setPass(); setMail(); setUsrName(); setFName(); setSurname(); setAddress()">
+
+  <header>
+    <img src="images/logo.png" alt="logo" class="logo">
+    <h1>Welcome To Your Account</h1>
+    <ul class="menu">
+      <li><a class="men" href="https://www.filmin.es/blog" target="_blank">Blog</a></li>
+      <li><a class="men" href="https://www.filmin.es/canales" target="_blank">Channels</a></li>
+      <li><a class="men" href="https://www.filmin.es/colecciones" target="_blank">Collections</a></li>
+    </ul>
+  </header>
+
+  <div id="myModal" class="modal" onsubmit="modalBoxHide(); return false;">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Welcome to Filmin</h2>
+      </div>
+      <div class="modal-body">
+        <p>Introduce your user information:</p>
+        <div class="modaldata">
+          <form>
+            <div class="modaldiv">
+              Email:
+              <p>
+                <input class="field" type="email" id="modalmail" value="">
+              </p>
+            </div>
+            <div>
+              Password:
+              <p>
+                <input class="field" type="password" id="modalpass" value="">
+              </p>
+            </div>
+            <input class="sub" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <article>
+
+    <form name="GlobalForm" id="GlobalForm">
+      <div class="row">
+        <div class="col-5 col-m-9">
+          <div class="block2">
+            ACCOUNT INFORMATION
+          </div>
+        </div>
+        <div class="col-3 col-m-5 bill">
+          Username:
+          <p>
+            <input class="field" type="text" id="Username" name="Username" value="Username">
+          </p>
+        </div>
+
+        <div class="col-3 col-m-5 bill1">
+
+          Password:
+          <p>
+            <input class="field" type="password" id="pass" name="pass" value="">
+          </p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-5 col-m-9">
+          <div class="block">
+            PERSONAL INFORMATION
+          </div>
+        </div>
+        <div class="col-3 col-m-5 bill">
+          Introduce your name
+          <p>
+            <input class="field" type="text" id="FirstName" name="FirstName" value="First Name">
+          </p>
+
+          Introduce your surname
+          <p>
+            <input class="field" type="text" id="Surname" name="Surname" value="Surname">
+          </p>
+
+          Introduce your email
+          <p>
+            <input class="field" type="email" id="myEmail" value="alumno@uc3m.es">
+            <i class="material-icons icon">email</i>
+          </p>
+
+          Introduce your birthday
+          <p>
+            <input class="field" type="date" id="myDate" value="1997-07-18">
+            <i class="fa fa-birthday-cake icon"></i>
+          </p>
+        </div>
+
+        <div class="col-3 col-m-5 bill1">
+
+
+          Select your language
+          <p>
+
+            <select id="Language">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Dutch">Dutch</option>
+            <option value="Russian">Russian</option>
+            </select>
+            <i class="material-icons icon">language</i>
+          </p>
+          Select Photo
+            <p>
+              <input type="file" name="picture" onchange="previewFile()">
+              <p>
+                <img src="images/photo.png" alt="Upload photo" class="photo">
+              </p>
+            </p>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-5 col-m-9">
+          <div class="block2">
+            BILLING INFORMATION
+          </div>
+        </div>
+        <div class="col-3 col-m-5 bill">
+          Address:
+          <p>
+            <input class="field" type="text" id="Address" name="Address" value="Street, City, ZIP, Country">
+            <i class="material-icons icon">home</i>
+          </p>
+
+
+          <p>
+            Payment Method
+          </p>
+          <select name="Payment" id="myPayment" onchange="showPay()">
+            <option value="Select">Select</option>
+            <option value="CreditCard">CreditCard</option>
+            <option value="Paypal">Paypal</option>
+            <option value="BitCoin">BitCoin</option>
+            <option value="Google Wallet">GoogleWallet</option>
+            <option value="BankTransfer">BankTransfer</option>
+             </select>
+          <i class="material-icons icon">attach_money</i>
+
+
+        </div>
+
+        <div class="col-3 col-m-5 bill1">
+          <!--CREDITCARDNUMBER (JS)-->
+          <div id="creditCard">
+            Number:
+            <p>
+              <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
+              <i class="material-icons icon">credit_card</i>
+            </p>
+            <!--VALID THRU-->
+            Valid Thru:
+            <p>
+              <select>
+                            <option value=''>Month</option>
+                            <option value='01'>January</option>
+                            <option value='02'>February</option>
+                            <option value='03'>March</option>
+                            <option value='04'>April</option>
+                            <option value='05'>May</option>
+                            <option value='06'>June</option>
+                            <option value='07'>July</option>
+                            <option value='08'>August</option>
+                            <option value='09'>September</option>
+                            <option value='10'>October</option>
+                            <option value='11'>November</option>
+                            <option value='12'>December</option>
+                        </select>
+              <select>
+                            <option value=''>Year</option>
+                            <option value='17'>2017</option>
+                            <option value='18'>2018</option>
+                            <option value='19'>2019</option>
+                            <option value='20'>2020</option>
+                            <option value='21'>2021</option>
+                            <option value='22'>2022</option>
+                            <option value='23'>2023</option>
+                            <option value='24'>2024</option>
+                            <option value='25'>2025</option>
+                            <option value='26'>2026</option>
+                            <option value='27'>2027</option>
+                            <option value='28'>2028</option>
+                        </select>
+
+              <i class="material-icons icon">date_range</i>
+              <input class="field" type="hidden" name="expiry" id="expiry">
+            </p>
+            <!--CREDITCODE-->
+            Credit Code:
+            <p>
+              <input class="field" type="text" id="creditcode" value="000" maxlength="3">
+              <i class="material-icons icon">done</i>
+            </p>
+          </div>
+
+          <!--PAYPAL (JS)-->
+          <div id="paypal">
+                <a href="https://www.paypal.com/es/home" target="_blank">Go to PayPal</a>
+          </div>
+          <!--BANKTRANSFER (JS)-->
+          <div id="bank">
+            Account Holder Name
+            <p>
+              <input class="field" type="text" name="Full Name" value="Your Name">
+            </p>
+
+            Account Number:
+            <p>
+              <input class="field" type="text" id="creditcardnum" value="0000 0000 0000 0000">
+            </p>
+
+            Bank Name
+            <p>
+              <input class="field" type="text" name="Bank Name" value="Your Bank's Name">
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-m-9">
+          <div id="rectangle" class="block3">
+            I have read and agree to terms of use, privacy policy and use of cookies
+            <p>
+              <input class="buttonl" id="save" type="button" value="Save" onclick="saveAllCookies()">
+              <input class="buttonr" id="cancel" type="button" value="Cancel" onclick="resetAllCookies()">
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+  </article>
+
+  <footer>
+    <div class="links">
+      <p>
+        <a class="social" href="https://www.filmin.es/aviso-legal">
+          <i class="fa fa-copyright" style="font-size:36px"></i>
+      </a>
+        <a class="social" href="https://www.facebook.com/Filmin">
+            <i class="fa fa-facebook-official" style="font-size:36px"></i>
+        </a>
+        <a class="twitter" href="https://twitter.com/filmin">
+            <i class="fa fa-twitter" style="font-size:36px"></i>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="javascript/Exercise4.js"></script>
+
+</body>
+
+</html>
