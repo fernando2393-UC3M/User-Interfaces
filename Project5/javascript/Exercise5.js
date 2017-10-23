@@ -1,6 +1,3 @@
-var clicks = 0;
-var shares = 0;
-
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -83,13 +80,15 @@ function checkCookieMail() {
 }
 
 function counterLike() {
-    clicks += 1;
-    document.getElementById("likes").innerHTML = clicks+" likes";
+  var likes = parseInt(document.getElementById("likes").innerHTML);
+  likes++;
+  document.getElementById("likes").innerHTML = likes + " likes";
 }
 
 function counterShare() {
-    shares += 1;
-    document.getElementById("shares").innerHTML = shares+" shares";
+  var shares = parseInt(document.getElementById("shares").innerHTML);
+  shares++;
+  document.getElementById("shares").innerHTML = shares + " shares";
 }
 
 function display1(){
