@@ -98,6 +98,7 @@ function checkCookieMyMail() {
         setCookie("mail", mail, 30);
       }
     }
+    return true;
   }
 }
 
@@ -118,6 +119,7 @@ function checkCookieMyPassword() {
         setCookie("password", password, 30);
       }
     }
+    return true;
   }
 }
 
@@ -141,6 +143,7 @@ function checkCookieUsrName() {
         setCookie("usr", usr, 30);
       }
     }
+    return true;
   }
 }
 
@@ -164,7 +167,7 @@ function checkCookieFName() {
         setCookie("fname", fname, 30);
       }
     }
-
+    return true;
   }
 }
 
@@ -188,6 +191,7 @@ function checkCookieSurname() {
         setCookie("surname", surname, 30);
       }
     }
+    return true;
   }
 }
 
@@ -215,6 +219,7 @@ function checkCookieAddress() {
         setCookie("address", address, 30);
       }
     }
+    return true;
   }
 }
 
@@ -253,6 +258,13 @@ function resetAllCookies() {
   document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   alert("Cookies Removed");
   location.reload();
+}
+
+function saveAllCookies() {
+  if(checkCookieMyMail() === true && checkCookieMyPassword() === true && checkCookieUsrName() === true && checkCookieFName() === true && checkCookieSurname() === true && checkCookieAddress() == true){
+    alert("All Cookies has ben saved");
+    location.reload();
+  }
 }
 
 function resetForm(){
@@ -364,7 +376,7 @@ function globalCheck() {
   }
   alert("All your data have been stored");
 }
-*/ 
+*/
 function modalBox() {
   var modal = document.getElementById('myModal');
   modal.style.display = "block";
