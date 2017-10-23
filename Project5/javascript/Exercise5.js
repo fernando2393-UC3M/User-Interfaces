@@ -28,7 +28,7 @@ function modalBoxHide() {
     //Display values in page
     document.getElementById("username").innerHTML = getCookie("usr");
   } else {
-    if (syntaxCheck === false || passCheck === false) {
+    if (syntaxCheck === false) {
       return false;
     }
     window.location = "Exercise4.html";
