@@ -57,7 +57,7 @@
 
   <article>
 
-    <form name="GlobalForm" id="GlobalForm" onsubmit="checkCookieMyMail(); checkCookieMyPassword(); checkCookieUsrName(); checkCookieFName(); checkCookieSurname(); checkCookieAddress()">
+    <form name="GlobalForm" id="GlobalForm">
       <div class="row">
         <div class="col-5 col-m-9">
           <div class="block2">
@@ -252,7 +252,7 @@
           <div id="rectangle" class="block3">
             I have read and agree to terms of use, privacy policy and use of cookies
             <p>
-              <input class="buttonl" type="submit" value="Save">
+              <input class="buttonl" id="save" type="button" value="Save" onclick="saveAllCookies()">
               <input class="buttonr" id="cancel" type="button" value="Cancel" onclick="resetAllCookies()">
             </p>
           </div>
