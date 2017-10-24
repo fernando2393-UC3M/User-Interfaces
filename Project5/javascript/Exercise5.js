@@ -102,3 +102,50 @@ function display2(){
 function display3(){
   document.getElementById("description3").style.visibility= "visible";
 }
+
+$(document).ready(function(){
+  $('#dragtest').draggable( {
+      cursor: 'move',
+      revert:true
+      //helper: 'clone'
+  });
+
+  $('#dragtest2').draggable( {
+      cursor: 'move',
+      revert: true
+      //helper: 'clone'
+  });
+
+  $('#test').droppable( {
+    drop: function( event, ui ) {
+      // var draggableId = ui.draggable.attr("id");
+      // var droppableId = $(this).attr("id");
+
+      var dragContent = ui.draggable.html();
+      var dropContent = $(this).find("p").html();
+      alert($(this).html());
+      ui.draggable.html(dropContent);
+      $(this).find("p").html(dragContent);
+
+      // ui.draggable.attr("id", droppableId);
+      // $(this).attr("id", droppableId);
+    }
+  });
+
+  $('#test2').droppable( {
+    drop: function( event, ui ) {
+      // var draggableId = ui.draggable.attr("id");
+      // var droppableId = $(this).attr("id");
+
+      var dragContent = ui.draggable.html();
+      var dropContent = $(this).find("p").html();
+      alert($(this).html());
+      ui.draggable.html(dropContent);
+      $(this).find("p").html(dragContent);
+
+      // ui.draggable.attr("id", droppableId);
+      // $(this).attr("id", droppableId);
+    }
+  });
+
+});
