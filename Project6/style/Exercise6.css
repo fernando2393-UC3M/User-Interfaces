@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.htitle {
+  font-size: 250%;
+  font-family: "Roboto", Helvetica, serif;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+    clear: both;
+}
+
+.timer {
+  font-family: "Roboto", Helvetica, serif;
+  color: #000e78;
+  float: right;
+  margin-top: 5%;
+  padding-top: 20px;
+  margin-right: 4%;
+}
+
+input.restart {
+  color: white;
+  font-family: "Roboto", Helvetica, serif;
+  font-size: 200%;
+  text-align: center;
+  background-color: #000e78;
+  border: none;
+  float: right;
+}
+
+.modal {
+    font-family: "Roboto", Helvetica, serif;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    border: 3px solid #000e78;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+    height: auto;
+}
+
+.modal-header {
+  margin-top: -3%;
+  color: #000e78;
+  font-size: 250%;
+
+}
+
+.modal-body {
+  font-size: 175%;
+  color: #000e78;
+}
+
+.modaldata {
+  font-size: 75%;
+  color: #000e78;
+  padding-top: 25px;
+}
+
+.modaldiv {
+float: left;
+margin-right: 10%;
+clear: both;
+}
+
+
+.sub {
+  color: white;
+  background-color: #000e78;
+  border: none;
+  font-size: 150%;
+  clear: both;
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 1%;
+  width: 100%;
+}
+
+/*MOBILE BY DEFAULT*/
+
+body {
+  background: linear-gradient(to right, #f5f5f5, #bdbdbd);
+  width: 100%;
+}
+
+#rectangle {
+  border-radius: 60px;
+  border: 2px solid #000e78;
+  padding: 2%;
+  width: auto;
+  height: auto;
+  background: #ffffff;
+}
+
+header {
+  background-color: #424242;
+  height: auto;
+  width: 100%;
+  /*Allow the header to be fixed*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+h1 {
+  font-family: "Roboto", Helvetica, serif;
+  font-size: 100%;
+  color: #000e78;
+  padding-top: 20px;
+}
+
+
+footer {
+  padding-bottom: 1%;
+  background-color: #424242;
+  color: white;
+  clear: both;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+select {
+  border: none;
+  border-bottom: solid 2px #000e78;
+  max-width: 200px;
+  width: auto;
+  background: rgba(0, 0, 0, 0);
+}
+
+input.field {
+  border: none;
+  border-bottom: solid 2px #000e78;
+  transition: border 0.3s;
+  background: rgba(0, 0, 0, 0);
+}
+
+
+/*For tablet design*/
+
+@media only screen and (min-width: 600px) {
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+  body {
+    background: linear-gradient(to right, #f5f5f5, #bdbdbd);
+    margin: 0 auto;
+  }
+  header {
+    margin: 0 0;
+    background-color: #424242;
+    height: auto;
+    width: 100%;
+    /*Allow the header to be fixed*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  footer {
+    background-color: #424242;
+    height: 8%;
+    color: white;
+    clear: both;
+    padding-left: 2%;
+  }
+
+  /*Allows to use the ul in a horizontal way*/
+  .menu li {
+    display: inline-block;
+  }
+  .table {
+    margin-left: 200%;
+  }
+
+  button {
+    color: white;
+    background-color: #000e78;
+    border: none;
+  }
+
+  input.button {
+    color: white;
+    background-color: #000e78;
+    border: none;
+  }
+
+  select {
+    border: none;
+    border-bottom: solid 2px #000e78;
+    max-width: 200px;
+    width: auto;
+    background: rgba(0, 0, 0, 0);
+  }
+  input.field {
+    border: none;
+    border-bottom: solid 2px #000e78;
+    transition: border 0.3s;
+    background: rgba(0, 0, 0, 0);
+}
