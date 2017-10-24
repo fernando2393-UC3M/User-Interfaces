@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+#Restart {
+  visibility: hidden;
+}
+
+#Play {
+  visibility: visible;
+}
+
+#Timer {
+  visibility: hidden;
+}
+
 .row::after {
   content: "";
   clear: both;
