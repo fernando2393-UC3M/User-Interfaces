@@ -1,6 +1,6 @@
 //Global varibales
 var n = 0;
-var timer = 0;
+var chrono = 0;
 var counter = 0;
 
 function setCookie(cname, cvalue, exdays) {
@@ -80,7 +80,7 @@ function checkTime() {
     document.cookie = "ctimer=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setCookie("ctimer", time, 30);
   }
-  timer = timen;
+  chrono = timen;
   return true;
 }
 
@@ -94,34 +94,32 @@ function sleep(milliseconds) {
   }
 }
 
-function clock() {
-  var countDownDate = new Date().getTime();
-  countDownDate.setSeconds(countDownDate.getSeconds()+timer);
-  // Update the count down every 1 second
-  var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Output the result in an element with id="demo"
-    document.getElementById("Timer").innerHTML = Minutes + "m " + Seconds + "s ";
-
-    // If the count down is over, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("Timer").innerHTML = "EXPIRED";
-    }
-  }, 1000);
+function timer() {
+  counter = chrono;
+  var min = 0;
+  var sec = 0;
+  if (counter > 0) {
+    var x = setInterval(function() {
+      if (counter >= 60) {
+        min = 1;
+        sec = counter - 60;
+        document.getElementById("Timer").innerHTML = min + " minute and " + sec + " seconds";
+        counter--;
+      }
+      if (counter < 60) {
+        sec = counter;
+        document.getElementById("Timer").innerHTML = sec + " seconds";
+        counter--;
+      }
+      if (counter < -1){
+        document.getElementById("Timer").innerHTML = "EXPIRED!";
+        alert("Time has expired!");
+        clearInterval(x);
+      }
+    }, 1000);
+  }
 }
+
 
 function hidePlay() {
   document.getElementById("Play").style.visibility = "hidden";
@@ -139,7 +137,6 @@ function hideTimer() {
 
 function showTimer() {
   document.getElementById("Timer").style.visibility = "visible";
-  clock();
 }
 
 //------------------------------------------------------------------------------
@@ -173,7 +170,7 @@ function showTimer() {
 			this.$memoryCards.on("click", this.cardClicked);
 			this.$restartButton.on("click", $.proxy(this.reset, this));
 		},
-		// kinda messy but hey
+
 		cardClicked: function(){
 			var _ = Memory;
 			var $card = $(this);
