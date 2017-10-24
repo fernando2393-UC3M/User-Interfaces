@@ -87,11 +87,9 @@ function checkTime() {
 function timer(){
   var x = setInterval(function() {
   var diff = new Date(timer);
-  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-  document.getElementById('Timer').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById('Timer').innerHTML = Minutes + "m " + Seconds + "s ";
   if (timer < 0) {
         clearInterval(x);
         document.getElementById('Timer').innerHTML = "EXPIRED";
@@ -99,7 +97,22 @@ function timer(){
         location.reload();
     }
   }, 1000);
+}
 
+function hidePlay(){
+  document.getElementById("Play").style.visibility = "hidden";
+  document.getElementById("Restart").style.visibility = "visible";
+}
+function hideRestart(){
+  document.getElementById("Restart").style.visibility = "hidden";
+  document.getElementById("Play").style.visibility = "visible";
+}
+function hideTimer(){
+  document.getElementById("Timer").style.visibility = "hidden";
+}
+
+function showTimer(){
+  document.getElementById("Timer").style.visibility = "visible";
 }
 
 function restart(){
