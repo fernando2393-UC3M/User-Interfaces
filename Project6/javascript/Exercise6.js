@@ -120,7 +120,6 @@ function timer() {
   }
 }
 
-
 function hidePlay() {
   document.getElementById("Play").style.visibility = "hidden";
   document.getElementById("Restart").style.visibility = "visible";
