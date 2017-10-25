@@ -3,6 +3,7 @@ var n = 0;
 var chrono = 0;
 var counter = 0;
 var x;
+var game;
 
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
@@ -149,18 +150,9 @@ function restart(){
 }
 
 //------------------------------------------------------------------------------
-//on click function in javascript
-/*
-$(document).ready(function(
-  $("timer").onclick(
-    start();
-)
-))
 
 
-*/
 
-/*
 (function(){
 
 	var Memory = {
@@ -325,5 +317,3 @@ $(document).ready(function(
 
 
 })();
-
-*/
