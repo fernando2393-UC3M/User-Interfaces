@@ -10,7 +10,7 @@
 
   <body onload="modalBox()">
 
-    <div id="myModal" class="modal" onsubmit="modalBoxHide(); return false">
+    <div id="myModal" class="modal" onsubmit="start(); modalBoxHide(); timer(); return false">
 
       <div class="modal-content">
         <div class="modal-header">
@@ -48,8 +48,14 @@
         </span>
 
         <span class="button">
-          <a onclick="ResetGame();">Reset</a>
+          <a onclick="ResetGame(); timer();">Reset</a>
         </span>
+
+        <div class="timer">
+          <p id="Timer">
+          </br>
+          </p>
+        </div>
 
       </span>
       <div id="boxcard"></div> <!--Images spanned here-->
