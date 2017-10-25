@@ -2,6 +2,7 @@
 var n = 0;
 var chrono = 0;
 var counter = 0;
+var x;
 
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
@@ -99,7 +100,7 @@ function timer() {
   var min = 0;
   var sec = 0;
   if (counter > 0) {
-    var x = setInterval(function() {
+     x = setInterval(function() {
       if (counter > 60) {
         min = 1;
         sec = counter - 60;
@@ -116,10 +117,9 @@ function timer() {
         document.getElementById("Timer").innerHTML = sec + " seconds";
         counter--;
       }
-      if (counter < -1){
+      if (counter < 1){
         document.getElementById("Timer").innerHTML = "EXPIRED!";
         alert("Time has expired!");
-        clearInterval(x);
       }
     }, 1000);
   }
@@ -141,6 +141,11 @@ function hideTimer() {
 
 function showTimer() {
   document.getElementById("Timer").style.visibility = "visible";
+}
+
+function restart(){
+  clearInterval(x);
+  //startGame();
 }
 
 //------------------------------------------------------------------------------
