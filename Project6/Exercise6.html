@@ -6,6 +6,8 @@
       Place yout bets!
     </title>
     <link rel="stylesheet" href="style/Exercise6.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/Exercise6.js"></script>
   </head>
 
   <body onload="modalBox()">
@@ -14,7 +16,7 @@
 
       <div class="modal-content">
         <div class="modal-header">
-          <h1>Welcome to Guessing Game</h1>
+          <h1>Welcome to Place Your Bets!</h1>
         </div>
         <div class="modal-body">
           <p>Introduce the following information</p>
@@ -39,6 +41,10 @@
       </div>
     </div>
 
+    <header>
+      PLACE YOUR BETS!
+    </header>
+
     <div id="picbox">
       <span id="boxbuttons">
 
@@ -51,24 +57,14 @@
           <a onclick="ResetGame(); timer();">Reset</a>
         </span>
 
-        <div class="timer">
-          <p id="Timer">
-          </br>
-          </p>
-        </div>
+        <span class="timer" id="Timer">
+        </span>
 
       </span>
       <div id="boxcard"></div> <!--Images spanned here-->
     </div>
 
   </body>
-
-  <footer>
-
-  </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="javascript/Exercise6.js"></script>
 
 
 </html>
