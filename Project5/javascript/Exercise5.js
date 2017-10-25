@@ -19,6 +19,10 @@ function modalBox() {
   modal.style.display = "block";
 }
 
+function setBackground(){ //Allows to set a background image compatible with the Modal
+  document.body.style.backgroundImage = "url('images/background.jpg')";
+}
+
 function modalBoxHide() {
   var syntaxCheck = checkModalPass();
   var passCheck = checkCookiePass();
@@ -79,16 +83,19 @@ function checkCookieMail() {
   //Now we dont have to set the cookie, just redirect to ex1
 }
 
-function counterLike() {
-  var likes = parseInt(document.getElementById("likes").innerHTML);
+
+function counterLike(elem) {
+  var child=elem.childNodes; //We will use the child nodes to get to the text to change
+  var likes = parseInt(child[3].innerHTML); //child[3] corresponds to the div withy id=likes from which we get the number of likes
   likes++;
-  document.getElementById("likes").innerHTML = likes + " likes";
+  child[3].innerHTML = likes + " likes";
 }
 
-function counterShare() {
-  var shares = parseInt(document.getElementById("shares").innerHTML);
+function counterShare(elem) {
+  var child=elem.childNodes;
+  var shares = parseInt(child[3].innerHTML);
   shares++;
-  document.getElementById("shares").innerHTML = shares + " shares";
+  child[3].innerHTML = shares + " shares";
 }
 
 function display1(){
@@ -128,14 +135,84 @@ $(document).ready(function(){
 
   $('#mainVideo').droppable( {
     drop: function( event, ui ) {
-      // var draggableId = ui.draggable.attr("id");
-      // var droppableId = $(this).attr("id");
 
       var dragContentLink = ui.draggable.find("a").attr("href");
       var dropContentLink = $(this).find("#videoIFrame").attr("src");
-      alert(dropContentLink);
+
       var dragContentImage = ui.draggable.find("a").find("img").attr("src");
       var dropContentImage = $(this).find("img").attr("src");
+
+      var dragContentDescription;
+      var dropContentDescription;
+
+      var dragContentLikes;
+      var dropContentLikes;
+
+      var dragContentShares;
+      var dropContentShares;
+
+      var id=ui.draggable.attr("id");
+      switch (id){
+        case "video1":
+            dragContentDescription= ui.draggable.find("#description1").attr("innerHTML");
+            dropContentDescription= $(this).find("#descriptionIframe").attr("innerHTML");
+
+            dragContentLikes= ui.draggable.find("#likesVid1").attr("innerHTML");
+            dropContentLikes= $(this).find("#likesFrame").attr("innerHTML");
+
+            dragContentShares= ui.draggable.find("#sharesVid1").attr("innerHTML");
+            dropContentShares= $(this).find("#sharesFrame").attr("innerHTML");
+
+            ui.draggable.find("#description1").attr("innerHTML", dropContentDescription);
+            $(this).find("#descriptionIframe").attr("innerHTML", dragContentDescription);
+
+            ui.draggable.find("#likesVid1").attr("innerHTML", dropContentLikes);
+            $(this).find("#likesFrame").attr("innerHTML", dragContentLikes);
+
+            ui.draggable.find("#sharesVid1").attr("innerHTML", dropContentShares);
+            $(this).find("#sharesFrame").attr("innerHTML", dragContentShares);
+          break;
+
+        case "video2":
+            dragContentDescription= ui.draggable.find("#description2").attr("innerHTML");
+            dropContentDescription= $(this).find("#descriptionIframe").attr("innerHTML");
+
+            dragContentLikes= ui.draggable.find("#likesVid2").attr("innerHTML");
+            dropContentLikes= $(this).find("#likesFrame").attr("innerHTML");
+
+            dragContentShares= ui.draggable.find("#sharesVid2").attr("innerHTML");
+            dropContentShares= $(this).find("#sharesFrame").attr("innerHTML");
+
+            ui.draggable.find("#description2").attr("innerHTML", dropContentDescription);
+            $(this).find("#descriptionIframe").attr("innerHTML", dragContentDescription);
+
+            ui.draggable.find("#likesVid2").attr("innerHTML", dropContentLikes);
+            $(this).find("#likesFrame").attr("innerHTML", dragContentLikes);
+
+            ui.draggable.find("#sharesVid2").attr("innerHTML", dropContentShares);
+            $(this).find("#sharesFrame").attr("innerHTML", dragContentShares);
+          break;
+
+        default:
+          dragContentDescription= ui.draggable.find("#description3").attr("innerHTML");
+          dropContentDescription= $(this).find("#descriptionIframe").attr("innerHTML");
+
+          dragContentLikes= ui.draggable.find("#likesVid3").attr("innerHTML");
+          dropContentLikes= $(this).find("#likesFrame").attr("innerHTML");
+
+          dragContentShares= ui.draggable.find("#sharesVid3").attr("innerHTML");
+          dropContentShares= $(this).find("#sharesFrame").attr("innerHTML");
+
+          ui.draggable.find("#description3").attr("innerHTML", dropContentDescription);
+          $(this).find("#descriptionIframe").attr("innerHTML", dragContentDescription);
+
+          ui.draggable.find("#likesVid3").attr("innerHTML", dropContentLikes);
+          $(this).find("#likesFrame").attr("innerHTML", dragContentLikes);
+
+          ui.draggable.find("#sharesVid3").attr("innerHTML", dropContentShares);
+          $(this).find("#sharesFrame").attr("innerHTML", dragContentShares);
+      break;
+      }
 
       ui.draggable.find("a").attr("href", dropContentLink);
       $(this).find("#videoIFrame").attr("src", dragContentLink);
@@ -143,8 +220,7 @@ $(document).ready(function(){
       ui.draggable.find("a").find("img").attr("src", dropContentImage);
       $(this).find("img").attr("src", dragContentImage);
 
-      // ui.draggable.attr("id", droppableId);
-      // $(this).attr("id", droppableId);
+
     }
   });
 
