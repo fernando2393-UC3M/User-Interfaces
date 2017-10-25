@@ -1,5 +1,5 @@
 #test{
-  float: left;
+ float: left;
  width: 100px;
  height: 35px;
  margin: 10px;
@@ -27,6 +27,12 @@ p.dragtest2{
   position: absolute;
 
 }
+
+#imgsource{
+  visibility: hidden;
+  position:absolute;
+}
+
 
 .modal {
     font-family: "Roboto", Helvetica, serif;
@@ -354,4 +360,4 @@ iframe.spotify{
     width: auto;
     border: none;
     margin-left: 2%;
-}
+  }
