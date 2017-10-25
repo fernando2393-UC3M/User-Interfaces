@@ -131,7 +131,6 @@ $(document).ready(function(){
       //helper: 'clone'
   });
 
-  //REMEMBER TO DELETE HOLDVIDEO IF NOT USED
 
   $('#mainVideo').droppable( {
     drop: function( event, ui ) {
@@ -221,51 +220,6 @@ $(document).ready(function(){
       $(this).find("img").attr("src", dragContentImage);
 
 
-    }
-  });
-
-
-  $('#dragtest').draggable( {
-      cursor: 'move',
-      revert:true,
-      //helper: 'clone'
-  });
-
-  $('#dragtest2').draggable( {
-      cursor: 'move',
-      revert: true,
-      //iframeFix: true
-      //helper: 'clone'
-  });
-
-  $('#test').droppable( {
-    drop: function( event, ui ) {
-      // var draggableId = ui.draggable.attr("id");
-      // var droppableId = $(this).attr("id");
-
-      var dragContent = ui.draggable.html();
-      var dropContent = $(this).find("p").html();
-      ui.draggable.html(dropContent);
-      $(this).find("p").html(dragContent);
-
-      // ui.draggable.attr("id", droppableId);
-      // $(this).attr("id", droppableId);
-    }
-  });
-
-
-  $('#test2').droppable( {
-    drop: function( event, ui ) {
-      // var draggableId = ui.draggable.attr("id");
-      // var droppableId = $(this).attr("id");
-
-      var dragContent = ui.draggable.html();
-      var dropContent = $(this).find("p").html();
-      ui.draggable.html(dropContent);
-      $(this).find("p").html(dragContent);
-
-      // ui.draggable.attr("id", droppableId);
-      // $(this).attr("id", droppableId);
     }
   });
 
