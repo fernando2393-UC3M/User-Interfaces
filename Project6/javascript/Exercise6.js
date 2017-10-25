@@ -100,10 +100,15 @@ function timer() {
   var sec = 0;
   if (counter > 0) {
     var x = setInterval(function() {
-      if (counter >= 60) {
+      if (counter > 60) {
         min = 1;
         sec = counter - 60;
         document.getElementById("Timer").innerHTML = min + " minute and " + sec + " seconds";
+        counter--;
+      }
+      if (counter === 60){
+         min = 1;
+        document.getElementById("Timer").innerHTML = min + " minute";
         counter--;
       }
       if (counter < 60) {
@@ -139,6 +144,17 @@ function showTimer() {
 }
 
 //------------------------------------------------------------------------------
+//on click function in javascript
+/*
+$(document).ready(function(
+  $("timer").onclick(
+    start();
+)
+))
+
+
+*/
+
 /*
 (function(){
 
