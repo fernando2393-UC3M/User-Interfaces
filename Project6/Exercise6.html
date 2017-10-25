@@ -1,75 +1,68 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>
-    FILMIN
-  </title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="style/Exercise6.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="javascript/Exercise6.js"></script>
-</head>
+  <head>
+    <title>
+      Place yout bets!
+    </title>
+    <link rel="stylesheet" href="style/Exercise6.css">
+  </head>
 
-<body onload="modalBox()">
+  <body onload="modalBox()">
 
-  <header>
-    <div class="htitle">
-      WELCOME TO THE AWESOME GUESSING GAME
-    </div>
+    <div id="myModal" class="modal" onsubmit="modalBoxHide(); return false">
 
-  </header>
-
-  <div id="myModal" class="modal" onsubmit="modalBoxHide(); return false">
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1>Welcome to Guessing Game</h1>
-      </div>
-      <div class="modal-body">
-        <p>Introduce the following information</p>
-        <div class="modaldata">
-          <form>
-            <div class="modaldiv">
-              Number of Images
-              <p>
-                <input class="field" type="text" id="Images" value="">
-              </p>
-            </div>
-            <div>
-              Game Duration
-              <p>
-                <input class="field" type="text" id="Time" value="">
-              </p>
-            </div>
-            <input class="sub" type="submit" value="Submit">
-          </form>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1>Welcome to Guessing Game</h1>
+        </div>
+        <div class="modal-body">
+          <p>Introduce the following information</p>
+          <div class="modaldata">
+            <form>
+              <div class="modaldiv">
+                Number of Images
+                <p>
+                  <input class="field" type="text" id="Images" value="">
+                </p>
+              </div>
+              <div>
+                Game Duration
+                <p>
+                  <input class="field" type="text" id="Time" value="">
+                </p>
+              </div>
+              <input class="sub" type="submit" value="Submit">
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <article>
-    <div class="timer">
-      <p id="Timer">
-      </br>
-      </p>
-      <p>
-        <input id="Restart" class="restart" type="button" value="Restart" onclick="restart(); hideRestart(); hideTimer()">
-        <input id="Play" class="restart" type="button" value="Play" onclick="hidePlay(); showTimer(); timer()">
-      </p>
-    </div>
-<!-- <div class="wrap">
-<div class="game"></div> -->
-  </article>
 
+    <div id="picbox">
+      <span id="boxbuttons">
+
+        <span class="button">
+          <span id="clickNum">0</span>
+          Clicks
+        </span>
+
+        <span class="button">
+          <a onclick="ResetGame();">Reset</a>
+        </span>
+
+      </span>
+      <div id="boxcard"></div> <!--Images spanned here-->
+    </div>
+
+  </body>
 
   <footer>
 
   </footer>
 
-</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="javascript/Exercise6.js"></script>
+
 
 </html>
