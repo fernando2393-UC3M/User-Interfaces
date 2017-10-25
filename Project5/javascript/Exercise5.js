@@ -104,15 +104,61 @@ function display3(){
 }
 
 $(document).ready(function(){
+  $('#video1').draggable( {
+      cursor: 'move',
+      revert:true,
+      //helper: 'clone'
+  });
+
+  $('#video2').draggable( {
+      cursor: 'move',
+      revert: true,
+      //iframeFix: true
+      //helper: 'clone'
+  });
+
+  $('#video3').draggable( {
+      cursor: 'move',
+      revert: true,
+      //iframeFix: true
+      //helper: 'clone'
+  });
+
+  //REMEMBER TO DELETE HOLDVIDEO IF NOT USED
+
+  $('#mainVideo').droppable( {
+    drop: function( event, ui ) {
+      // var draggableId = ui.draggable.attr("id");
+      // var droppableId = $(this).attr("id");
+
+      var dragContentLink = ui.draggable.find("a").attr("href");
+      var dropContentLink = $(this).find("#videoIFrame").attr("src");
+      alert(dropContentLink);
+      var dragContentImage = ui.draggable.find("a").find("img").attr("src");
+      var dropContentImage = $(this).find("img").attr("src");
+
+      ui.draggable.find("a").attr("href", dropContentLink);
+      $(this).find("#videoIFrame").attr("src", dragContentLink);
+
+      ui.draggable.find("a").find("img").attr("src", dropContentImage);
+      $(this).find("img").attr("src", dragContentImage);
+
+      // ui.draggable.attr("id", droppableId);
+      // $(this).attr("id", droppableId);
+    }
+  });
+
+
   $('#dragtest').draggable( {
       cursor: 'move',
-      revert:true
+      revert:true,
       //helper: 'clone'
   });
 
   $('#dragtest2').draggable( {
       cursor: 'move',
-      revert: true
+      revert: true,
+      //iframeFix: true
       //helper: 'clone'
   });
 
@@ -123,7 +169,6 @@ $(document).ready(function(){
 
       var dragContent = ui.draggable.html();
       var dropContent = $(this).find("p").html();
-      alert($(this).html());
       ui.draggable.html(dropContent);
       $(this).find("p").html(dragContent);
 
@@ -131,6 +176,7 @@ $(document).ready(function(){
       // $(this).attr("id", droppableId);
     }
   });
+
 
   $('#test2').droppable( {
     drop: function( event, ui ) {
@@ -139,7 +185,6 @@ $(document).ready(function(){
 
       var dragContent = ui.draggable.html();
       var dropContent = $(this).find("p").html();
-      alert($(this).html());
       ui.draggable.html(dropContent);
       $(this).find("p").html(dragContent);
 
@@ -147,5 +192,6 @@ $(document).ready(function(){
       // $(this).attr("id", droppableId);
     }
   });
+
 
 });
