@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body {
-	font: 18px Verdana;
+	font-family: "Roboto", Helvetica, serif;
 	color: #FFF;
   background: #CCC;
 }
@@ -21,11 +21,10 @@ body {
 	height: 100px;
 	margin: 5px;
 	padding: 5px;
-	border: 4px solid #EE872A;
+	border: 4px solid #000e78;
 	cursor: pointer;
 	border-radius: 10px;
-	box-shadow: 0 1px 5px rgba(0,0,0,.5);
-  background: #B1B1B1;
+  background: white;
 	z-index: 2;
 }
 #boxcard div img {
@@ -35,12 +34,12 @@ body {
 }
 #boxbuttons {
 	text-align: center;
-	margin: 20px;
+	margin: 10%;
 	display: block;
 }
 #boxbuttons .button {
 	text-transform: uppercase;
-	background: #EE872A;
+	background: #000e78;
 	padding: 5px 10px;
 	margin: 5px;
 	border-radius: 10px;
@@ -49,6 +48,15 @@ body {
 #boxbuttons .button:hover {
 	background: #999;
 }
+
+.srcImg{
+	width: inherit;
+	height: inherit;
+}
+
+
+
+
 
 .modal {
     font-family: "Roboto", Helvetica, serif;
@@ -77,8 +85,8 @@ body {
 .modal-header {
   margin-top: -3%;
   color: #000e78;
-  font-size: 250%;
-
+  font-size: 100%;
+	margin-bottom: 3%;
 }
 
 .modal-body {
@@ -96,4 +104,24 @@ body {
 float: left;
 margin-right: 10%;
 clear: both;
+}
+
+.timer {
+  font-family: "Roboto", Helvetica, serif;
+  color: #000e78;
+  float: right;
+}
+
+.sub {
+  color: white;
+  background-color: #000e78;
+  border: none;
+  font-size: 150%;
+  clear: both;
+  width: 100%;
+	margin-top: 5%;
+}
+
+#Timer {
+  font-size: 100%;
 }
