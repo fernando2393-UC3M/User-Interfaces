@@ -148,6 +148,10 @@ header {
 	padding-bottom: 10px;
 }
 
+.subtitle {
+	font-size: 25%;
+}
+
 .modal-header {
   margin-top: -3%;
   color: #000e78;
