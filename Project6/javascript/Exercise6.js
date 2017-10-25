@@ -15,30 +15,32 @@ var BoxOpened = ""; //Holds id of 2º image openned
 var ImgOpened = ""; //Holds id of 1º image openned
 var clickNum = 0;
 var ImgFound = 0;
+var numImg;
+
+var x; //For the timer
+var chrono = 0;
 
 
-
-$(document).ready(function(){
-  function modalBox() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = "block";
-  }
-
-  function modalBoxHide() {
-    if (checkImages() === true && checkTime() === true) {
-      var modal = document.getElementById('myModal');
-      modal.style.display = "none";
-    }
-  }
-
+function start(){
+  numImg= subArray();
   for (var y = 1; y < 3 ; y++) {  //Appends the images twice (one div per image)
-  	$.each(ImgSource, function(i, val) {
-  		$(Source).append("<div id=card" + y + i + "><img src=" + val + "/>");
+  	numImg.map(function(val, i) {
+  		$(Source).append("<div id=card" + y + i + "><img class='srcImg' src=" + val + "/>");
   	});
   }
 	$(Source + " div").click(OpenCard); //Image clicked
 	ShuffleImages();
-});
+}
+
+function subArray(){
+  var num=$("#Images").val();
+  var subar=[];
+  for(var i=0;i<num;i++){
+    subar[i]=ImgSource[i];
+  }
+  // var subar=ImgSource.slice(1, num);
+  return subar;
+}
 
 function OpenCard() {
 	var id = $(this).attr("id"); //Id of openned card
@@ -61,8 +63,8 @@ function OpenCard() {
 				     },400);
 			   }
          else {//Images MATCH
-    				$("#" + id + " img").parent().css("visibility", "hidden");  //Delete images already paired
-    				$("#" + BoxOpened + " img").parent().css("visibility", "hidden");
+    				$("#" + id + " img").parent().css("visibility", "visible");  //Delete images already paired
+    				$("#" + BoxOpened + " img").parent().css("visibility", "visible");
             ImgFound++;
             checkWin();
     				BoxOpened = "";
@@ -114,8 +116,25 @@ function ResetGame() {
 }
 
 function checkWin(){
-  if (ImgFound == ImgSource.length) { //Check if user has won
+  BoxOpened = "";//Reset the selected images (in order to avoid malfunctioning)
+  ImgOpened = "";
+  alert(ImgFound);
+  if (ImgFound == numImg.length) { //Check if user has won
     alert("WINNER WINNER CHICKEN DINER");
+  }
+}
+
+
+//MODAL BOX
+function modalBox() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "block";
+}
+
+function modalBoxHide() {
+  if (checkImages() === true && checkTime() === true) {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
   }
 }
 
@@ -147,4 +166,35 @@ function checkTime() {
   }
   chrono = timen;
   return true;
+}
+
+function timer() {
+  clearInterval(x);
+  counter = chrono;
+  var min = 0;
+  var sec = 0;
+  if (counter > 0) {
+     x = setInterval(function() {
+      if (counter > 60) {
+        min = 1;
+        sec = counter - 60;
+        document.getElementById("Timer").innerHTML = min + " minute and " + sec + " seconds";
+        counter--;
+      }
+      if (counter === 60){
+         min = 1;
+        document.getElementById("Timer").innerHTML = min + " minute";
+        counter--;
+      }
+      if (counter < 60) {
+        sec = counter;
+        document.getElementById("Timer").innerHTML = sec + " seconds";
+        counter--;
+      }
+      if (counter < 1){
+        document.getElementById("Timer").innerHTML = "EXPIRED!";
+        alert("Time has expired!");
+      }
+    }, 1000);
+  }
 }
