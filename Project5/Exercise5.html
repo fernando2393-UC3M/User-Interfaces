@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body onload="modalBox()">
+<body onload="setBackground(); modalBox()">
 
     <header>
         <img src="images/logo.png" alt="logo" class="logo">
@@ -56,28 +56,34 @@
     </div>
 
     <article>
-        <div class="oneblock">
+        <div id="mainVideo" class="oneblock">
 
             <div class="description" id="rcorners">
 
                 <div class="title">
-                    THE IPHONE X
+                    YOUR NEXT SMARTPHONE
                 </div>
 
-                <button type="button" onclick="counterLike()"><i class="material-icons iconl">favorite</i></button>
-                <div id="likes" class="adj">
-                    0 likes
+                <div onclick="counterLike(this)">
+                  <button type="button"><i class="material-icons iconl">favorite</i></button>
+                  <div id="likesFrame" class="adj">
+                      0 likes
+                  </div>
                 </div>
 
-                <button type="button" onclick="counterShare()"><i class="material-icons iconl">share</i></button>
-                <div id="shares" class="adj">
-                    0 shares
+                <div onclick="counterShare(this)">
+                  <button type="button"><i class="material-icons iconl">share</i></button>
+                  <div id="sharesFrame" class="adj">
+                      0 shares
+                  </div>
                 </div>
 
-                Meet the IPhone X, the new concept phone from Apple which is gonna break the market due to its minimum frame screen and the
-                unconditional power of its new heart, the Apple Chip A11.
+                <div id="descriptionIframe">
+                  Meet the IPhone X, the new concept phone from Apple which is gonna break the market due to its minimum frame screen and the
+                  unconditional power of its new heart, the Apple Chip A11.
+                </div>
             </div>
-              <div id="mainVideo">
+              <div >
                 <iframe id="videoIFrame" class="video" width="720" height="405" src="https://www.youtube.com/embed/mW6hFttt_KE" allowfullscreen></iframe>
                 <img id="imgsource" src="images/iphone.jpg"> <!--We use it to keep track of the different images of the videos dropped on iframe. The image is hidden so it does not intefere with the design-->
                 <!--Spotify Panel-->
@@ -94,14 +100,28 @@
                   <img alt="Xiaomi" src="images/xiaomi.jpg" width="480" height="270">
                 </a>
                 <div class="subdescription" id="rcorners1">
-                    Xiaomi Mi Mix 2: The Bezel-less Sequel
-                    <i class="material-icons icon" onclick="display1()">add_circle</i>
+                    Xiaomi Mi Mix 2: The Sequel
+
+                    <div class="counter" onclick="counterLike(this)">
+                      <button type="button"><i class="material-icons iconl">favorite</i></button>
+                      <div id="likesVid1" class="adj">
+                          0 likes
+                      </div>
+                    </div>
+
+                    <div class="counter" onclick="counterShare(this)">
+                      <button type="button"><i class="material-icons iconl">share</i></button>
+                      <div id="sharesVid1" class="adj">
+                          0 shares
+                      </div>
+                    </div>
+
+                    <i class="material-icons" onclick="display1()">add_circle</i>
                     <div id="description1">
-                      Xiaomi Mi Mix 2 is a sequel to convert the everyday person.<br>
-                      RIP bezels.
+                      Xiaomi Mi Mix 2 is a sequel to convert the everyday person. RIP bezels.
                     </div>
                 </div>
-              </div>
+           </div>
 
             <div id="video2" class="subvideos">
                 <a href="https://www.youtube.com/embed/-_WbmSxZnB8" target="_blank">
@@ -109,10 +129,24 @@
                 </a>
                 <div class="subdescription" id="rcorners2">
                     Essential Phone Impressions!
+
+                    <div class="counter" onclick="counterLike(this)">
+                      <button type="button"><i class="material-icons iconl">favorite</i></button>
+                      <div id="likesVid2" class="adj">
+                          0 likes
+                      </div>
+                    </div>
+
+                    <div class="counter" onclick="counterShare(this)">
+                      <button type="button"><i class="material-icons iconl">share</i></button>
+                      <div id="sharesVid2" class="adj">
+                          0 shares
+                      </div>
+                    </div>
+
                     <i class="material-icons icon" onclick="display2()">add_circle</i>
                     <div id="description2">
-                      Essential Phone PH 1 is here<br>
-                      An unboxing and first hands-on thoughts.
+                      Essential Phone PH 1 is here. An unboxing and first hands-on thoughts.
                     </div>
                 </div>
             </div>
@@ -122,11 +156,25 @@
                   <img alt="S8" src="images/s8.jpg" width="480" height="270">
                 </a>
                 <div class="subdescription" id="rcorners3">
-                    Samsung Galaxy S8 and S8+: Official Introduction
+                    Samsung Galaxy S8 and S8+
+
+                    <div class="counter" onclick="counterLike(this)">
+                      <button type="button"><i class="material-icons iconl">favorite</i></button>
+                      <div id="likesVid3" class="adj">
+                          0 likes
+                      </div>
+                    </div>
+
+                    <div class="counter" onclick="counterShare(this)">
+                      <button type="button"><i class="material-icons iconl">share</i></button>
+                      <div id="sharesVid3" class="adj">
+                          0 shares
+                      </div>
+                    </div>
+
                     <i class="material-icons icon" onclick="display3()">add_circle</i>
                     <div id="description3">
-                      We live our lives through our phones. They still look the same<br>
-                      as they did a decade ago. Until Now.
+                      We live our lives through our phones. They still look the same as they did a decade ago. Until Now.
                     </div>
                 </div>
             </div>
