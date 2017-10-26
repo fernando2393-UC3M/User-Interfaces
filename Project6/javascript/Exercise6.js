@@ -159,21 +159,25 @@ function checkImages() {
 }
 
 function checkTime() {
+  /*Check time introduced, first check if empty*/
   var time = document.getElementById('Time').value;
   if (time === "") {
     alert("The time field cannot be empty");
     return false;
   }
+  /*Parse the field to integer and check values*/
   var timen = parseInt(document.getElementById('Time').value);
   if (timen < 10 || timen > 120) {
     alert("The time must be between 10 and 120")
     return false;
   }
+  /*Store time number into a global variable*/
   chrono = timen;
   return true;
 }
 
 function timer() {
+  /*Clear timer if any*/
   clearInterval(x);
   counter = chrono;
   var min = 0;
@@ -181,22 +185,26 @@ function timer() {
   if (counter > 0) {
     x = setInterval(function() {
       if (counter > 60) {
+        /*When there are more than 60 seconds, 1 minute and remaining seconds*/
         min = 1;
         sec = counter - 60;
         document.getElementById("Timer").innerHTML = min + " minute and " + sec + " seconds";
         counter--;
       }
       if (counter === 60) {
+        /*Only display minutes when exactly one*/
         min = 1;
         document.getElementById("Timer").innerHTML = min + " minute";
         counter--;
       }
       if (counter < 60) {
+        /*Display only seconds when lower than 60*/
         sec = counter;
         document.getElementById("Timer").innerHTML = sec + " seconds";
         counter--;
       }
       if (counter < 0) {
+        /*When counter arrives to 0, Expired time*/
         document.getElementById("Timer").innerHTML = "EXPIRED!";
         alert("Time has expired!");
         clearInterval(x);
