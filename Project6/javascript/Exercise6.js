@@ -119,7 +119,7 @@ function checkWin() {
   ImgOpened = "";
   if (ImgFound == numImg.length) { //Check if user has won
     document.getElementById("Timer").innerHTML = "Congratulations";
-    alert("WINNER WINNER CHICKEN DINER");
+    alert("WINNER WINNER CHICKEN DINNER");
     alert("The game has lasted "+(chrono-counter-1)+" seconds");
     clearInterval(x);
 
