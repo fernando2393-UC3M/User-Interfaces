@@ -131,6 +131,7 @@ clear: both;
 	margin-top: 5%;
 }
 
+/*Timer style, which will appear only when modal is submitted*/
 #Timer {
   font-size: 150%;
 	font-family: "Roboto", Helvetica, serif;
