@@ -47,11 +47,6 @@ function OpenCard() {
   var id = $(this).attr("id"); //Id of openned card
   if ($("#" + id + " img").is(":hidden")) { //Only on hidden images
     $("#" + id + " img").slideDown('fast'); //Animation
-    $(document).ready(function() {
-      $("#picbox").click(function() {
-        $(this).addClass('flip');
-      });
-    });
 
     if (ImgOpened == "") {
       BoxOpened = id;
