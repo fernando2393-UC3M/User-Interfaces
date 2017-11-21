@@ -1,309 +1,312 @@
-	/* The Modal (background) */
+	
+/* The Modal (background) */
+#myModal{
+    display: inline;  /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
 
-	#myModal {
-	  display: inline;
-	  /*Hidden by default */
-	  position: fixed;
-	  /* Stay in place */
-	  z-index: 1;
-	  /* Sit on top */
-	  left: 0;
-	  top: 0;
-	  width: 100%;
-	  /* Full width */
-	  height: 100%;
-	  /* Full height */
-	  overflow: auto;
-	  /* Enable scroll if needed */
-	  background-color: rgb(0, 0, 0);
-	  /* Fallback color */
-	  background-color: rgba(0, 0, 0, 0.7);
-	  /* Black w/ opacity */
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    height: 80%;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+.formularioModal{
+	margin-left: 20px;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+.modalContent{
+	width: 50%;
+	max-width:1000px;
+	margin-top: 200px;
+	margin-left: 25%;
+	overflow: hidden;
+	background-color: #f2f2f2;
+	height:300px;
+	box-shadow: 0px 0px 3px grey;
+	background-color: rgb(0,0,0,0.4);
+
+
+}
+.modal-body {
+	padding: 2px 16px;
+}
+ #credit{
+visibility: hidden;
+}
+#payp{
+	visibility: hidden;
+}
+#trans{
+	visibility: hidden;
+}
+.Sign p{
+	color: #303F9F;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px;
+}
+.form{
+	width: 50%;
+	float: left;
+}
+.buttons{
+	width: 50%;
+	float: right;
+	margin-top: 5%;
+}
+.formularioModal .input-group{
+		width: 70%;
+		position: relative;
+		margin-bottom: 32px;
+}
+.formularioModal .input-group input[id="passwordModal"],
+.formularioModal .input-group input[id="emailModal"]{
+		font-size: 16px;
+		color: #303F9F;
+		width: 100%;
+		outline: none;
+		padding: 15px;
+		background: none;
+		border: none;
+		border-bottom: 2px solid #BBDEFB;
+}
+#emailModal, #passwordModal{
+		margin-left: 20px;
 	}
+.formularioModal .input-group input[id="passwordModal"]:focus,
+.formularioModal .input-group input[id="passwordModal"]:active,
+.formularioModal .input-group input[id="emailModal"]:focus,
+.formularioModal .input-group input[id="emailModal"]:active{
+	outline: none;
+	border-bottom: 2px solid #303F9F;
+}
+.formularioModal .input-group{
+	        color: #303F9F; 
+}
+.formularioModal .input-group label.label{
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	margin-left: 15px;
+	font-size: 16px;
+	line-height: 16px;
+	position: absolute;
+	top: 16px;
+	left: 0; 
+}
+.formularioModal .input-group label.label.active{
+	top: -12px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #B6B6B6;
+}
+.formularioModal input[id="btn-SM"]{
+    background: #303F9F;
+    border-radius: 1px;
+    border: 2px solid #f2f2f2;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Roboto";
+    font-size: 16px;
+    padding: 15px;
+    width: 90%;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    text-align: center;
+}
+.formularioModal input[id="btn-CM"]{
+	background: #c0392b;
+	border-radius: 1px;
+	border: 2px solid #f2f2f2;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Roboto";
+	font-size: 16px;
+	padding: 15px;
+	margin-top: 10px;
+	width: 90%;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	text-align: center;
+}
+.formularioModal input[id="btn-SM"]:hover{
+	background: #1976D2; 
+}
+.formularioModal input[id="btn-CM"]:hover{
+	background: #e74c3c;}
+select {
+		font-family: Roboto;
+		background: transparent;
+		border: none;
+		font-size: 14px;
+		height: 30px;
+		padding: 5px;
+		width: 250px;
+		color: #303F9F;
+		border-bottom: 2px solid #BBDEFB;
+}
+*{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: roboto;
+}
+.lines{
+	float: left;
+	width: 5%
+}
+.lines img{
+	width: 30px;
+	height: 30px;
+	line-height: 75px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.name{
+	float: left;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 75px;
+	color: #0097A7;
+}
+header{
+	height: 14%;
+	width: 100%;
+	background:#283593;
+	padding: 0px;
+	position: fixed;
+	overflow: hidden;
+	line-height: 75px;
+}
+header nav{
+	float: right;
+	line-height: 75px;
 
-	/* Modal Content */
-
-	.modal-content {
-	  position: relative;
-	  margin-bottom: 10%;
-	  margin-left: 10%;
-	  height: 80%;
-	  padding: 0;
-	  border: 1px solid #888;
-	  width: 80%;
-	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	  -webkit-animation-name: animatetop;
-	  -webkit-animation-duration: 0.4s;
-	  animation-name: animatetop;
-	  animation-duration: 0.4s
+}
+header nav a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding:8px 16px;
+	line-height: normal;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 50px;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition: all 500ms ease;
 	}
+header nav a:hover{
+	background: #0097A7;
+}
+.wrapper{
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+}
+.wrapper .name img{
+	width: 30%;
+	height: auto;
+	margin-top: 4%;
+}
+.lines img:hover .Bar{
+	display: block;
+}
+.Bar{
+	display: none;
+	width: 10%;
+	height: 10%
+	margin-top: 77px;
+	z-index: 3;
+	float: left;
+	background: #283593;
+}
+.Bar p{
+	color: #fff;
+	text-decoration: none;
+	padding:8px 16px;
+	line-height: normal;
+	font-size: 15px;
+	font-weight: bold;
+}
+.first-row img{
+	margin-top: 77px;
+	width: 25%;
+	height: 185px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0px;
+	float: left;
+	overflow: hidden;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition: all 500ms ease;
+}
+.second-row img{
+	width: 25%;
+	height: 185px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0px;
+	float: left;
+	overflow: hidden;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition: all 500ms ease;
+}
+.first-row img:hover,
+.second-row img:hover{ 
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5)
+	z-index: 3;
+}
 
-	.formularioModal {
-	  margin-left: 20px;
-	}
 
-	/* Add Animation */
 
-	@-webkit-keyframes animatetop {
-	  from {
-	    top: -300px;
-	    opacity: 0
-	  }
-	  to {
-	    top: 0;
-	    opacity: 1
-	  }
-	}
 
-	@keyframes animatetop {
-	  from {
-	    top: -300px;
-	    opacity: 0
-	  }
-	  to {
-	    top: 0;
-	    opacity: 1
-	  }
-	}
 
-	.modalContent {
-	  width: 50%;
-	  max-width: 1000px;
-	  margin-top: 200px;
-	  margin-left: 25%;
-	  overflow: hidden;
-	  background-color: #f2f2f2;
-	  height: 300px;
-	  box-shadow: 0px 0px 3px grey;
-	  background-color: rgb(0, 0, 0, 0.4);
-	}
 
-	.modal-body {
-	  padding: 2px 16px;
-	}
 
-	#credit {
-	  visibility: hidden;
-	}
 
-	#payp {
-	  visibility: hidden;
-	}
 
-	#trans {
-	  visibility: hidden;
-	}
 
-	.Sign p {
-	  color: #303F9F;
-	  font-size: 20px;
-	  font-weight: bold;
-	  padding: 20px;
-	}
 
-	.form {
-	  width: 50%;
-	  float: left;
-	}
 
-	.buttons {
-	  width: 50%;
-	  float: right;
-	  margin-top: 5%;
-	}
-
-	.formularioModal .input-group {
-	  width: 70%;
-	  position: relative;
-	  margin-bottom: 32px;
-	}
-
-	.formularioModal .input-group input[id="passwordModal"], .formularioModal .input-group input[id="emailModal"] {
-	  font-size: 16px;
-	  color: #303F9F;
-	  width: 100%;
-	  outline: none;
-	  padding: 15px;
-	  background: none;
-	  border: none;
-	  border-bottom: 2px solid #BBDEFB;
-	}
-
-	#emailModal, #passwordModal {
-	  margin-left: 20px;
-	}
-
-	.formularioModal .input-group input[id="passwordModal"]:focus, .formularioModal .input-group input[id="passwordModal"]:active, .formularioModal .input-group input[id="emailModal"]:focus, .formularioModal .input-group input[id="emailModal"]:active {
-	  outline: none;
-	  border-bottom: 2px solid #303F9F;
-	}
-
-	.formularioModal .input-group {
-	  color: #303F9F;
-	}
-
-	.formularioModal .input-group label.label {
-	  -webkit-transition: all 0.3s ease;
-	  -o-transition: all 0.3s ease;
-	  transition: all 0.3s ease;
-	  margin-left: 15px;
-	  font-size: 16px;
-	  line-height: 16px;
-	  position: absolute;
-	  top: 16px;
-	  left: 0;
-	}
-
-	.formularioModal .input-group label.label.active {
-	  top: -12px;
-	  font-size: 12px;
-	  line-height: 12px;
-	  color: #B6B6B6;
-	}
-
-	.formularioModal input[id="btn-SM"] {
-	  background: #303F9F;
-	  border-radius: 1px;
-	  border: 2px solid #f2f2f2;
-	  color: #fff;
-	  cursor: pointer;
-	  display: inline-block;
-	  font-family: "Roboto";
-	  font-size: 16px;
-	  padding: 15px;
-	  width: 90%;
-	  -webkit-transition: all 0.3s ease;
-	  -o-transition: all 0.3s ease;
-	  transition: all 0.3s ease;
-	  margin: 0 auto;
-	  text-align: center;
-	}
-
-	.formularioModal input[id="btn-CM"] {
-	  background: #c0392b;
-	  border-radius: 1px;
-	  border: 2px solid #f2f2f2;
-	  color: #fff;
-	  cursor: pointer;
-	  display: inline-block;
-	  font-family: "Roboto";
-	  font-size: 16px;
-	  padding: 15px;
-	  margin-top: 10px;
-	  width: 90%;
-	  -webkit-transition: all 0.3s ease;
-	  -o-transition: all 0.3s ease;
-	  transition: all 0.3s ease;
-	  text-align: center;
-	}
-
-	.formularioModal input[id="btn-SM"]:hover {
-	  background: #1976D2;
-	}
-
-	.formularioModal input[id="btn-CM"]:hover {
-	  background: #e74c3c;
-	}
-
-	select {
-	  font-family: Roboto;
-	  background: transparent;
-	  border: none;
-	  font-size: 14px;
-	  height: 30px;
-	  padding: 5px;
-	  width: 250px;
-	  color: #303F9F;
-	  border-bottom: 2px solid #BBDEFB;
-	}
-
-	* {
-	  padding: 0;
-	  margin: 0;
-	  -webkit-box-sizing: border-box;
-	  -moz-box-sizing: border-box;
-	  box-sizing: border-box;
-	}
-
-	body {
-	  font-family: roboto;
-	}
-
-	.name {
-	  float: left;
-	  font-weight: bold;
-	  font-size: 30px;
-	  line-height: 75px;
-	  color: #0097A7;
-	}
-
-	header {
-	  height: 75px;
-	  width: 100%;
-	  background: #283593;
-	  padding: 0px;
-	  position: fixed;
-	  overflow: hidden;
-	  line-height: 75px;
-	}
-
-	header nav {
-	  float: right;
-	  line-height: 75px;
-	}
-
-	header nav a {
-	  display: inline-block;
-	  color: #fff;
-	  text-decoration: none;
-	  padding: 8px 16px;
-	  line-height: normal;
-	  font-size: 15px;
-	  font-weight: bold;
-	  border-radius: 50px;
-	  -webkit-transition: all 500ms ease;
-	  -o-transition: all 500ms ease;
-	  transition: all 500ms ease;
-	}
-
-	header nav a:hover {
-	  background: #0097A7;
-	}
-
-	.wrapper {
-	  width: 90%;
-	  margin: auto;
-	  overflow: hidden;
-	}
-
-	.first-row img {
-	  margin-top: 75px;
-	  width: 25%;
-	  height: 185px;
-	  margin-left: 0px;
-	  margin-right: 0px;
-	  padding: 0px;
-	  float: left;
-	  overflow: hidden;
-	  -webkit-transition: all 500ms ease;
-	  -o-transition: all 500ms ease;
-	  transition: all 500ms ease;
-	}
-
-	.second-row img {
-	  width: 25%;
-	  height: 185px;
-	  margin-left: 0px;
-	  margin-right: 0px;
-	  padding: 0px;
-	  float: left;
-	  overflow: hidden;
-	  -webkit-transition: all 500ms ease;
-	  -o-transition: all 500ms ease;
-	  transition: all 500ms ease;
-	}
-
-	.first-row img:hover, .second-row img:hover {
-	  -webkit-transform: scale(1.5);
-	  transform: scale(1.5) z-index: 3;
-	}
