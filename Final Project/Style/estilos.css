@@ -191,35 +191,34 @@ body{
 }
 .lines{
 	float: left;
-	width: 5%
+	width: 5%;
+	margin-top: 1%;
 }
 .lines img{
 	width: 30px;
 	height: 30px;
-	line-height: 75px;
+	line-height: 10%;
 	margin-left: 20px;
-	margin-top: 20px;
 }
 .name{
 	float: left;
 	font-weight: bold;
 	font-size: 30px;
-	line-height: 75px;
+	line-height: 10%;
 	color: #0097A7;
 }
 header{
-	height: 14%;
+	height: 10%;
 	width: 100%;
 	background:#283593;
 	padding: 0px;
 	position: fixed;
 	overflow: hidden;
-	line-height: 75px;
+	line-height: 10%;
 }
 header nav{
 	float: right;
-	line-height: 75px;
-
+	line-height: 58px;
 }
 header nav a{
 	display: inline-block;
@@ -245,16 +244,13 @@ header nav a:hover{
 .wrapper .name img{
 	width: 30%;
 	height: auto;
-	margin-top: 4%;
-}
-.lines img:hover .Bar{
-	display: block;
+	margin-top: 2%;
 }
 .Bar{
 	display: none;
 	width: 10%;
 	height: 10%
-	margin-top: 77px;
+	margin-top: 10%;
 	z-index: 3;
 	float: left;
 	background: #283593;
@@ -267,10 +263,11 @@ header nav a:hover{
 	font-size: 15px;
 	font-weight: bold;
 }
+
 .first-row img{
-	margin-top: 77px;
+	margin-top: 60px;
 	width: 25%;
-	height: 185px;
+	height: 168px;
 	margin-left: 0px;
 	margin-right: 0px;
 	padding: 0px;
@@ -282,7 +279,7 @@ header nav a:hover{
 }
 .second-row img{
 	width: 25%;
-	height: 185px;
+	height: 168px;
 	margin-left: 0px;
 	margin-right: 0px;
 	padding: 0px;
