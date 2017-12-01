@@ -1,13 +1,20 @@
+function showBar(){
+if (document.getElementById('bar').style.display=="block") {
+
+    document.getElementById('bar').style.display="none";
+}
+  else{
+
+      document.getElementById('bar').style.display="block";
+  }
+}
 function checkPass() {
 
   /* parámetros que debe cumplir,
   Minimo 8 caracteres
   Maximo 15
-  Al menos una letra mayúscula
-  Al menos una letra minucula
   Al menos un dígito
   No espacios en blanco
-  Al menos 1 caracter especial
   */
 
   var regexp_password = /^(?=.*[a-z])(?=.*\d)([A-Za-z\d$@$!%*?&]|[^ ]){1,8}$/;

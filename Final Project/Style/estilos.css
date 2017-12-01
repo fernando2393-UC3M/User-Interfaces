@@ -1,4 +1,4 @@
-	
+
 /* The Modal (background) */
 #myModal{
     display: inline;  /*Hidden by default */
@@ -33,7 +33,7 @@
 }
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
+    from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
 
@@ -49,7 +49,7 @@
 	margin-top: 200px;
 	margin-left: 25%;
 	overflow: hidden;
-	background-color: #f2f2f2;
+	background-color: #222222;
 	height:300px;
 	box-shadow: 0px 0px 3px grey;
 	background-color: rgb(0,0,0,0.4);
@@ -69,7 +69,7 @@ visibility: hidden;
 	visibility: hidden;
 }
 .Sign p{
-	color: #303F9F;
+	color: #0084C9;
 	font-size: 20px;
 	font-weight: bold;
 	padding: 20px;
@@ -91,13 +91,13 @@ visibility: hidden;
 .formularioModal .input-group input[id="passwordModal"],
 .formularioModal .input-group input[id="emailModal"]{
 		font-size: 16px;
-		color: #303F9F;
+		color: #0084C9;
 		width: 100%;
 		outline: none;
 		padding: 15px;
 		background: none;
 		border: none;
-		border-bottom: 2px solid #BBDEFB;
+		border-bottom: 2px solid #0084C9;
 }
 #emailModal, #passwordModal{
 		margin-left: 20px;
@@ -107,10 +107,10 @@ visibility: hidden;
 .formularioModal .input-group input[id="emailModal"]:focus,
 .formularioModal .input-group input[id="emailModal"]:active{
 	outline: none;
-	border-bottom: 2px solid #303F9F;
+	border-bottom: 2px solid #00547F;
 }
 .formularioModal .input-group{
-	        color: #303F9F; 
+	        color: #0084C9;
 }
 .formularioModal .input-group label.label{
 	-webkit-transition: all 0.3s ease;
@@ -121,16 +121,16 @@ visibility: hidden;
 	line-height: 16px;
 	position: absolute;
 	top: 16px;
-	left: 0; 
+	left: 0;
 }
 .formularioModal .input-group label.label.active{
 	top: -12px;
 	font-size: 12px;
 	line-height: 12px;
-	color: #B6B6B6;
+	color: #8FB299;
 }
 .formularioModal input[id="btn-SM"]{
-    background: #303F9F;
+    background: #0084C9;
     border-radius: 1px;
     border: 2px solid #f2f2f2;
     color: #fff;
@@ -164,7 +164,7 @@ visibility: hidden;
 	text-align: center;
 }
 .formularioModal input[id="btn-SM"]:hover{
-	background: #1976D2; 
+	background: #1976D2;
 }
 .formularioModal input[id="btn-CM"]:hover{
 	background: #e74c3c;}
@@ -200,6 +200,12 @@ body{
 	line-height: 10%;
 	margin-left: 20px;
 }
+#bar{
+  display: none;
+  width: 25%;
+  height: 100%;
+  background: Black;
+}
 .name{
 	float: left;
 	font-weight: bold;
@@ -210,7 +216,7 @@ body{
 header{
 	height: 10%;
 	width: 100%;
-	background:#283593;
+	background:black;
 	padding: 0px;
 	position: fixed;
 	overflow: hidden;
@@ -222,7 +228,7 @@ header nav{
 }
 header nav a{
 	display: inline-block;
-	color: #fff;
+	color: #0084C9;
 	text-decoration: none;
 	padding:8px 16px;
 	line-height: normal;
@@ -234,7 +240,7 @@ header nav a{
 	transition: all 500ms ease;
 	}
 header nav a:hover{
-	background: #0097A7;
+	background: #FFFFFF;
 }
 .wrapper{
 	width: 90%;
@@ -265,7 +271,7 @@ header nav a:hover{
 }
 
 .first-row img{
-	margin-top: 60px;
+	margin-top: 65px;
 	width: 25%;
 	height: 168px;
 	margin-left: 0px;
@@ -290,20 +296,8 @@ header nav a:hover{
 	transition: all 500ms ease;
 }
 .first-row img:hover,
-.second-row img:hover{ 
+.second-row img:hover{
     -webkit-transform: scale(1.5);
     transform: scale(1.5)
 	z-index: 3;
 }
-
-
-
-
-
-
-
-
-
-
-
-
