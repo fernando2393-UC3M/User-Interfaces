@@ -1,7 +1,6 @@
-
 /* The Modal (background) */
 #myModal{
-    display: inline;  /*Hidden by default */
+    display: none;  /*Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -11,6 +10,10 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+#Menu1{
+  display: none;
 }
 
 /* Modal Content */
@@ -88,7 +91,7 @@ visibility: hidden;
 		position: relative;
 		margin-bottom: 32px;
 }
-.formularioModal .input-group input[id="passwordModal"],
+.formularioModal .input-group input[id="modalpass"],
 .formularioModal .input-group input[id="emailModal"]{
 		font-size: 16px;
 		color: #0084C9;
@@ -99,11 +102,11 @@ visibility: hidden;
 		border: none;
 		border-bottom: 2px solid #0084C9;
 }
-#emailModal, #passwordModal{
+#emailModal, #modalpass{
 		margin-left: 20px;
 	}
-.formularioModal .input-group input[id="passwordModal"]:focus,
-.formularioModal .input-group input[id="passwordModal"]:active,
+.formularioModal .input-group input[id="modalpass"]:focus,
+.formularioModal .input-group input[id="modalpass"]:active,
 .formularioModal .input-group input[id="emailModal"]:focus,
 .formularioModal .input-group input[id="emailModal"]:active{
 	outline: none;
@@ -218,7 +221,7 @@ header{
 	width: 100%;
 	background:black;
 	padding: 0px;
-	position: fixed;
+	position: block;
 	overflow: hidden;
 	line-height: 10%;
 }
@@ -271,7 +274,6 @@ header nav a:hover{
 }
 
 .first-row img{
-	margin-top: 65px;
 	width: 25%;
 	height: 168px;
 	margin-left: 0px;
@@ -279,9 +281,13 @@ header nav a:hover{
 	padding: 0px;
 	float: left;
 	overflow: hidden;
-	-webkit-transition:all 500ms ease;
-	-o-transition:all 500ms ease;
-	transition: all 500ms ease;
+  -webkit-filter: grayscale(100%);
+  -webkit-transform:rotateY(0deg);
+    -moz-transform:rotateY(0deg);
+    transform:rotateY(0deg);
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s
 }
 .second-row img{
 	width: 25%;
@@ -291,13 +297,18 @@ header nav a:hover{
 	padding: 0px;
 	float: left;
 	overflow: hidden;
-	-webkit-transition:all 500ms ease;
-	-o-transition:all 500ms ease;
-	transition: all 500ms ease;
+  -webkit-filter: grayscale(100%);
+  -webkit-transform:rotateY(0deg);
+    -moz-transform:rotateY(0deg);
+    transform:rotateY(0deg);
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s
 }
 .first-row img:hover,
 .second-row img:hover{
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5)
-	z-index: 3;
+-webkit-filter: grayscale(0%);
+-webkit-transform:rotateY(360deg);
+-moz-transform:rotateY(360deg);
+transform:rotateY(360deg)
 }

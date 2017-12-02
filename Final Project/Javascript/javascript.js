@@ -1,40 +1,48 @@
-function showBar(){
-if (document.getElementById('bar').style.display=="block") {
+var modalVar = 1;
 
-    document.getElementById('bar').style.display="none";
+function showBar(){
+if (document.getElementById("Menu").style.display=="block") {
+    document.getElementById("Menu").style.display="none";
+    document.getElementById("Menu1").style.display="block";
 }
   else{
-
-      document.getElementById('bar').style.display="block";
+      document.getElementById("Menu").style.display="block";
+      document.getElementById("Menu1").style.display="none";
   }
 }
+
 function checkPass() {
-
-  /* parámetros que debe cumplir,
-  Minimo 8 caracteres
-  Maximo 15
-  Al menos un dígito
-  No espacios en blanco
-  */
-
-  var regexp_password = /^(?=.*[a-z])(?=.*\d)([A-Za-z\d$@$!%*?&]|[^ ]){1,8}$/;
-  var regexp_email = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-  // cojo el valor de los input
-  var contrasenia = document.getElementById('passwordModal').value;
-  var email = document.getElementById('emailModal').value;
-  cemail = "Email";
-  cpass = "Pass";
-  // compruebo si contrasenia cumple las condiciones de expresión regular, lo hago mediante función test.
-  if (regexp_password.test(contrasenia) && regexp_email.test(email)) {
-    document.getElementById('myModal').style.display = "none";
-    return true;
-  } else {
-    if (!regexp_password.test(contrasenia)) {
-      alert('Wrong...! Please put a correct password!');
-      return false;
-    } else {
-      alert('Wrong...! Please put a correct email!');
+    var pw = document.getElementById("modalpass").value;
+    if (pw.length < 8) {
+      alert("Your password must be at least 8 characters");
       return false;
     }
+    if (pw.length > 15) {
+      alert("Your password must be at most 15 characters");
+      return false;
+    }
+    if (pw.search(/[a-z]/i) < 0) {
+      alert("Your password must contain at least one letter.");
+      return false;
+    }
+    if (pw.search(/[0-9]/) < 0) {
+      alert("Your password must contain at least one digit.");
+      return false;
+    }
+    return true;
   }
-}
+
+  function modalBox() {
+    if(modalVar===1){
+      var modal = document.getElementById('myModal');
+      modal.style.display = "block";
+    }
+  }
+
+  function hideModal(){
+    if(checkPass()===true){
+      var modal = document.getElementById("myModal");
+      modalVar = 0;
+      modal.style.display="none";
+    }
+  }

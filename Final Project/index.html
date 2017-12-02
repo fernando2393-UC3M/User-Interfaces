@@ -9,22 +9,31 @@
 </head>
 
 <body>
+
 	<header>
 		<div class="lines"><img src="Images/lines.png" onclick="showBar()"></div>
 		<div class="bar" id="bar"></div>
 		<div class="wrapper">
-		<div class="name"><img src="Images/logo.png"></div>
-			<nav>
-				<a href="#">About Us</a>
-				<a href="#">Help</a>
-				<a href="#">Contact</a>
-				<a href="#">Use Terms</a>
-			</nav>
+			<div class="name">
+				<img src="Images/logo.png">
+			</div>
+			<div>
+				<nav id="Menu">
+					<a href="#">About Us</a>
+					<a href="#">Help</a>
+					<a href="#">Contact</a>
+					<a href="#">Use Terms</a>
+				</nav>
+				<nav id="Menu1">
+					<a href="#">Get An Account</a>
+					<a href="#" onclick="modalBox()">Sign In</a>
+				</nav>
+			</div>
 		</div>
 	</header>
-	<div id="myModal" class="modal">
+
+	<div id="myModal" class="modal" onsubmit="hideModal(); return false;">
 		<div class="modalContent">
-			<!-- Modal content -->
 			<div class="Sign">
 				<p>Sign In</p>
 			</div>
@@ -36,12 +45,11 @@
 					</div>
 					<div class="input-group">
 						<label for="password">Password:</label>
-						<input type="password" id="passwordModal" name="passwordModal" />
+						<input type="password" id="modalpass" name="modalpass" />
 					</div>
 				</div>
 				<div class="buttons">
-					<div class="submitModal"><input type="input" id="btn-SM" value="Submit" onclick="checkPass()"></div>
-
+					<div class="submitModal"><input type="input" id="btn-SM" value="Submit"></div>
 					<div class="cancelModal"><input type="submit" id="btn-CM" value="Cancel"></div>
 				</div>
 			</form>
