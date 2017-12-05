@@ -46,3 +46,8 @@ function checkPass() {
       modal.style.display="none";
     }
   }
+
+  function cancel(){
+    var modal = document.getElementById("myModal");
+    modal.style.display="none";
+  }

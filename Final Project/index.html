@@ -32,7 +32,7 @@
 		</div>
 	</header>
 
-	<div id="myModal" class="modal" onsubmit="hideModal(); return false;">
+	<div id="myModal" class="modal">
 		<div class="modalContent">
 			<div class="Sign">
 				<p>Sign In</p>
@@ -49,8 +49,8 @@
 					</div>
 				</div>
 				<div class="buttons">
-					<div class="submitModal"><input type="input" id="btn-SM" value="Submit"></div>
-					<div class="cancelModal"><input type="submit" id="btn-CM" value="Cancel"></div>
+					<div class="submitModal"><input type="submit" id="btn-SM" value="Submit" onclick="hideModal(); return false;"></div>
+					<div class="cancelModal"><input type="submit" id="btn-CM" value="Cancel" onclick="cancel(); return false();"></div>
 				</div>
 			</form>
 		</div>
