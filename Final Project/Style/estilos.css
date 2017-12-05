@@ -274,7 +274,7 @@ header nav a:hover{
 	font-weight: bold;
 }
 
-.second-row img{
+.images img{
 	width: 25%;
 	height: 168px;
 	margin-left: 0px;
@@ -287,14 +287,14 @@ header nav a:hover{
   -moz-transition:all 500ms;
   transition:all 500ms;
 }
-.first-row img:hover,
-.second-row img:hover{
+
+.images img:hover{
 -webkit-filter: grayscale(0%);
   -webkit-transform:scale(1.3);
   transform:scale(1.3);
   z-index: 4;
   position: sticky;
 }
-.first-row, .second-row{
+.images{
   overflow: hidden;
 }
