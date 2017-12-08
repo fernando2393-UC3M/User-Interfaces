@@ -54,8 +54,10 @@ function cancel() {
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("content").style.display = "block";
 }
 
 function closeNav() {
+  document.getElementById("content").style.display = "none";
   document.getElementById("mySidenav").style.width = "0";
 }
