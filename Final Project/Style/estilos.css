@@ -363,6 +363,7 @@ header nav a:hover {
 }
 
 .sidenav a {
+  margin-top: 20px;
   padding: 10px 10px 10px 32px;
   text-decoration: none;
   font-size: 20px;
@@ -393,6 +394,7 @@ header nav a:hover {
 }
 
 .search {
+  margin-top: 20px;
   border: 2px solid #0084C9;
   border-radius: 4px;
   margin-left: 32px;
