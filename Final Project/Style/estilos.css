@@ -104,6 +104,7 @@
 .form {
   width: 50%;
   float: left;
+  color: #0084C9;
 }
 
 .buttons {
@@ -118,7 +119,7 @@
   margin-bottom: 32px;
 }
 
-.formularioModal .input-group input[id="modalpass"], .formularioModal .input-group input[id="emailModal"] {
+.formularioModal .input-group{
   font-size: 16px;
   color: #0084C9;
   width: 100%;
@@ -129,37 +130,36 @@
   border-bottom: 2px solid #0084C9;
 }
 
-#emailModal, #modalpass {
+#modalmail, #modalpass {
   margin-left: 20px;
 }
 
-.formularioModal .input-group input[id="modalpass"]:focus, .formularioModal .input-group input[id="modalpass"]:active, .formularioModal .input-group input[id="emailModal"]:focus, .formularioModal .input-group input[id="emailModal"]:active {
-  outline: none;
-  border-bottom: 2px solid #00547F;
-}
-
-.formularioModal .input-group {
-  color: #0084C9;
-}
-
-.formularioModal .input-group label.label {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  margin-left: 15px;
+.email{
   font-size: 16px;
-  line-height: 16px;
-  position: absolute;
-  top: 16px;
-  left: 0;
+  color: #0084C9;
+  width: 80%;
+  outline: none;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0084C9;
 }
 
-.formularioModal .input-group label.label.active {
-  top: -12px;
-  font-size: 12px;
-  line-height: 12px;
-  color: #8FB299;
+.pass{
+  font-size: 16px;
+  color: #0084C9;
+  width: 80%;
+  outline: none;
+  padding: 15px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0084C9;
 }
+
+.pass_div{
+  padding-top: 40px;
+}
+
 
 .formularioModal input[id="btn-SM"] {
   background: #0084C9;
@@ -189,7 +189,7 @@
   font-family: "Roboto";
   font-size: 16px;
   padding: 15px;
-  margin-top: 10px;
+  margin-top: 30px;
   width: 90%;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -287,9 +287,24 @@ header nav a {
   transition: all 500ms ease;
 }
 
+#signin{
+  display: inline-block;
+  color: #0084C9;
+  text-decoration: none;
+  padding: 8px 16px;
+  line-height: normal;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
 header nav a:hover {
   background: #FFFFFF;
 }
+
 
 .wrapper {
   width: 90%;

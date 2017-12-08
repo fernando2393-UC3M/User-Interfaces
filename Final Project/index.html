@@ -19,35 +19,37 @@
 				<img alt="logo" src="Images/logo.png">
 			</div>
 				<nav>
-					<a href="#">About Us</a>
+					<a href="#" onclick="resetAllCookies()">About Us</a>
 					<a href="#">Get An Account</a>
-					<a href="#" onclick="modalBox()">Sign In</a>
+					<div id="signin">
+						<a href="#" onclick="modalBox()">Sign In</a>
+					</div>
 				</nav>
 		</div>
 	</header>
 
-	<div id="myModal" class="modal">
+	<div id="myModal" class="modal" >
 		<div class="modalContent">
 			<div class="Sign">
 				<p>Sign In</p>
 			</div>
 			<form class="formularioModal" method="post">
 				<div class="form">
-					<div class="input-group">
+					<div>
 						<p>
 							E-mail
 						</p>
-						<input type="email" id="emailModal" name="emailModal" />
+						<input class="email" type="email" id="modalmail">
 					</div>
-					<div class="input-group">
-						<p>
-							Password
-						</p>
-						<input type="password" id="modalpass" name="modalpass" />
-					</div>
+						<div class="pass_div">
+							<p>
+								Password
+							</p>
+							<input class="pass" type="password" id="modalpass">
+						</div>
 				</div>
 				<div class="buttons">
-					<div class="submitModal"><input type="submit" id="btn-SM" value="Submit" onclick="hideModal(); return false;"></div>
+					<div class="submitModal"><input type="btn" id="btn-SM" value="Submit" onclick="modalBoxHide()"></div>
 					<div class="cancelModal"><input type="submit" id="btn-CM" value="Cancel" onclick="return cancel(); return false();"></div>
 				</div>
 			</form>
