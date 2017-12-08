@@ -358,6 +358,7 @@ header nav a:hover {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  z-index: 5;
 }
 
 .sidenav a {
