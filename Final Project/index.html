@@ -5,30 +5,24 @@
 	<title>FILMIN</title>
 	<link rel="stylesheet" type="text/css" href="Style/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="Javascript/javascript.js"></script>
 </head>
 
 <body>
 
 	<header>
-		<div class="lines"><img src="Images/lines.png" onclick="showBar()"></div>
+		<i class="fa fa-bars fa-2x menu" aria-hidden="true" onclick="openNav()"></i>
 		<div class="bar" id="bar"></div>
 		<div class="wrapper">
 			<div class="name">
 				<img src="Images/logo.png">
 			</div>
-			<div>
-				<nav id="Menu">
+				<nav>
 					<a href="#">About Us</a>
-					<a href="#">Help</a>
-					<a href="#">Contact</a>
-					<a href="#">Use Terms</a>
-				</nav>
-				<nav id="Menu1">
 					<a href="#">Get An Account</a>
 					<a href="#" onclick="modalBox()">Sign In</a>
 				</nav>
-			</div>
 		</div>
 	</header>
 
@@ -55,6 +49,14 @@
 			</form>
 		</div>
 	</div>
+
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<input class="search" type="text" name="search" placeholder="Search...">
+		<a class="sidenav_opt" href="#">Categories</a>
+		<a class="sidenav_opt" href="#">My List</a>
+	</div>
+
 	<div class="images">
 		<img src="Images/Star-Wars.jpg">
 		<img src="Images/Indiana-Jones.jpg">
@@ -77,6 +79,22 @@
 		<img src="Images/Annabelle.jpg">
 		<img src="Images/Interstellar.jpg">
 	</div>
+
+	<footer>
+				<nav>
+					<a href="#">Help</a>
+					<a href="#">Contact</a>
+					<a href="#">Use Terms</a>
+				</nav>
+				<i class="fa fa-facebook-official foot" aria-hidden="true"></i>
+				<i class="fa fa-instagram foot" aria-hidden="true"></i>
+				<i class="fa fa-twitter foot" aria-hidden="true"></i>
+				<i class="fa fa-youtube foot" aria-hidden="true"></i>
+				<div class="copyright">
+				&copy; 2017 Filmin, Inc. All rights reserved.
+				</div>
+	</footer>
+
 </body>
 
 </html>
