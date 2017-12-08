@@ -376,14 +376,6 @@ header nav a:hover {
   background: #FFFFFF;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -399,7 +391,9 @@ header nav a:hover {
   border-radius: 4px;
   margin-left: 32px;
   margin-right: 20px;
+  height: 25px;
   width: 130px;
+  font-size: 15px;
   background-color: white;
   background-image: url("/Images/ic_search_black_24dp_1x.png");
   background-position: 10px 10px;
@@ -475,4 +469,15 @@ i.foot {
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 10px;
+}
+
+.closebtn {
+  float: right;
+  padding-right: 10px;
+  margin-top: -45px;
+}
+
+h2 {
+  padding: 10px 10px 10px 32px;
+  color: #0084C9;
 }
