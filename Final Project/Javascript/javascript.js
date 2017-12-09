@@ -55,7 +55,11 @@ function modalBox2() {
 function cancel() {
   var modal = document.getElementById("myModal");
   modal.style.display = "none";
-  modal = document.getElementById("myModal2");
+  return false;
+}
+
+function cancel2() {
+  var modal = document.getElementById("myModal2");
   modal.style.display = "none";
   return false;
 }
@@ -293,6 +297,8 @@ function godfather(){
 function lambs(){
   window.open("http://www.imdb.com/title/tt0102926/?ref_=nv_sr_1","_self");
 }
+
+
 function credit(){
 	var x= document.getElementById('paymentMethod');
 	var y=x.options[x.selectedIndex].value;

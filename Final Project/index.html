@@ -31,86 +31,6 @@
 		</div>
 	</header>
 
-	<div id="myModal2" class="modal2">
-		<div class="modalContent2">
-			<div class="Sign">
-				<p>Sign Up</p>
-			</div>
-			<form class="formularioModal" method="post">
-				<div class="form">
-					<div>
-						<br>
-						<br>
-						<p>
-							E-mail
-						</p>
-						<input class="email" type="email" id="modalmail">
-					</div>
-					<div class="pass_div">
-						<p>
-							Password
-						</p>
-						<input class="pass" type="password" id="modalpass">
-					</div>
-					<div>
-						<br>
-						<br>
-						<p>
-							Address
-						</p>
-						<input type="text" class="address" id="modaladdress">
-					</div>
-				</div>
-				<div class="buttons2">
-					<div class="input-group">
-						<label for="payment" id="payment">Payment Method:</label>
-						<br>
-						<br>
-						<select id="paymentMethod" onchange="credit()">
-						<option value="empty" id="empty"> </option>
-	 					<option value="creditcard" id="creditcard" >Credit Card</option>
-	 					<option value="transfer" id="transfer">Bank transfer</option>
-	 					<option value="Paypal" id="Paypal">Paypal</option>
-	 					</select>
-					</div>
-					<div class="paypal" id="payp">
-						<a href="http://www.paypal.com" target="_blank"><img src="Images/paypal.png"></a>
-					</div>
-					<div class="credit" id="credit">
-						<div class="input-group">
-							<label for="Account">Account Number:</label>
-							<input type="text" id="account" name="account" size="8">
-						</div>
-						<div class="input-group">
-							<label for="Month">Valid Thru:</label>
-							<input type="Month" id="Month" name="Month">
-						</div>
-						<div class="input-group">
-							<label for="cvv">CVV:</label>
-							<input type="Number" id="cvv" name="cvv" size="3">
-						</div>
-					</div>
-					<div class="transfer" id="trans">
-						<div class="input-group">
-							<label for="name">Account Holder:</label>
-							<input type="text" id="holder" name="holder">
-						</div>
-						<div class="input-group">
-							<label for="name">Account Number:</label>
-							<input type="text" id="ACnumber" name="ACnumber">
-						</div>
-						<div class="input-group">
-							<label for="name">Bank name:</label>
-							<input type="text" id="bname" name="bname">
-						</div>
-					</div>
-					<div class="submitModal"><input type="submit" id="btn-SM" value="Submit" onclick="modalBoxHide(); return false;"></div>
-					<div class="cancelModal"><input type="submit" id="btn-CM" value="Cancel" onclick="return cancel(); return false;"></div>
-				</div>
-			</form>
-		</div>
-	</div>
-
 	<div id="myModal" class="modal">
 		<div class="modalContent">
 			<div class="Sign">
@@ -139,6 +59,82 @@
 		</div>
 	</div>
 
+	<div id="myModal2" class="modal2">
+		<div class="modalContent2">
+			<div class="Sign">
+				<p>Sign Up</p>
+			</div>
+			<form class="formularioModal" method="post">
+				<div class="form">
+					<div>
+						<p>
+							E-mail
+						</p>
+						<input class="email" type="email" id="modalmail">
+					</div>
+					<div class="pass_div">
+						<p>
+							Password
+						</p>
+						<input class="pass" type="password" id="modalpass">
+					</div>
+					<div class="pass_div">
+						<p>
+							Address
+						</p>
+						<input class="address" type="text" id="modaladdress">
+					</div>
+					<div class="pass_div">
+						<div class="submitModal2"><input type="submit" id="btn-SM" value="Submit" onclick="modalBoxHide(); return false;"></div>
+						<div class="cancelModal2"><input type="submit" id="btn-CM" value="Cancel" onclick="cancel2(); return false;"></div>
+					</div>
+				</div>
+				<div class="buttons2">
+					<div class="input-group">
+						<label for="payment" id="payment">Payment Method:</label>
+						<select id="paymentMethod" onchange="credit()">
+						<option value="empty" id="empty">Select</option>
+	 					<option value="creditcard" id="creditcard">Credit Card</option>
+	 					<option value="transfer" id="transfer">Bank transfer</option>
+	 					<option value="Paypal" id="Paypal">Paypal</option>
+	 					</select>
+					</div>
+					<div id="payp">
+						<a href="http://www.paypal.com" target="_blank"><img src="Images/paypal.png"></a>
+					</div>
+					<div class="credit" id="credit">
+						<div class="input-group">
+							<label for="Account">Account Number:</label>
+							<input type="text" class="modin" id="account" name="account" size="8">
+						</div>
+						<div class="input-group">
+							<label for="Month">Valid Thru:</label>
+							<input type="Month" class="modin" id="Month" name="Month">
+						</div>
+						<div class="input-group">
+							<label for="cvv">CVV:</label>
+							<input type="Number" class="modin" id="cvv" name="cvv" size="3">
+						</div>
+					</div>
+					<div class="transfer" id="trans">
+						<div class="input-group">
+							<label for="name">Account Holder:</label>
+							<input type="text" class="modin" id="holder" name="holder">
+						</div>
+						<div class="input-group">
+							<label for="name">Account Number:</label>
+							<input type="text" class="modin" id="ACnumber" name="ACnumber">
+						</div>
+						<div class="input-group">
+							<label for="name">Bank name:</label>
+							<input type="text" class="modin" id="bname" name="bname">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<div id="mySidenav" class="sidenav">
 		<div id="content">
 			<i onclick="closeNav()" class="fa fa-arrow-circle-o-left fa-2x closebtn" aria-hidden="true"></i>
@@ -148,26 +144,26 @@
 			<input id="search" onkeyup="searchf();" class="search" type="text" name="search" placeholder="Search...">
 			<div id="result">
 				<ul id="myUl">
-					<li><a href="#">Annabelle <i onclick="annabelle()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Braveheart <i onclick="braveheart()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Catch Me If You Can <i onclick="catch_it()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Dunkirk <i onclick="dunkirk()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Forrest Gump <i onclick="forrest()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Inception <i onclick="inception()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Indiana Jones <i onclick="indiana()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">In Time <i onclick="time()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Interstellar <i onclick="interstellar()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Law Abiding Citizen <i onclick="law()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Lucy <i onclick="lucy()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Pearl Harbor <i onclick="pearl()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Philadelphia <i onclick="philadelphia()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Pursuit Of Happyness <i onclick="pursuit()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Seven <i onclick="seven()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Space Jam <i onclick="space()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">Star Wars <i onclick="starwars()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">The Gallows <i onclick="gallows()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">The Godfather <i onclick="godfather()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
-					<li><a href="#">The Silence Of The Lambs <i onclick="lambs()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Annabelle', 'Annabelle.jpg')">Annabelle <i onclick="annabelle()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Braveheart', 'Brave.jpg')">Braveheart <i onclick="braveheart()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Catch Me If You Can', 'Catch.jpg')">Catch Me If You Can <i onclick="catch_it()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Dunkirk', 'Dunkirk.jpg')">Dunkirk <i onclick="dunkirk()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Forrest Gump', 'Forrest.jpg')">Forrest Gump <i onclick="forrest()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Inception', 'Inception.jpeg')">Inception <i onclick="inception()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Indiana Jones', 'Indiana-Jones.jpg')">Indiana Jones <i onclick="indiana()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('In Time', 'Time.jpg')">In Time <i onclick="time()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Interstellar', 'Interstellar.jpg')">Interstellar <i onclick="interstellar()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Law Abiding Citizen', 'ciudadano.jpg')">Law Abiding Citizen <i onclick="law()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Lucy', 'Lucy.jpg')">Lucy <i onclick="lucy()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Pearl Harbor', 'Pearl.jpg')">Pearl Harbor <i onclick="pearl()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Philadelphia', 'Philadelphia.jpg')">Philadelphia <i onclick="philadelphia()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('The pursuite of Happyness', 'Happyness.jpg')">Pursuit Of Happyness <i onclick="pursuit()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Seven', 'Seven.jpg')">Seven <i onclick="seven()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Space Jam', 'Space-Jam.jpg')">Space Jam <i onclick="space()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Star Wars', 'Star-Wars.jpg')">Star Wars <i onclick="starwars()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('The Gallows', 'Gallows.jpg')">The Gallows <i onclick="gallows()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('The Godfather', 'Godfather.jpg')">The Godfather <i onclick="godfather()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('The Silence Of The Lambs', 'Lambs.jpg')">The Silence Of The Lambs <i onclick="lambs()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</div>
