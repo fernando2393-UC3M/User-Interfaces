@@ -508,11 +508,12 @@ h2 {
 }
 
 #myUl li{
+  margin-left: -20px;
   display: none;
 }
 
 #myUl a{
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .imdb{
