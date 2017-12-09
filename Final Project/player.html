@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Style/player.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="Javascript/player.js"></script>
+</head>
+
+<body onload="getMovie(); hidePlayer()" onmousemove="showPlayer()">
+
+  <div id="headerWrapper">
+    <header>
+      <i onclick="goBack()" class="fa fa-arrow-circle-o-left fa-2x closebtn" id="back"></i>
+      <div class="titleWrapper">
+        <p id="title">
+          Title
+        </p>
+      </div>
+    </header>
+  </div>
+
+<div class="iconWrapper">
+  <i class="fa fa-play-circle-o" aria-hidden="true" id="centre" onclick="pause(); hideCentre()"></i>
+</div>
+
+<div id="loadingWrapper">
+  <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true" id="loading"></i>
+</div>
+
+<div id="footerWrapper">
+  <footer>
+    <div class="wrapper">
+      <i class="fa fa-play" aria-hidden="true" id="play" onclick="pause()"></i>
+      <i class="fa fa-pause" aria-hidden="true" id="pause" onclick="play()"></i>
+      <i class="fa fa-arrows-alt" aria-hidden="true" id="full"></i>
+    </div>
+  </footer>
+</div>
+
+</body>
+
+</html>
