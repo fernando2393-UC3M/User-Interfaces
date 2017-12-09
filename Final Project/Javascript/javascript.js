@@ -191,3 +191,66 @@ function searchf() {
     }
   }
 }
+
+//--------------------------------------IMDB FILMS--------------------------------------//
+
+function annabelle(){
+  window.open("http://www.imdb.com/title/tt3322940/?ref_=fn_al_tt_1","_self");
+}
+function braveheart(){
+  window.open("http://www.imdb.com/title/tt0112573/?ref_=nv_sr_3","_self");
+}
+function catch_it(){
+  window.open("http://www.imdb.com/title/tt0264464/?ref_=nv_sr_1","_self");
+}
+function dunkirk(){
+  window.open("http://www.imdb.com/title/tt5013056/?ref_=nv_sr_1","_self");
+}
+function forrest(){
+  window.open("http://www.imdb.com/title/tt0109830/?ref_=nv_sr_1","_self");
+}
+function inception(){
+  window.open("http://www.imdb.com/title/tt1375666/?ref_=nv_sr_1","_self");
+}
+function indiana(){
+  window.open("http://www.imdb.com/title/tt0097576/?ref_=nv_sr_1","_self");
+}
+function time(){
+  window.open("http://www.imdb.com/title/tt1637688/?ref_=nv_sr_2","_self");
+}
+function interstellar(){
+  window.open("http://www.imdb.com/title/tt0816692/?ref_=nv_sr_1","_self");
+}
+function law(){
+  window.open("http://www.imdb.com/title/tt1197624/?ref_=nv_sr_1","_self");
+}
+function lucy(){
+  window.open("http://www.imdb.com/title/tt2872732/?ref_=nv_sr_3","_self");
+}
+function pearl(){
+  window.open("http://www.imdb.com/title/tt0213149/?ref_=nv_sr_2","_self");
+}
+function philadelphia(){
+  window.open("http://www.imdb.com/title/tt0107818/?ref_=nv_sr_2","_self");
+}
+function pursuit(){
+  window.open("http://www.imdb.com/title/tt0454921/?ref_=nv_sr_1","_self");
+}
+function seven(){
+  window.open("http://www.imdb.com/title/tt0114369/?ref_=fn_al_tt_1","_self");
+}
+function space(){
+  window.open("http://www.imdb.com/title/tt0117705/?ref_=nv_sr_1","_self");
+}
+function starwars(){
+  window.open("http://www.imdb.com/title/tt0076759/?ref_=nv_sr_5","_self");
+}
+function gallows(){
+  window.open("http://www.imdb.com/title/tt2309260/?ref_=nv_sr_1","_self");
+}
+function godfather(){
+  window.open("http://www.imdb.com/title/tt0068646/?ref_=nv_sr_1","_self");
+}
+function lambs(){
+  window.open("http://www.imdb.com/title/tt0102926/?ref_=nv_sr_1","_self");
+}

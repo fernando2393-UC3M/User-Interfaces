@@ -514,3 +514,8 @@ h2 {
 #myUl a{
   font-size: 14px;
 }
+
+.imdb{
+  margin-top: -5px;
+  float: right;
+}
