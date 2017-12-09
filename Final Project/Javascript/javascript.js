@@ -37,6 +37,12 @@ function modalBox() {
     modal.style.display = "block";
   }
 }
+function modalBox2() {
+  if (modalVar === 1) {
+    var modal = document.getElementById('myModal2');
+    modal.style.display = "block";
+  }
+}
 
 // function hideModal() {
 //   if (checkPass() === true) {
@@ -253,4 +259,26 @@ function godfather(){
 }
 function lambs(){
   window.open("http://www.imdb.com/title/tt0102926/?ref_=nv_sr_1","_self");
+}
+function credit(){
+	var x= document.getElementById('paymentMethod');
+	var y=x.options[x.selectedIndex].value;
+	if(y=="creditcard"){
+		document.getElementById('credit').style.display="block";
+		document.getElementById('credit').style.visibility="visible";
+		document.getElementById('payp').style.display="none";
+		document.getElementById('trans').style.display="none";
+	}
+	else if (y=="Paypal") {
+		document.getElementById('credit').style.display="none";
+		document.getElementById('payp').style.display="block";
+		document.getElementById('payp').style.visibility="visible";
+		document.getElementById('trans').style.display="none";
+	}
+	else if(y=="transfer"){
+		document.getElementById('credit').style.display="none";
+		document.getElementById('payp').style.display="none";
+		document.getElementById('trans').style.display="block";
+		document.getElementById('trans').style.visibility="visible";
+	}
 }

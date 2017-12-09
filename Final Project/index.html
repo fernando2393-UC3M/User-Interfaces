@@ -20,13 +20,93 @@
 			</div>
 			<nav>
 				<a href="#" onclick="resetAllCookies()">About Us</a>
-				<a href="#">Get An Account</a>
+				<a href="#" onclick="modalBox2()">Get An Account</a>
 				<div id="signin">
 					<a href="#" onclick="modalBox()">Sign In</a>
 				</div>
 			</nav>
 		</div>
 	</header>
+
+	<div id="myModal2" class="modal2">
+		<div class="modalContent2">
+			<div class="Sign">
+				<p>Sign Up</p>
+			</div>
+			<form class="formularioModal" method="post">
+				<div class="form">
+					<div>
+						<br>
+						<br>
+						<p>
+							E-mail
+						</p>
+						<input class="email" type="email" id="modalmail">
+					</div>
+					<div class="pass_div">
+						<p>
+							Password
+						</p>
+						<input class="pass" type="password" id="modalpass">
+					</div>
+					<div>
+						<br>
+						<br>
+						<p>
+							Address
+						</p>
+						<input type="text" class="address" id="modaladdress">
+					</div>
+				</div>
+				<div class="buttons2">
+					<div class="input-group">
+						<label for="payment" id="payment">Payment Method:</label>
+						<br>
+						<br>
+						<select id="paymentMethod" onchange="credit()">
+						<option value="empty" id="empty"> </option>
+	 					<option value="creditcard" id="creditcard" >Credit Card</option>
+	 					<option value="transfer" id="transfer">Bank transfer</option>
+	 					<option value="Paypal" id="Paypal">Paypal</option>
+	 					</select>
+					</div>
+					<div class="paypal" id="payp">
+						<a href="http://www.paypal.com" target="_blank"><img src="Images/paypal.png"></a>
+					</div>
+					<div class="credit" id="credit">
+						<div class="input-group">
+							<label for="Account">Account Number:</label>
+							<input type="text" id="account" name="account" size="8">
+						</div>
+						<div class="input-group">
+							<label for="Month">Valid Thru:</label>
+							<input type="Month" id="Month" name="Month">
+						</div>
+						<div class="input-group">
+							<label for="cvv">CVV:</label>
+							<input type="Number" id="cvv" name="cvv" size="3">
+						</div>
+					</div>
+					<div class="transfer" id="trans">
+						<div class="input-group">
+							<label for="name">Account Holder:</label>
+							<input type="text" id="holder" name="holder">
+						</div>
+						<div class="input-group">
+							<label for="name">Account Number:</label>
+							<input type="text" id="ACnumber" name="ACnumber">
+						</div>
+						<div class="input-group">
+							<label for="name">Bank name:</label>
+							<input type="text" id="bname" name="bname">
+						</div>
+					</div>
+					<div class="submitModal"><input type="submit" id="btn-SM" value="Submit" onclick="modalBoxHide(); return false;"></div>
+					<div class="cancelModal"><input type="submit" id="btn-CM" value="Cancel" onclick="return cancel(); return false;"></div>
+				</div>
+			</form>
+		</div>
+	</div>
 
 	<div id="myModal" class="modal">
 		<div class="modalContent">
