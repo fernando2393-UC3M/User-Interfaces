@@ -60,6 +60,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("content").style.display = "none";
   document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("search").value = "";
+  searchf();
 }
 
 /*COOKIES*/
