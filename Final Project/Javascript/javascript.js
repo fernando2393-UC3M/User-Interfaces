@@ -55,6 +55,8 @@ function modalBox2() {
 function cancel() {
   var modal = document.getElementById("myModal");
   modal.style.display = "none";
+  modal = document.getElementById("myModal2");
+  modal.style.display = "none";
   return false;
 }
 
@@ -155,7 +157,9 @@ function modalBoxHide() {
   if ((checkModalPass() === true && checkCookiePass() === true) && (checkCookieMail() === true)) {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
-    document.getElementById("signin").innerHTML = '<a href="#">' + getCookie("mail") + '</a>'
+    document.getElementById("signin").innerHTML = '<a href="#" onclick="logOut()" onmouseover="showLogOut()" onmouseout="hideLogOut()">' + getCookie("mail") + '</a>'+'<div id="logOut"> Click to Log Out </div>'
+    modal = document.getElementById("myModal2");
+    modal.style.display = "none";
   }
 }
 
@@ -164,6 +168,35 @@ function resetAllCookies() {
   document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   window.alert("Cookies Removed");
 }
+
+function showLogOut() {
+  var mess = document.getElementById("logOut");
+  mess.style.display= "block";
+}
+
+function hideLogOut(){
+  var mess = document.getElementById("logOut");
+  mess.style.display= "none";
+}
+
+function logOut() {
+  resetAllCookies();
+  location.reload();
+}
+
+/*Redirection*/
+function redirect(title, trailer) {
+  setCookie("film", title, 30);
+  setCookie("trailer", trailer, 30);
+  window.location = "player.html";
+}
+
+
+
+
+
+
+
 
 //--------------------------------------SEARCH FIELD--------------------------------------//
 
