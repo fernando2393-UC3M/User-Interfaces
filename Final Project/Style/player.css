@@ -1,0 +1,100 @@
+
+html {
+background-size: contain;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  height: auto;
+  width: 100%;
+  height: 5%;
+  padding: 0% 1% 2% 1%;
+  /*Allow the header to be fixed*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.titleWrapper{
+  background: #FFFFFF;
+}
+
+#title {
+  margin-right: 5%;
+  float: right;
+  color: #0084C9;
+  font-family: "Roboto";
+  background-color: #FFFFFF;
+  padding:1%;
+  border-radius: 30px;
+}
+
+.closebtn {
+  margin-top: 1%;
+  margin-left: 1%;
+  float: left;
+  font-size: 200%;
+}
+
+.iconWrapper {
+  margin-top: 27%;
+  position: relative;
+  text-align: center;
+}
+#centre {
+  font-size: 500%;
+}
+
+#loadingWrapper {
+  margin-top: 27%;
+  position: relative;
+  text-align: center;
+  display: none;
+}
+
+#loading {
+  font-size: 500%;
+}
+
+i {
+  color: #0084C9;
+}
+
+#back {
+  font-size: 300%;
+}
+
+.wrapper {
+  margin-top: 2%;
+  margin-left: 1%;
+}
+#play{
+  float: left;
+  font-size: 150%;
+}
+
+#pause {
+  float: left;
+  display: none;
+  font-size: 150%;
+}
+
+#full {
+  margin-right: 5%;
+  float: right;
+  font-size: 150%;
+}
+
+footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  height: 10%;
+  width: 100%;
+  height: 5%;
+  padding: 0% 1% 2% 1%;
+  /*Allow the header to be fixed*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
