@@ -18,17 +18,17 @@
 			<div class="name">
 				<img alt="logo" src="Images/logo.png">
 			</div>
-				<nav>
-					<a href="#" onclick="resetAllCookies()">About Us</a>
-					<a href="#">Get An Account</a>
-					<div id="signin">
-						<a href="#" onclick="modalBox()">Sign In</a>
-					</div>
-				</nav>
+			<nav>
+				<a href="#" onclick="resetAllCookies()">About Us</a>
+				<a href="#">Get An Account</a>
+				<div id="signin">
+					<a href="#" onclick="modalBox()">Sign In</a>
+				</div>
+			</nav>
 		</div>
 	</header>
 
-	<div id="myModal" class="modal" >
+	<div id="myModal" class="modal">
 		<div class="modalContent">
 			<div class="Sign">
 				<p>Sign In</p>
@@ -41,12 +41,12 @@
 						</p>
 						<input class="email" type="email" id="modalmail">
 					</div>
-						<div class="pass_div">
-							<p>
-								Password
-							</p>
-							<input class="pass" type="password" id="modalpass">
-						</div>
+					<div class="pass_div">
+						<p>
+							Password
+						</p>
+						<input class="pass" type="password" id="modalpass">
+					</div>
 				</div>
 				<div class="buttons">
 					<div class="submitModal"><input type="submit" id="btn-SM" value="Submit" onclick="modalBoxHide(); return false;"></div>
@@ -60,9 +60,33 @@
 		<div id="content">
 			<i onclick="closeNav()" class="fa fa-arrow-circle-o-left fa-2x closebtn" aria-hidden="true"></i>
 			<h2>Menu</h2>
-			<input class="search" type="text" name="search" placeholder="Search...">
 			<a class="sidenav_opt" href="#"><i class="fa fa-tags" aria-hidden="true"></i>  Categories</a>
 			<a class="sidenav_opt" href="#"><i class="fa fa-list" aria-hidden="true"></i>  My List</a>
+			<input id="search" onkeyup="searchf();" class="search" type="text" name="search" placeholder="Search...">
+			<div id="result">
+				<ul id="myUl" onclick="return false;">
+					<li><a href="#">Annabelle</a></li>
+					<li><a href="#">Brave</a></li>
+					<li><a href="#">Catch Me If You Can</a></li>
+					<li><a href="#">Dunkirk</a></li>
+					<li><a href="#">Forrest Gump</a></li>
+					<li><a href="#">Inception</a></li>
+					<li><a href="#">Indiana Jones</a></li>
+					<li><a href="#">In Time</a></li>
+					<li><a href="#">Interstellar</a></li>
+					<li><a href="#">Law Abiding Citizen</a></li>
+					<li><a href="#">Lucy</a></li>
+					<li><a href="#">Pearl Harbor</a></li>
+					<li><a href="#">Philadelphia</a></li>
+					<li><a href="#">Pursuit Of Happiness</a></li>
+					<li><a href="#">Seven</a></li>
+					<li><a href="#">Space Jam</a></li>
+					<li><a href="#">Star Wars</a></li>
+					<li><a href="#">The Gallows</a></li>
+					<li><a href="#">The Godfather</a></li>
+					<li><a href="#">The Silence Of The Lambs</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -90,18 +114,18 @@
 	</div>
 
 	<footer>
-				<nav onclick="return false">
-					<a href="#">Help</a>
-					<a href="#">Contact</a>
-					<a href="#">Use Terms</a>
-				</nav>
-				<i class="fa fa-facebook-official foot" aria-hidden="true"></i>
-				<i class="fa fa-instagram foot" aria-hidden="true"></i>
-				<i class="fa fa-twitter foot" aria-hidden="true"></i>
-				<i class="fa fa-youtube foot" aria-hidden="true"></i>
-				<div class="copyright">
-				&copy; 2017 Filmin, Inc. All rights reserved.
-				</div>
+		<nav onclick="return false">
+			<a href="#">Help</a>
+			<a href="#">Contact</a>
+			<a href="#">Use Terms</a>
+		</nav>
+		<i class="fa fa-facebook-official foot" aria-hidden="true"></i>
+		<i class="fa fa-instagram foot" aria-hidden="true"></i>
+		<i class="fa fa-twitter foot" aria-hidden="true"></i>
+		<i class="fa fa-youtube foot" aria-hidden="true"></i>
+		<div class="copyright">
+			&copy; 2017 Filmin, Inc. All rights reserved.
+		</div>
 	</footer>
 
 </body>

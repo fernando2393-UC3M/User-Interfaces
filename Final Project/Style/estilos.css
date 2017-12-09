@@ -496,3 +496,21 @@ h2 {
   padding: 10px 10px 10px 32px;
   color: #0084C9;
 }
+
+#result{
+  margin-top: 10px;
+  display: none;
+  width: 80%;
+  border-radius: 5px;
+  margin-left: 32px;
+  margin-bottom: 10px;
+  background: white;
+}
+
+#myUl li{
+  display: none;
+}
+
+#myUl a{
+  font-size: 14px;
+}

@@ -91,8 +91,7 @@ function checkCookieMail() {
   if (mail != "") {
     if (mail === document.getElementById("modalmail").value) {
       return true;
-    }
-    else {
+    } else {
       alert("Invalid mail, try again.");
       return false;
     }
@@ -148,7 +147,7 @@ function modalBoxHide() {
   if ((checkModalPass() === true && checkCookiePass() === true) && (checkCookieMail() === true)) {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
-    document.getElementById("signin").innerHTML='<a href="#">'+ getCookie("mail") +'</a>'
+    document.getElementById("signin").innerHTML = '<a href="#">' + getCookie("mail") + '</a>'
   }
 }
 
@@ -156,4 +155,37 @@ function resetAllCookies() {
   document.cookie = "mail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   window.alert("Cookies Removed");
+}
+
+//--------------------------------------SEARCH FIELD--------------------------------------//
+
+function showResult(){
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  if(filter.length > 0){
+    document.getElementById("result").style.display = "block";
+  }
+}
+
+function searchf() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUl");
+  li = ul.getElementsByTagName("li");
+  if (filter.length > 0) {
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        showResult();
+        li[i].style.display = "block";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  } else {
+    for (i = 0; i < li.length; i++) {
+      li[i].style.display = "none";
+    }
+  }
 }
