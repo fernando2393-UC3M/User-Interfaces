@@ -462,6 +462,20 @@ header nav a:hover {
   }
 }
 
+#cookies {
+  position: absolute;
+  color: #0084C9;
+  padding: 10px 10px 10px 32px;
+  text-decoration: none;
+  bottom: 10px;
+  transition: 0.3s;
+}
+
+#cookies:hover {
+  color: white;
+}
+
+
 .search {
   margin-top: 20px;
   border: 2px solid #0084C9;
@@ -578,6 +592,7 @@ h2 {
 #myUl i{
   margin-top: -34px;
   margin-right: 5px;
+
 }
 
 .imdb{
