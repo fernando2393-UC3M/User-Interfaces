@@ -578,6 +578,11 @@ h2 {
   font-size: 12px;
 }
 
+#myUl i{
+  margin-top: -34px;
+  margin-right: 5px;
+}
+
 .imdb{
   margin-top: -5px;
   float: right;
