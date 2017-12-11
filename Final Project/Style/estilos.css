@@ -463,7 +463,7 @@ header nav a:hover {
 }
 
 #cookies {
-  position: absolute;
+  position: relative;
   color: #0084C9;
   padding: 10px 10px 10px 32px;
   text-decoration: none;
