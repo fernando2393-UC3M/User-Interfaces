@@ -168,7 +168,7 @@
   border-bottom: 2px solid #0084C9;
 }
 
-#modalmail, #modalpass, #modaladdress{
+#modalmail, #modalmail2, #modalpass, #modalpass2, #modaladdress{
   margin-left: 20px;
 }
 
@@ -210,7 +210,7 @@
 }
 
 
-.formularioModal input[id="btn-SM"] {
+.formularioModal input[id="btn-SM"], input[id="btn-SM2"] {
   background: #0084C9;
   border-radius: 1px;
   border: 2px solid #f2f2f2;
@@ -228,7 +228,7 @@
   text-align: center;
 }
 
-.formularioModal input[id="btn-CM"] {
+.formularioModal input[id="btn-CM"], input[id="btn-CM2"]{
   background: #c0392b;
   border-radius: 1px;
   border: 2px solid #f2f2f2;
@@ -583,4 +583,8 @@ h2 {
 .imdb{
   margin-top: -5px;
   float: right;
+}
+
+#paymentMethod {
+  margin-top: 10px;
 }
