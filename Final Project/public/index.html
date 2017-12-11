@@ -70,13 +70,13 @@
 						<p>
 							E-mail
 						</p>
-						<input class="email" type="email" id="modalmail">
+						<input class="email" type="email" id="modalmail2">
 					</div>
 					<div class="pass_div">
 						<p>
 							Password
 						</p>
-						<input class="pass" type="password" id="modalpass">
+						<input class="pass" type="password" id="modalpass2">
 					</div>
 					<div class="pass_div">
 						<p>
@@ -85,13 +85,15 @@
 						<input class="address" type="text" id="modaladdress">
 					</div>
 					<div class="pass_div">
-						<div class="submitModal2"><input type="submit" id="btn-SM" value="Submit" onclick="modalBoxHide(); return false;"></div>
-						<div class="cancelModal2"><input type="submit" id="btn-CM" value="Cancel" onclick="cancel2(); return false;"></div>
+						<div class="submitModal2"><input type="submit" id="btn-SM2" value="Submit" onclick="modalBoxHide(); return false;"></div>
+						<div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>
 					</div>
 				</div>
 				<div class="buttons2">
 					<div class="input-group">
-						<label for="payment" id="payment">Payment Method:</label>
+						<p>
+							Payment Method
+						</p>
 						<select id="paymentMethod" onchange="credit()">
 						<option value="empty" id="empty">Select</option>
 	 					<option value="creditcard" id="creditcard">Credit Card</option>
@@ -100,34 +102,35 @@
 	 					</select>
 					</div>
 					<div id="payp">
-						<a href="http://www.paypal.com" target="_blank"><img src="Images/paypal.png"></a>
+						<a href="https://www.paypal.com/webapps/mpp/paypal-popup"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/bdg_payments_by_pp_2line.png" alt="Payments by PayPal"></a>
 					</div>
 					<div class="credit" id="credit">
 						<div class="input-group">
-							<label for="Account">Account Number:</label>
+							<p>Account Number:</p>
 							<input type="text" class="modin" id="account" name="account" size="8">
 						</div>
 						<div class="input-group">
-							<label for="Month">Valid Thru:</label>
-							<input type="Month" class="modin" id="Month" name="Month">
+							<p>Valid Thru:</p>
+							<input type="text" class="modin" id="Month" name="Month">
 						</div>
 						<div class="input-group">
-							<label for="cvv">CVV:</label>
+							<p>CVV:</p>
 							<input type="Number" class="modin" id="cvv" name="cvv" size="3">
 						</div>
 					</div>
 					<div class="transfer" id="trans">
 						<div class="input-group">
-							<label for="name">Account Holder:</label>
+							<p>Account Holder:</p>
 							<input type="text" class="modin" id="holder" name="holder">
 						</div>
 						<div class="input-group">
-							<label for="name">Account Number:</label>
+							<p>Account Number:</p>
 							<input type="text" class="modin" id="ACnumber" name="ACnumber">
 						</div>
 						<div class="input-group">
-							<label for="name">Bank name:</label>
-							<input type="text" class="modin" id="bname" name="bname">
+							<p>Bank name:
+								<p>
+									<input type="text" class="modin" id="bname" name="bname">
 						</div>
 					</div>
 				</div>
@@ -146,7 +149,7 @@
 				<ul id="myUl">
 					<li><a href="#" onclick="redirect('Annabelle', 'Annabelle.jpg')">Annabelle </a><i onclick="annabelle()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
 					<li><a href="#" onclick="redirect('Braveheart', 'Brave.jpg')">Braveheart </a><i onclick="braveheart()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
-					<li><a href="#" onclick="redirect('Catch Me If You Can', 'Catch.jpg')">Catch Me If You Can </a><i onclick="catch_it()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Catch Me If You Can', 'Catch.jpg')">Catch Me If You Can </a><i onclick="catch_it()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
 					<li><a href="#" onclick="redirect('Dunkirk', 'Dunkirk.jpg')">Dunkirk </a><i onclick="dunkirk()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
 					<li><a href="#" onclick="redirect('Forrest Gump', 'Forrest.jpg')">Forrest Gump </a><i onclick="forrest()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
 					<li><a href="#" onclick="redirect('Inception', 'Inception.jpeg')">Inception </a><i onclick="inception()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
