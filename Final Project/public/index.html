@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FILMIN</title>
+	<link rel="stylesheet" type="text/css" href="Style/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="Javascript/javascript.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<i class="fa fa-bars fa-2x menu" aria-hidden="true" onclick="openNav()"></i>
+		<div class="bar" id="bar"></div>
+		<div class="wrapper">
+			<div class="name">
+				<img alt="logo" src="Images/logo.png">
+			</div>
+			<nav>
+				<a href="#" onclick="resetAllCookies()">About Us</a>
+				<a href="#" onclick="modalBox2()">Get An Account</a>
+				<div id="signin">
+					<a href="#" onclick="modalBox()">Sign In</a>
+					<div id="logOut">
+						Click to Log Out
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<div id="myModal" class="modal">
+		<div class="modalContent">
+			<div class="Sign">
+				<p>Sign In</p>
+			</div>
+			<form class="formularioModal" method="post">
+				<div class="form">
+					<div>
+						<p>
+							E-mail
+						</p>
+						<input class="email" type="email" id="modalmail">
+					</div>
+					<div class="pass_div">
+						<p>
+							Password
+						</p>
+						<input class="pass" type="password" id="modalpass">
+					</div>
+				</div>
+				<div class="buttons">
+					<div class="submitModal"><input type="submit" id="btn-SM" value="Submit" onclick="modalBoxHide(); return false;"></div>
+					<div class="cancelModal"><input type="submit" id="btn-CM" value="Cancel" onclick="return cancel(); return false;"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="myModal2" class="modal2">
+		<div class="modalContent2">
+			<div class="Sign">
+				<p>Sign Up</p>
+			</div>
+			<form class="formularioModal" method="post">
+				<div class="form">
+					<div>
+						<p>
+							E-mail
+						</p>
+						<input class="email" type="email" id="modalmail">
+					</div>
+					<div class="pass_div">
+						<p>
+							Password
+						</p>
+						<input class="pass" type="password" id="modalpass">
+					</div>
+					<div class="pass_div">
+						<p>
+							Address
+						</p>
+						<input class="address" type="text" id="modaladdress">
+					</div>
+					<div class="pass_div">
+						<div class="submitModal2"><input type="submit" id="btn-SM" value="Submit" onclick="modalBoxHide(); return false;"></div>
+						<div class="cancelModal2"><input type="submit" id="btn-CM" value="Cancel" onclick="cancel2(); return false;"></div>
+					</div>
+				</div>
+				<div class="buttons2">
+					<div class="input-group">
+						<label for="payment" id="payment">Payment Method:</label>
+						<select id="paymentMethod" onchange="credit()">
+						<option value="empty" id="empty">Select</option>
+	 					<option value="creditcard" id="creditcard">Credit Card</option>
+	 					<option value="transfer" id="transfer">Bank transfer</option>
+	 					<option value="Paypal" id="Paypal">Paypal</option>
+	 					</select>
+					</div>
+					<div id="payp">
+						<a href="http://www.paypal.com" target="_blank"><img src="Images/paypal.png"></a>
+					</div>
+					<div class="credit" id="credit">
+						<div class="input-group">
+							<label for="Account">Account Number:</label>
+							<input type="text" class="modin" id="account" name="account" size="8">
+						</div>
+						<div class="input-group">
+							<label for="Month">Valid Thru:</label>
+							<input type="Month" class="modin" id="Month" name="Month">
+						</div>
+						<div class="input-group">
+							<label for="cvv">CVV:</label>
+							<input type="Number" class="modin" id="cvv" name="cvv" size="3">
+						</div>
+					</div>
+					<div class="transfer" id="trans">
+						<div class="input-group">
+							<label for="name">Account Holder:</label>
+							<input type="text" class="modin" id="holder" name="holder">
+						</div>
+						<div class="input-group">
+							<label for="name">Account Number:</label>
+							<input type="text" class="modin" id="ACnumber" name="ACnumber">
+						</div>
+						<div class="input-group">
+							<label for="name">Bank name:</label>
+							<input type="text" class="modin" id="bname" name="bname">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="mySidenav" class="sidenav">
+		<div id="content">
+			<i onclick="closeNav()" class="fa fa-arrow-circle-o-left fa-2x closebtn" aria-hidden="true"></i>
+			<h2>Menu</h2>
+			<a class="sidenav_opt" href="#"><i class="fa fa-tags" aria-hidden="true"></i>  Categories</a>
+			<a class="sidenav_opt" href="#"><i class="fa fa-list" aria-hidden="true"></i>  My List</a>
+			<input id="search" onkeyup="searchf();" class="search" type="text" name="search" placeholder="Search...">
+			<div id="result">
+				<ul id="myUl">
+					<li><a href="#" onclick="redirect('Annabelle', 'Annabelle.jpg')">Annabelle </a><i onclick="annabelle()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Braveheart', 'Brave.jpg')">Braveheart </a><i onclick="braveheart()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Catch Me If You Can', 'Catch.jpg')">Catch Me If You Can </a><i onclick="catch_it()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></a></li>
+					<li><a href="#" onclick="redirect('Dunkirk', 'Dunkirk.jpg')">Dunkirk </a><i onclick="dunkirk()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Forrest Gump', 'Forrest.jpg')">Forrest Gump </a><i onclick="forrest()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Inception', 'Inception.jpeg')">Inception </a><i onclick="inception()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Indiana Jones', 'Indiana-Jones.jpg')">Indiana Jones </a><i onclick="indiana()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('In Time', 'Time.jpg')">In Time </a><i onclick="time()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Interstellar', 'Interstellar.jpg')">Interstellar </a><i onclick="interstellar()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Law Abiding Citizen', 'ciudadano.jpg')">Law Abiding Citizen </a><i onclick="law()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Lucy', 'Lucy.jpg')">Lucy </a><i onclick="lucy()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Pearl Harbor', 'Pearl.jpg')">Pearl Harbor </a><i onclick="pearl()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Philadelphia', 'Philadelphia.jpg')">Philadelphia </a><i onclick="philadelphia()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('The pursuite of Happyness', 'Happyness.jpg')">Pursuit Of Happyness </a><i onclick="pursuit()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Seven', 'Seven.jpg')">Seven </a><i onclick="seven()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Space Jam', 'Space-Jam.jpg')">Space Jam </a><i onclick="space()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('Star Wars', 'Star-Wars.jpg')">Star Wars </a><i onclick="starwars()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('The Gallows', 'Gallows.jpg')">The Gallows </a><i onclick="gallows()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('The Godfather', 'Godfather.jpg')">The Godfather </a><i onclick="godfather()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+					<li><a href="#" onclick="redirect('The Silence Of The Lambs', 'Lambs.jpg')">The Silence Of The Lambs </a><i onclick="lambs()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="images">
+		<img alt="Star Wars" src="Images/Star-Wars.jpg" onclick="redirect('Star Wars', 'Star-Wars.jpg')">
+		<img alt="Indiana Jones" src="Images/Indiana-Jones.jpg" onclick="redirect('Indiana Jones', 'Indiana-Jones.jpg')">
+		<img alt="Godfather" src="Images/Godfather.jpg" onclick="redirect('Godfather', 'Godfather.jpg')">
+		<img alt="Forrest" src="Images/Forrest.jpg" onclick="redirect('Forrest Gump', 'Forrest.jpg')">
+		<img alt="Seven" src="Images/Seven.jpg" onclick="redirect('Seven', 'Seven.jpg')">
+		<img alt="Dunkirk" src="Images/Dunkirk.jpg" onclick="redirect('Dunkirk', 'Dunkirk.jpg')">
+		<img alt="Catch" src="Images/Catch.jpg" onclick="redirect('Catch Me If You Can', 'Catch.jpg')">
+		<img alt="Philadelphia" src="Images/Philadelphia.jpg" onclick="redirect('Philadelphia', 'Philadelphia.jpg')">
+		<img alt="Space Jam" src="Images/Space-Jam.jpg" onclick="redirect('Space Jam', 'Space-Jam.jpg')">
+		<img alt="Brave" src="Images/Brave.jpg" onclick="redirect('BraveHeart', 'Brave.jpg')">
+		<img alt="Lambs" src="Images/Lambs.jpg" onclick="redirect('The Silence of the Lambs', 'Lambs.jpg')">
+		<img alt="Inception" src="Images/Inception.jpeg" onclick="redirect('Inception', 'Inception.jpeg')">
+		<img alt="Ciudadano" src="Images/ciudadano.jpg" onclick="redirect('Citizen Kane', 'ciudadano.jpg')">
+		<img alt="Time" src="Images/Time.jpg" onclick="redirect('Timeless', 'Time.jpg')">
+		<img alt="Happiness" src="Images/Happyness.jpg" onclick="redirect('The pursuite of Happiness', 'Happyness.jpg')">
+		<img alt="Pearl" src="Images/Pearl.jpg" onclick="redirect('Pearl Harbor', 'Pearl.jpg')">
+		<img alt="Gallows" src="Images/Gallows.jpg" onclick="redirect('The Gallows', 'Gallows.jpg')">
+		<img alt="Lucy" src="Images/Lucy.jpg" onclick="redirect('Lucy', 'Lucy.jpg')">
+		<img alt="Annabelle" src="Images/Annabelle.jpg" onclick="redirect('Annabelle', 'Annabelle.jpg')">
+		<img alt="Interstellar" src="Images/Interstellar.jpg" onclick="redirect('Interstellar', 'Interstellar.jpg')">
+	</div>
+
+	<footer>
+		<nav onclick="return false">
+			<a href="#">Help</a>
+			<a href="#">Contact</a>
+			<a href="#">Use Terms</a>
+		</nav>
+		<i class="fa fa-facebook-official foot" aria-hidden="true"></i>
+		<i class="fa fa-instagram foot" aria-hidden="true"></i>
+		<i class="fa fa-twitter foot" aria-hidden="true"></i>
+		<i class="fa fa-youtube foot" aria-hidden="true"></i>
+		<div class="copyright">
+			&copy; 2017 Filmin, Inc. All rights reserved.
+		</div>
+	</footer>
+
+</body>
+
+</html>

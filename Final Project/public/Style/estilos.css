@@ -472,6 +472,9 @@ header nav a:hover {
   width: 130px;
   font-size: 15px;
   background-color: white;
+  background-image: url("/Images/ic_search_black_24dp_1x.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
