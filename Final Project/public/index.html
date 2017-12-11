@@ -20,7 +20,7 @@
 			</div>
 			<nav>
 				<a href="#" onclick="resetAllCookies()">About Us</a>
-				<a href="#" onclick="modalBox2()">Get An Account</a>
+				<a href="#" onclick="modalBox2()" id="getaccount">Get An Account</a>
 				<div id="signin">
 					<a href="#" onclick="modalBox()">Sign In</a>
 					<div id="logOut">
@@ -84,8 +84,8 @@
 						</p>
 						<input class="address" type="text" id="modaladdress">
 					</div>
-					<div class="pass_div">
-						<div class="submitModal2"><input type="submit" id="btn-SM2" value="Submit" onclick="modalBoxHide(); return false;"></div>
+					<div class="pass_div" id="optiondiv">
+						<div class="submitModal2"><input type="submit" id="btn-SM2" value="Submit" onclick="setPass(); setAddress(); setAccountNum(); modalBoxHide2(); return false;"></div>
 						<div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>
 					</div>
 				</div>
@@ -169,6 +169,7 @@
 					<li><a href="#" onclick="redirect('The Silence Of The Lambs', 'Lambs.jpg')">The Silence Of The Lambs </a><i onclick="lambs()" class="fa fa-imdb fa-2x imdb" aria-hidden="true"></i></li>
 				</ul>
 			</div>
+			<a href="#" id="cookies" onclick="resetAllCookies()"><i class="fa fa-lock" aria-hidden="true" onclick="resetAllCookies()"></i> Delete Cookies</a>
 		</div>
 	</div>
 

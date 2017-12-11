@@ -9,27 +9,6 @@ function showBar() {
     document.getElementById("Menu1").style.display = "none";
   }
 }
-//
-// function checkPass() {
-//   var pw = document.getElementById("pass").value;
-//   if (pw.length < 8) {
-//     window.alert("Your password must be at least 8 characters");
-//     return false;
-//   }
-//   if (pw.length > 15) {
-//     window.alert("Your password must be at most 15 characters");
-//     return false;
-//   }
-//   if (pw.search(/[a-z]/i) < 0) {
-//     window.alert("Your password must contain at least one letter.");
-//     return false;
-//   }
-//   if (pw.search(/[0-9]/) < 0) {
-//     window.alert("Your password must contain at least one digit.");
-//     return false;
-//   }
-//   return true;
-// }
 
 function modalBox() {
   if (modalVar === 1) {
@@ -44,13 +23,6 @@ function modalBox2() {
   }
 }
 
-// function hideModal() {
-//   if (checkPass() === true) {
-//     var modal = document.getElementById("myModal");
-//     modalVar = 0;
-//     modal.style.display = "none";
-//   }
-// }
 
 function cancel() {
   var modal = document.getElementById("myModal");
@@ -113,7 +85,9 @@ function checkCookieMail() {
     mail = document.getElementById("modalmail").value;
     if (mail != "" && mail != null) {
       setCookie("mail", mail, 30);
+      return true;
     }
+    return false;
   }
 }
 
@@ -162,17 +136,152 @@ function modalBoxHide() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
     document.getElementById("signin").innerHTML = '<a href="#" onclick="logOut()" onmouseover="showLogOut()" onmouseout="hideLogOut()">' + getCookie("mail") + '</a>'+'<div id="logOut"> Click to Log Out </div>'
-    modal = document.getElementById("myModal2");
-    modal.style.display = "none";
+    document.getElementById("getaccount").innerHTML = "Account Info.";
+    /*We modify the register modal to make it work as an Account Information Display*/
+    document.getElementById("optiondiv").innerHTML = '<div class="submitModal2"><input type="submit" id="btn-SM2" value="Display/Save Info" onclick="setPass(); setAddress(); setAccountNum(); return false;"></div><div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>'
   }
 }
+
+/*Cookies for Redister Modal (myModal2)*/
+function checkCookieMail2() {
+  var mail = getCookie("mail");
+  if (mail != "") {
+    if (mail === document.getElementById("modalmail2").value) {
+      return true;
+    } else {
+      alert("Invalid mail, try again.");
+      return false;
+    }
+  } else {
+    mail = document.getElementById("modalmail2").value;
+    if (mail != "" && mail != null) {
+      setCookie("mail", mail, 30);
+      return true;
+    }
+    return false;
+  }
+}
+
+function checkCookiePass2() {
+  var password = getCookie("password");
+  if (password != "") {
+    if (password === document.getElementById("modalpass2").value) {
+      return true;
+    } else {
+      alert("Invalid password, try again.");
+      return false;
+    }
+  } else {
+    password = document.getElementById("modalpass2").value;
+    if (password != "" && password != null) {
+      setCookie("password", password, 30);
+      return true;
+    }
+    return false;
+  }
+}
+
+function checkCookieAddress() {
+    var address = getCookie("address");
+    if (address != "") {
+      if (address === document.getElementById("modaladdress").value) {
+        return true;
+      } else {
+        alert("Invalid Address, try again.");
+        return false;
+      }
+    } else {
+      address = document.getElementById("modaladdress").value;
+      if (address != "" && address != null) {
+        setCookie("address", address, 30);
+        return true;
+      }
+      return false;
+    }
+}
+
+function checkCookieAccount() {
+    var account = getCookie("account");
+    if (account != "") {
+      if (account === document.getElementById("account").value) {
+        return true;
+      } else {
+        alert("Invalid Account, try again.");
+        return false;
+      }
+    } else {
+      account = document.getElementById("account").value;
+      if (account != "" && account != null) {
+        setCookie("account", account, 30);
+        return true;
+      }
+      return false;
+    }
+}
+
+/*Checks the conditions for the password are fullfilled*/
+function checkModalPass2() {
+  var pw = document.getElementById("modalpass2").value;
+  if (pw.length < 8) {
+    alert("Your password must be at least 8 characters");
+    return false;
+  }
+  if (pw.length > 15) {
+    alert("Your password must be at most 15 characters");
+    return false;
+  }
+  if (pw.search(/[a-z]/i) < 0) {
+    alert("Your password must contain at least one letter.");
+    return false;
+  }
+  if (pw.search(/[0-9]/) < 0) {
+    alert("Your password must contain at least one digit.");
+    return false;
+  }
+  return true;
+}
+function modalBoxHide2() {
+  if ((checkModalPass2() === true && checkCookiePass2() === true) && (checkCookieMail2() === true && checkCookieAddress()=== true) && (checkCookieAccount())) {
+    var modal = document.getElementById("myModal2");
+    modal.style.display = "none";
+    /*In order to display the user name we change the HTML directly and add the onmouseover condition to logOut*/
+    document.getElementById("signin").innerHTML = '<a href="#" onclick="logOut()" onmouseover="showLogOut()" onmouseout="hideLogOut()">' + getCookie("mail") + '</a>'+'<div id="logOut"> Click to Log Out </div>'
+    document.getElementById("getaccount").innerHTML = "Account Info.";
+    document.getElementById("optiondiv").innerHTML = '<div class="submitModal2"><input type="submit" id="btn-SM2" value="Display/Save Info" onclick="setPass(); setAddress(); setAccountNum(); return false;"></div><div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>'
+  }
+}
+
+function setPass() {
+  if(getCookie("password") != ""){
+    /*We also put the email in case we logged in instea of created the account*/
+    document.getElementById("modalmail2").value = getCookie("mail");
+    document.getElementById("modalpass2").value = getCookie("password");
+  }
+}
+
+function setAddress() {
+  if(getCookie("address") != ""){
+    document.getElementById("modaladdress").value = getCookie("address");
+  }
+}
+
+function setAccountNum() {
+  if(getCookie("account") != ""){
+    document.getElementById("account").value = getCookie("account");
+  }
+}
+
 
 function resetAllCookies() {
   document.cookie = "mail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "address=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "account=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   window.alert("Cookies Removed");
+  location.reload();
 }
 
+/*Display the logOut information when hovering*/
 function showLogOut() {
   var mess = document.getElementById("logOut");
   mess.style.display= "block";
@@ -184,16 +293,16 @@ function hideLogOut(){
 }
 
 function logOut() {
-  resetAllCookies();
   location.reload();
 }
 
-/*Redirection*/
+/*Redirection to video player using a cookie to let the player know which film is selected*/
 function redirect(title, trailer) {
   setCookie("film", title, 30);
   setCookie("trailer", trailer, 30);
   window.location = "player.html";
 }
+
 
 
 
