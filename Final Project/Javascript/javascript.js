@@ -430,3 +430,4 @@ function credit(){
 		document.getElementById('trans').style.visibility="visible";
 	}
 }
+
