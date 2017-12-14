@@ -138,7 +138,7 @@ function modalBoxHide() {
     document.getElementById("signin").innerHTML = '<a href="#" onclick="logOut()" onmouseover="showLogOut()" onmouseout="hideLogOut()">' + getCookie("mail") + '</a>'+'<div id="logOut"> Click to Log Out </div>'
     document.getElementById("getaccount").innerHTML = "Account Info.";
     /*We modify the register modal to make it work as an Account Information Display*/
-    document.getElementById("optiondiv").innerHTML = '<div class="submitModal2"><input type="submit" id="btn-SM2" value="Display/Save Info" onclick="setPass(); setAddress(); setAccountNum(); return false;"></div><div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>'
+    document.getElementById("optiondiv").innerHTML = '<div class="submitModal2"><input type="submit" id="btn-SM2" value="Display/Save Info" onclick="setPass(); setAddress(); setAccountNum(); modalBoxHide2(); return false;"></div><div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>'
   }
 }
 
@@ -247,7 +247,7 @@ function modalBoxHide2() {
     /*In order to display the user name we change the HTML directly and add the onmouseover condition to logOut*/
     document.getElementById("signin").innerHTML = '<a href="#" onclick="logOut()" onmouseover="showLogOut()" onmouseout="hideLogOut()">' + getCookie("mail") + '</a>'+'<div id="logOut"> Click to Log Out </div>'
     document.getElementById("getaccount").innerHTML = "Account Info.";
-    document.getElementById("optiondiv").innerHTML = '<div class="submitModal2"><input type="submit" id="btn-SM2" value="Display/Save Info" onclick="setPass(); setAddress(); setAccountNum(); return false;"></div><div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>'
+    document.getElementById("optiondiv").innerHTML = '<div class="submitModal2"><input type="submit" id="btn-SM2" value="Display/Save Info" onclick="setPass(); setAddress(); setAccountNum(); modalBoxHide2(); return false;"></div><div class="cancelModal2"><input type="submit" id="btn-CM2" value="Cancel" onclick="cancel2(); return false;"></div>'
   }
 }
 
