@@ -215,7 +215,7 @@ function checkCookieAccount() {
         setCookie("account", account, 30);
         return true;
       }
-      return false;
+      return true;
     }
 }
 
